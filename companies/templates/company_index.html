@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,8 +28,9 @@
                 </div>
                 <div class="col-1 cs-registration">
                     {% comment %} Регистрация и вход пользователя {% endcomment %}
-                    <a href="./voiti.html" class="cs-a-registr">Войти</a>
-                    <a href="./regist.html" class="cs-a-registr">Регистрация</a>
+                    {% comment %} Если пользователь вошёл, то эти ссылки убираются и появляется ссылка на профиль {% endcomment %}
+                    <a href="{% url 'company_login'%}" class="cs-a-registr">Войти</a>
+                    <a href="{% url 'company_registration'%}" class="cs-a-registr">Регистрация</a>
                 </div>
             </div>
         </div>
@@ -109,62 +112,33 @@
                 </div>
             </div>
 
-            <div class="col-9 cs-vakansii">
-                <div class="cs-vakansii_list">
+            <div class="col-9 cs-spezi">
+                <div class="cs-spezi_list">
                     <div class="container">
+                        {% for company in companies %}
                         <div class="row">
                             <div class="column-10">
-                                <div class="cs-vakansiya">
+                                <div class="cs-spez">
                                     <a class="cs-vakansiya-ssilka" href="#">
-                                        <span class="cs-vakansiya-name">ВФЫВЦФВЙЦ</span>
+                                        <span class="cs-vakansiya-name">{{company.name}}</span>
                                     </a>
                                     <br>
-                                    <span class="cs-vakansiya-spez">Парикмахерская</span>
+                                    <span class="cs-vakansiya-spez">{{company.spez}}</span>
                                     <span class="tochka"> • </span>
                                     <span class="cs-vakansiya-company">ООО "вфвфцв"</span>
                                     <br>
                                     <span class="cs-vakansiya-tegi">
-                                        <span class="teg">стрижка</span>
-                                        <span class="tochka"> • </span>
-                                        <span class="teg">окрашивание</span>
+                                        {% for service in company.services %}
+                                            <span class="teg">{{service}}</span>
+                                            <span class="tochka"> • </span>
+                                        {% endfor %}
                                     </span>
                                     <br>
-                                    {% comment %} <button type="button" class="cs-button-otklik">Подробнее</button> {% endcomment %}
                                 </div>
                             </div>
-                            <div class="column-2">
-                            </div>
+
                         </div>
-
-                        <div class="row">
-                            <div class="column-10">
-                                <div class="cs-vakansiya">
-                                    <a class="cs-vakansiya-ssilka" href="#">
-                                        <span class="cs-vakansiya-name">АВАФ</span>
-                                    </a>
-                                    <br>
-                                    <span class="cs-vakansiya-spez">Баня</span>
-                                    <span class="tochka"> • </span>
-                                    <span class="cs-vakansiya-company">ООО "Хамам"</span>
-                                    <br>
-                                    <span class="cs-vakansiya-tegi">
-                                        <span class="teg">бассейн</span>
-                                        <span class="tochka"> • </span>
-                                        <span class="teg">баня</span>
-                                        <span class="tochka"> • </span>
-                                        <span class="teg">сауна</span>
-                                    </span>
-                                    <br>
-                                    {% comment %} <button type="button" class="cs-button-otklik">Откликнуться</button> {% endcomment %}
-
-                                </div>
-                            </div>
-                            <div class="column-2">
-
-                            </div>
-                        </div>
-
-
+                        {% endfor %}
                     </div>
                 </div>
             </div>

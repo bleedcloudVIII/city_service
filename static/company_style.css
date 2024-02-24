@@ -90,13 +90,13 @@ hr {
     border-bottom-right-radius: 0px;
 }
 
-.cs-vakansii {
+.cs-spezi {
     background-color: var(--colorBlack);
     color: var(--colorWhite);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 }
-.cs-vakansii_list{
+.cs-spezi_list{
 
 }
 .cs-button-otklik{
@@ -107,7 +107,7 @@ hr {
     border-style: hidden;
     font-size: 13px;
 }
-.cs-vakansiya{
+.cs-spez{
     background-color: var(--colorWhite);
     margin-top: 5px;
     margin-bottom: 5px;

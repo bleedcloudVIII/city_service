@@ -69,11 +69,20 @@ hr {
     color: var(--colorWhite);
 }
 .cs-name{
-
+    color: var(--colorWhite);
+    margin-bottom: 2px;
 }
 .cs-value{
-
+    margin-left: 5px;
+    color: var(--colorBlack);
 }
 .cs-pole{
-    background-color: red;
+    margin-bottom: 5px;
+}
+.cs-window{
+    background-color: var(--colorWhite);
+    border-radius: 6px;
+    width: 150px;
+    height: 30px;
+    margin-bottom: 5px;
 }
