@@ -56,35 +56,24 @@ hr {
     margin-top: 10px;
     float: left;
     height: 40px;
-    width: 165px;
+    width: 180px;
     border-radius: 8px;
     background-color: var(--colorWhite);
     color: var(--colorBlack);
     border-style: hidden;
 }
 
-.cs-ww{
-    color: green;
-}
 
 .cs-a{
     text-decoration: none;
     color: var(--colorWhite);
 }
-.cs-voiti{
-    margin-left: 10px;
+.cs-name{
+
 }
-.cs-input {
-    margin-top: 10px;
-    text-decoration: none;
-    padding: 15px;
-    height: 50px;
-    /* width: 390px; */
-    width: 50vw;
-    min-width: 100px;
-    margin-right: 10px;
-    border-radius: 8px;
-    border-style: hidden;
-    background-color: var(--colorBlack);
-    color: var(--colorWhite);
+.cs-value{
+
+}
+.cs-pole{
+    background-color: red;
 }

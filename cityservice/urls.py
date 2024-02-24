@@ -17,9 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from companies.views import index as index_company
+from companies.views import index as c_index
+from companies.views import registration as c_registration
+from companies.views import login as c_login
+from companies.views import profile as c_profile
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('companies/', index_company, name='index_company')
+    path('companies/', c_index, name='company_index'),
+    path('companies/registration/', c_registration, name='company_registration'),
+    path('companies/login/', c_login, name='company_login'),
+    path('companies/profile/', c_profile, name='company_profile'),
+    
 ]

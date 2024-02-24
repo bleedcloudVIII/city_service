@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/style.css" rel=stylesheet>
+    <link href="/static/company_style.css" rel=stylesheet>
     <title>CityService</title>
 </head>
 
@@ -20,10 +20,9 @@
         <div class="container ">
             <div class="row">
                 <div class="col-11">
-                    {% comment %} <h1 class="text-left fp-h1">CityService</h1> {% endcomment %}
-                    <h1 class="text-left cs-ww">CityService</h1>
+                    <h1 class="text-left cs-h1">CityService</h1>
 
-                    <h5 class="text-left fp-h5 cs-header-text">Найди практику своей мечты!</h5>
+                    <h5 class="text-left cs-h5 cs-header-text">Найди практику своей мечты!</h5>
                 </div>
                 <div class="col-1 cs-registration">
                     {% comment %} Регистрация и вход пользователя {% endcomment %}
@@ -37,31 +36,13 @@
     <hr>
     <div class="container">
         <div class="row">
-            <!-- <div class="col col-xl-12">  -->
-            <!-- col-md-6 col-xs-3 -->
-            <!-- <div class="col"> -->
-            {% comment %} <div class="col-12 cs-users col-md-9 col-sm-12 col-lg-6"> {% endcomment %}
-                {% comment %} <a class="cs-a-student">Студентам</a> {% endcomment %}
-                {% comment %} <a href="./forRabotodatel.html" class="cs-a-company">Работодателям</a> {% endcomment %}
-            {% comment %} </div> {% endcomment %}
             <div class="col-12 cs-input-panel ">
-                <!--  col-md-9 col-sm-12 col-lg-6 ????-->
                 <form class="cs-form" action="#" method="get">
-                    <!-- <div class="mb3"> -->
                     <input placeholder="Услуга" class="cs-input">
-                    <!-- <div class="cs-button-div"> -->
                     <button class="cs-button">
-                        <!-- <div class="cs-span"> -->
                         <span class="cs-span">Найти</span>
-                        <!-- </div> -->
                     </button>
-                    <!-- </div> -->
-
-                    <!-- </div> -->
                 </form>
-                <!-- </div> -->
-                <!-- </div> -->
-
             </div>
         </div>
     </div>
@@ -71,27 +52,60 @@
             <div class="col-3 cs-panel">
                 <div class="spez-name">Специализация</div>
                 <div class="spez">
-                    <!-- Выбранные регионы -->
+                    <!-- Выбранные специализации -->
                     <label id="vibrannie_spez" hidden="true" class="cs-vibrannie-spez-label"></label>
                     <div class="spez-cut" id="spez_cut_list">
                         <ul class="cs-spez-list">
                             <li>
-                                <label class="cs-label" onclick="addRegion('Москва')">
+                                <label class="cs-label" >
                                     <input type="checkbox" class="cs-checkbox">
                                     <span>Ремонт</span>
                                 </label>
                             </li>
-                            
+                            <li>
+                                <label class="cs-label" >
+                                    <input type="checkbox" class="cs-checkbox">
+                                    <span>Пошив</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="cs-label" >
+                                    <input type="checkbox" class="cs-checkbox">
+                                    <span>Техническое обслуживание</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="cs-label" >
+                                    <input type="checkbox" class="cs-checkbox">
+                                    <span>Прачечная</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="cs-label" >
+                                    <input type="checkbox" class="cs-checkbox">
+                                    <span>Фотоателье</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="cs-label" >
+                                    <input type="checkbox" class="cs-checkbox">
+                                    <span>Баня</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="cs-label" >
+                                    <input type="checkbox" class="cs-checkbox">
+                                    <span>Парикмахерская</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="cs-label" >
+                                    <input type="checkbox" class="cs-checkbox">
+                                    <span>Ритуальные услуги</span>
+                                </label>
+                            </li>
                         </ul>
-                    </div>
-                    <div class="spez_all" id="spez_all_list" hidden="true">
-                        <!-- Добавить вызов функции addRegion -->
-                        <ul class="cs-spez-list">
-                            
-                        </ul>
-                    </div>
-                    <button type="button" class="cs-button-list" onclick="getspezAllList()"
-                        id="button_spez">Показать все</button>
+                    </div>       
                 </div>
             </div>
 
@@ -102,23 +116,20 @@
                             <div class="column-10">
                                 <div class="cs-vakansiya">
                                     <a class="cs-vakansiya-ssilka" href="#">
-                                        <span class="cs-vakansiya-name">Программист</span>
+                                        <span class="cs-vakansiya-name">ВФЫВЦФВЙЦ</span>
                                     </a>
-
                                     <br>
-                                    <span class="cs-vakansiya-spez">Москва</span>
+                                    <span class="cs-vakansiya-spez">Парикмахерская</span>
                                     <span class="tochka"> • </span>
-                                    <span class="cs-vakansiya-company">Яндекс</span>
+                                    <span class="cs-vakansiya-company">ООО "вфвфцв"</span>
                                     <br>
                                     <span class="cs-vakansiya-tegi">
-                                        <span class="teg">тег 1</span>
+                                        <span class="teg">стрижка</span>
                                         <span class="tochka"> • </span>
-                                        <span class="teg">тег 2</span>
-                                        <span class="tochka"> • </span>
-                                        <span class="teg">тег 3</span>
+                                        <span class="teg">окрашивание</span>
                                     </span>
                                     <br>
-                                    <button type="button" class="cs-button-otklik">Откликнуться</button>
+                                    {% comment %} <button type="button" class="cs-button-otklik">Подробнее</button> {% endcomment %}
                                 </div>
                             </div>
                             <div class="column-2">
@@ -129,22 +140,22 @@
                             <div class="column-10">
                                 <div class="cs-vakansiya">
                                     <a class="cs-vakansiya-ssilka" href="#">
-                                        <span class="cs-vakansiya-name">Инженер</span>
+                                        <span class="cs-vakansiya-name">АВАФ</span>
                                     </a>
                                     <br>
-                                    <span class="cs-vakansiya-spez">Санкт-Петербург</span>
+                                    <span class="cs-vakansiya-spez">Баня</span>
                                     <span class="tochka"> • </span>
-                                    <span class="cs-vakansiya-company">ООО "Что-то"</span>
+                                    <span class="cs-vakansiya-company">ООО "Хамам"</span>
                                     <br>
                                     <span class="cs-vakansiya-tegi">
-                                        <span class="teg">тег 1</span>
+                                        <span class="teg">бассейн</span>
                                         <span class="tochka"> • </span>
-                                        <span class="teg">тег 2</span>
+                                        <span class="teg">баня</span>
                                         <span class="tochka"> • </span>
-                                        <span class="teg">тег 3</span>
+                                        <span class="teg">сауна</span>
                                     </span>
                                     <br>
-                                    <button type="button" class="cs-button-otklik">Откликнуться</button>
+                                    {% comment %} <button type="button" class="cs-button-otklik">Откликнуться</button> {% endcomment %}
 
                                 </div>
                             </div>

@@ -118,14 +118,14 @@ hr {
 .cs-vakansiya-ssilka{
     text-decoration: none;
 }
-.cs-vakansiya-name, .cs-vakansiya-opisanie, .cs-vakansiya-spez, .cs-vakansiya-company {
+.cs-vakansiya-name, .cs-vakansiya-opisanie, .cs-vakansiya-spez, .cs-vakansiya-regioni, .cs-vakansiya-company {
     color: var(--colorBlack);
 }
 .cs-vakansiya-name{
     font-size: 30px;
 
 }
-.cs-vakansiya-spez, .cs-vakansiya-company{
+.cs-vakansiya-spez, .cs-vakansiya-regioni, .cs-vakansiya-company{
     font-size: 14px;
 }
 .cs-vakansiya-tegi{
@@ -150,7 +150,7 @@ hr {
 /* text-align: right; */
 /* float: right; */
 /* } */
-.cs-spez-list {
+.cs-spez-list, .cs-regioni-list {
     list-style-type: none;
     text-align: left;
 }
@@ -231,16 +231,16 @@ hr {
     font-size: 13px;
     /* display: flex; */
 }
-.spez_cut{
+.spez_cut, .regioni_cut{
     /* min-height: 100px;
     min-width: 50px;
     overflow: auto; */
 }
-.spez_all{
+.spez_all, .regioni_all{
     max-height: 200px;
     overflow: auto;
 }
-.cs-vibrannie-spez-label{
+.cs-vibrannie-spez-label, .cs-vibrannie-regioni-label{
     color: var(--colorGray);
 }
 
