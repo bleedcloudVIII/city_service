@@ -12,15 +12,15 @@ body{
 }
 
 
-.fp-header-text {
+.cs-header-text {
     size: 10px;
 }
 
-.fp-h1 {
+.cs-h1 {
     color: var(--colorWhite);
 }
 
-.fp-h5 {
+.cs-h5 {
     color: var(--colorWhite);
 }
 
@@ -36,10 +36,10 @@ header {
 hr {
     color: var(--colorWhite);
 }
-.fp-label{
+.cs-label{
     color: var(--colorWhite);
 }
-.fp-form {
+.cs-form {
     margin-top: 10px;
     margin-left: -12px;
     display: flex;
@@ -52,7 +52,7 @@ hr {
     /* margin-right: 400px; */
     margin-left: -12px;
 }
-.fp-button {
+.cs-button {
     margin-top: 10px;
     float: left;
     height: 40px;
@@ -62,14 +62,19 @@ hr {
     color: var(--colorBlack);
     border-style: hidden;
 }
-.fp-a{
+
+.cs-ww{
+    color: green;
+}
+
+.cs-a{
     text-decoration: none;
     color: var(--colorWhite);
 }
-.fp-voiti{
+.cs-voiti{
     margin-left: 10px;
 }
-.fp-input {
+.cs-input {
     margin-top: 10px;
     text-decoration: none;
     padding: 15px;

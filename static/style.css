@@ -10,7 +10,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--colorWhite);
 }
-/* .fp-input{
+/* .cs-input{
 
 } */
 footer {
@@ -18,15 +18,20 @@ footer {
     color: var(--colorBlack);
 }
 
-.fp-header-text {
+.cs-header-text {
     size: 10px;
 }
 
-.fp-h1 {
+
+.cs-ww{
+    color: green;
+}
+
+.cs-h1 {
     color: var(--colorWhite);
 }
 
-.fp-h5 {
+.cs-h5 {
     color: var(--colorWhite);
 }
 
@@ -43,13 +48,15 @@ hr {
     color: var(--colorWhite);
 }
 
-.fp-a-student {
+.cs-a-student {
     /* margin-left: 120px; */
     margin-right: 10px;
     margin-left: -21px;
 }
 
-.fp-a-student{
+
+
+.cs-a-student{
     padding: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -58,7 +65,7 @@ hr {
     background-color: var(--colorBlack);
     color: var(--colorGray)
 }
-.fp-a-company {
+.cs-a-company {
     padding: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -68,12 +75,12 @@ hr {
     color: var(--colorWhite)
 }
 
-.fp-users {
+.cs-users {
     text-align: left;
     margin-left: 10px;
 }
 
-.fp-panel {
+.cs-panel {
     background-color: var(--colorBlack);
     color: var(--colorWhite);
     padding: 5px;
@@ -83,16 +90,16 @@ hr {
     border-bottom-right-radius: 0px;
 }
 
-.fp-vakansii {
+.cs-vakansii {
     background-color: var(--colorBlack);
     color: var(--colorWhite);
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 }
-.fp-vakansii_list{
+.cs-vakansii_list{
 
 }
-.fp-button-otklik{
+.cs-button-otklik{
     background-color: var(--colorBlack);
     color: var(--colorWhite);
     border-radius: 8px;
@@ -100,7 +107,7 @@ hr {
     border-style: hidden;
     font-size: 13px;
 }
-.fp-vakansiya{
+.cs-vakansiya{
     background-color: var(--colorWhite);
     margin-top: 5px;
     margin-bottom: 5px;
@@ -108,26 +115,26 @@ hr {
     border-style: hidden;
     padding-left: 10px;
 }
-.fp-vakansiya-ssilka{
+.cs-vakansiya-ssilka{
     text-decoration: none;
 }
-.fp-vakansiya-name, .fp-vakansiya-opisanie, .fp-vakansiya-regioni, .fp-vakansiya-company {
+.cs-vakansiya-name, .cs-vakansiya-opisanie, .cs-vakansiya-spez, .cs-vakansiya-company {
     color: var(--colorBlack);
 }
-.fp-vakansiya-name{
+.cs-vakansiya-name{
     font-size: 30px;
 
 }
-.fp-vakansiya-regioni, .fp-vakansiya-company{
+.cs-vakansiya-spez, .cs-vakansiya-company{
     font-size: 14px;
 }
-.fp-vakansiya-tegi{
+.cs-vakansiya-tegi{
     font-size: 18px;
 }
 .teg{
     color: var(--colorBlack);
 }
-.fp-vakansiya-company{
+.cs-vakansiya-company{
 
 }
 .tochka{
@@ -135,15 +142,15 @@ hr {
 
     color: var(--colorBlack);
 }
-.fp-logo-img{
+.cs-logo-img{
     width: 100px;
     height: 100px;
 }
-/* .fp-button-div{ */
+/* .cs-button-div{ */
 /* text-align: right; */
 /* float: right; */
 /* } */
-.fp-regioni-list {
+.cs-spez-list {
     list-style-type: none;
     text-align: left;
 }
@@ -152,7 +159,7 @@ hr {
     border-radius: 10px;
 }
 
-.fp-input {
+.cs-input {
 
     text-decoration: none;
     padding: 15px;
@@ -167,7 +174,7 @@ hr {
     color: var(--colorWhite);
 }
 
-.fp-button {
+.cs-button {
     float: right;
     height: 50px;
     width: 120px;
@@ -181,26 +188,26 @@ hr {
 
 }
 
-.fp-input-panel,
-.fp-users {
+.cs-input-panel,
+.cs-users {
     display: flex;
     align-items: left;
     /* justify-content: space-around; */
 }
 
-/* .fp-panel, .fp-vakansii{
+/* .cs-panel, .cs-vakansii{
     display: flex;
     align-items: center;
     justify-content: space-around;
 } */
-.fp-registration{
+.cs-registration{
     margin-top: 5px;
 }
-.fp-a-registr{
+.cs-a-registr{
     text-decoration: none;
     color: var(--colorWhite);
 }
-.fp-form {
+.cs-form {
     margin-top: 10px;
     margin-left: -12px;
     display: flex;
@@ -213,10 +220,10 @@ hr {
     /* margin-right: 400px; */
     margin-left: -12px;
 }
-.fp-registration{
+.cs-registration{
     color: var(--colorWhite);
 }
-.fp-button-list{
+.cs-button-list{
     border-radius: 6px;
     color: var(--colorBlack);
     background-color: var(--colorWhite);
@@ -224,21 +231,21 @@ hr {
     font-size: 13px;
     /* display: flex; */
 }
-.regioni_cut{
+.spez_cut{
     /* min-height: 100px;
     min-width: 50px;
     overflow: auto; */
 }
-.regioni_all{
+.spez_all{
     max-height: 200px;
     overflow: auto;
 }
-.fp-vibrannie-regioni-label{
+.cs-vibrannie-spez-label{
     color: var(--colorGray);
 }
 
 /* Checkbox */
-.fp-label:hover{
+.cs-label:hover{
     color: var(--colorGray);
     
 }
