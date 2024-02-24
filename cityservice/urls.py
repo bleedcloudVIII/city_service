@@ -21,5 +21,5 @@ from companies.views import index as index_company
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('companies/', index_company)
+    path('companies/', index_company, name='index_company')
 ]
