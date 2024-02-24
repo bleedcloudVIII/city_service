@@ -1,0 +1,85 @@
+:root {
+    --colorBlack: #1D0F0F;
+    /* --colorBlack: #2e2b29; */
+    --colorWhite: #fdfdfd;
+    --colorGray: #a3a3a3;
+    /* --colorGray: #878787; */
+
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--colorWhite);
+}
+
+
+.fp-header-text {
+    size: 10px;
+}
+
+.fp-h1 {
+    color: var(--colorWhite);
+}
+
+.fp-h5 {
+    color: var(--colorWhite);
+}
+
+.container-header {
+    background-color: var(--colorBlack);
+}
+
+header {
+    background-color: var(--colorBlack);
+    margin-bottom: -15px;
+}
+
+hr {
+    color: var(--colorWhite);
+}
+.fp-label{
+    color: var(--colorWhite);
+}
+.fp-form {
+    margin-top: 10px;
+    margin-left: -12px;
+    display: flex;
+    /* margin-top: 20px; */
+
+    background-color: var(--colorBlack);
+    padding: 10px;
+    border-color: var(--colorWhite);
+    border-radius: 8px;
+    /* margin-right: 400px; */
+    margin-left: -12px;
+}
+.fp-button {
+    margin-top: 10px;
+    float: left;
+    height: 40px;
+    width: 165px;
+    border-radius: 8px;
+    background-color: var(--colorWhite);
+    color: var(--colorBlack);
+    border-style: hidden;
+}
+.fp-a{
+    text-decoration: none;
+    color: var(--colorWhite);
+}
+.fp-voiti{
+    margin-left: 10px;
+}
+.fp-input {
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 15px;
+    height: 50px;
+    /* width: 390px; */
+    width: 50vw;
+    min-width: 100px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border-style: hidden;
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
+}

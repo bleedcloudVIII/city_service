@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+    <title>findPractice</title>
+</head>
+
+<body>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./index.js"></script>
+
+    <!-- Работникам, Работодателям -->
+    <!-- Создать резюме, войти, регистрация -->
+    <!-- footer - фигня снизу -->
+    <header>
+        <div class="container ">
+            <div class="row">
+                <div class="col-11">
+                    <h1 class="text-left fp-h1">findPractice</h1>
+                    <h5 class="text-left fp-h5 fp-header-text">Найди практику своей мечты!</h5>
+                </div>
+                <div class="col-1 fp-registration">
+                    <a href="./voiti.html" class="fp-a-registr">Войти</a>
+                    <a href="./regist.html" class="fp-a-registr">Регистрация</a>
+                </div>
+            </div>
+        </div>
+        <h1></h1>
+    </header>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <!-- <div class="col col-xl-12">  -->
+            <!-- col-md-6 col-xs-3 -->
+            <!-- <div class="col"> -->
+            <div class="col-12 fp-users col-md-9 col-sm-12 col-lg-6">
+                <a class="fp-a-student">Студентам</a>
+                <a href="./forRabotodatel.html" class="fp-a-company">Работодателям</a>
+            </div>
+            <div class="col-12 fp-input-panel ">
+                <!--  col-md-9 col-sm-12 col-lg-6 ????-->
+                <form class="fp-form" action="#" method="get">
+                    <!-- <div class="mb3"> -->
+                    <input placeholder="Направление практики" class="fp-input">
+                    <!-- <div class="fp-button-div"> -->
+                    <button class="fp-button">
+                        <!-- <div class="fp-span"> -->
+                        <span class="fp-span">Найти</span>
+                        <!-- </div> -->
+                    </button>
+                    <!-- </div> -->
+
+                    <!-- </div> -->
+                </form>
+                <!-- </div> -->
+                <!-- </div> -->
+
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 fp-panel">
+                <div class="region-name">Регион</div>
+                <div class="regioni">
+                    <!-- Выбранные регионы -->
+                    <label id="vibrannie_regioni" hidden="true" class="fp-vibrannie-regioni-label"></label>
+                    <div class="regioni-cut" id="regioni_cut_list">
+                        <ul class="fp-regioni-list">
+                            <li>
+                                <label class="fp-label" onclick="addRegion('Москва')">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Москва</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox" onclick="addRegion('Санкт-Петербург')">
+                                    <span>Санкт-Петербург</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox"
+                                        onclick="addRegion('Московская область')">
+                                    <span>Московская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox"
+                                        onclick="addRegion('Краснодарский край')">
+                                    <span>Краснодарский край</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="regioni_all" id="regioni_all_list" hidden="true">
+                        <!-- Добавить вызов функции addRegion -->
+                        <ul class="fp-regioni-list">
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Алтайский край</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Амурская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Архангельская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Астраханская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Белгородская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Брянская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Владимирская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Волгоградская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Воронежская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Донецкая область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Еврейская АО</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Забайкальский край</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Запорожская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Ивановская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Иркутская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Кабардино-Балканская республика</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>калининградская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Калужская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Камчатский край</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Карачаево-Черкесская Республика</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Кемеровская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Кировская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Костромская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Краснодарский край</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Красноярский край область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Курганская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Курская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Ленинградская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Липецкая область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Луганская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Магаданская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Москва</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Московская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Мурманская область</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="fp-label">
+                                    <input type="checkbox" class="fp-checkbox">
+                                    <span>Владимирская область</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button" class="fp-button-list" onclick="getRegioniAllList()"
+                        id="button_regioni">Показать все</button>
+                </div>
+            </div>
+
+            <div class="col-9 fp-vakansii">
+                <div class="fp-vakansii_list">
+                    <div class="container">
+                        <div class="row">
+                            <div class="column-10">
+                                <div class="fp-vakansiya">
+                                    <a class="fp-vakansiya-ssilka" href="#">
+                                        <span class="fp-vakansiya-name">Программист</span>
+                                    </a>
+
+                                    <br>
+                                    <span class="fp-vakansiya-regioni">Москва</span>
+                                    <span class="tochka"> • </span>
+                                    <span class="fp-vakansiya-company">Яндекс</span>
+                                    <br>
+                                    <span class="fp-vakansiya-tegi">
+                                        <span class="teg">тег 1</span>
+                                        <span class="tochka"> • </span>
+                                        <span class="teg">тег 2</span>
+                                        <span class="tochka"> • </span>
+                                        <span class="teg">тег 3</span>
+                                    </span>
+                                    <br>
+                                    <button type="button" class="fp-button-otklik">Откликнуться</button>
+                                </div>
+                            </div>
+                            <div class="column-2">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="column-10">
+                                <div class="fp-vakansiya">
+                                    <a class="fp-vakansiya-ssilka" href="#">
+                                        <span class="fp-vakansiya-name">Инженер</span>
+                                    </a>
+                                    <br>
+                                    <span class="fp-vakansiya-regioni">Санкт-Петербург</span>
+                                    <span class="tochka"> • </span>
+                                    <span class="fp-vakansiya-company">ООО "Что-то"</span>
+                                    <br>
+                                    <span class="fp-vakansiya-tegi">
+                                        <span class="teg">тег 1</span>
+                                        <span class="tochka"> • </span>
+                                        <span class="teg">тег 2</span>
+                                        <span class="tochka"> • </span>
+                                        <span class="teg">тег 3</span>
+                                    </span>
+                                    <br>
+                                    <button type="button" class="fp-button-otklik">Откликнуться</button>
+
+                                </div>
+                            </div>
+                            <div class="column-2">
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+
+        </footer>
+
+</body>
+
+</html>
