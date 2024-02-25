@@ -25,10 +25,14 @@ from companies.views import profile as c_profile
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('companies/', c_index, name='company_index'),
-    path('companies/registration/', c_registration, name='company_registration'),
-    path('companies/login/', c_login, name='company_login'),
-    path('companies/profile/', c_profile, name='company_profile'),
+    path('cityservice/admin/', admin.site.urls),
     
+    path('cityservice/', c_index, name='company_index'),
+    path('cityservice/company/registration/', c_registration, name='company_registration'),
+    path('cityservice/company/login/', c_login, name='company_login'),
+    path('cityservice/company/profile/', c_profile, name='company_profile'),
+    
+    # path('cityserivce/users/registration/'),
+    # path('cityserivce/users/login/'),
+    # path('cityserivce/users/profile/'),
 ]

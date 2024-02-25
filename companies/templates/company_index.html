@@ -15,9 +15,6 @@
     <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/static/index.js"></script>
 
-    <!-- Работникам, Работодателям -->
-    <!-- Создать резюме, войти, регистрация -->
-    <!-- footer - фигня снизу -->
     <header>
         <div class="container ">
             <div class="row">
@@ -29,8 +26,14 @@
                 <div class="col-1 cs-registration">
                     {% comment %} Регистрация и вход пользователя {% endcomment %}
                     {% comment %} Если пользователь вошёл, то эти ссылки убираются и появляется ссылка на профиль {% endcomment %}
-                    <a href="{% url 'company_login'%}" class="cs-a-registr">Войти</a>
-                    <a href="{% url 'company_registration'%}" class="cs-a-registr">Регистрация</a>
+                    {% comment %} ???????? {% endcomment %}
+                    {% if request.user.is_authenticated %}
+                        <a href="" class="cs-a-registr">Профиль</a>                        
+                    {% else %}
+                        <a href="{% url 'company_login'%}" class="cs-a-registr">Войти</a>
+                        <a href="{% url 'company_registration'%}" class="cs-a-registr">Регистрация</a>
+                    {% endif %}
+                    
                 </div>
             </div>
         </div>
@@ -59,54 +62,31 @@
                     <label id="vibrannie_spez" hidden="true" class="cs-vibrannie-spez-label"></label>
                     <div class="spez-cut" id="spez_cut_list">
                         <ul class="cs-spez-list">
-                            <li>
-                                <label class="cs-label" >
-                                    <input type="checkbox" class="cs-checkbox">
-                                    <span>Ремонт</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label class="cs-label" >
-                                    <input type="checkbox" class="cs-checkbox">
-                                    <span>Пошив</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label class="cs-label" >
-                                    <input type="checkbox" class="cs-checkbox">
-                                    <span>Техническое обслуживание</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label class="cs-label" >
-                                    <input type="checkbox" class="cs-checkbox">
-                                    <span>Прачечная</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label class="cs-label" >
-                                    <input type="checkbox" class="cs-checkbox">
-                                    <span>Фотоателье</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label class="cs-label" >
-                                    <input type="checkbox" class="cs-checkbox">
-                                    <span>Баня</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label class="cs-label" >
-                                    <input type="checkbox" class="cs-checkbox">
-                                    <span>Парикмахерская</span>
-                                </label>
-                            </li>
-                            <li>
-                                <label class="cs-label" >
-                                    <input type="checkbox" class="cs-checkbox">
-                                    <span>Ритуальные услуги</span>
-                                </label>
-                            </li>
+                            {% for spez in spezs %}
+                                <li>
+                                    <label class="cs-label" >
+                                        <input type="checkbox" class="cs-checkbox">
+                                        <span>{{spez.name}}</span>
+                                    </label>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>       
+                </div>
+                <div class="spez-name">Услуги</div>
+                <div class="spez">
+                    <!-- Выбранные специализации -->
+                    <label id="vibrannie_spez" hidden="true" class="cs-vibrannie-spez-label"></label>
+                    <div class="spez-cut" id="spez_cut_list">
+                        <ul class="cs-spez-list">
+                            {% for service in services %}
+                                <li>
+                                    <label class="cs-label" >
+                                        <input type="checkbox" class="cs-checkbox">
+                                        <span>{{service.name}}</span>
+                                    </label>
+                                </li>
+                            {% endfor %}
                         </ul>
                     </div>       
                 </div>
@@ -125,7 +105,7 @@
                                     <br>
                                     <span class="cs-vakansiya-spez">{{company.spez}}</span>
                                     <span class="tochka"> • </span>
-                                    <span class="cs-vakansiya-company">ООО "вфвфцв"</span>
+                                    <span class="cs-vakansiya-company">{{company.address}}</span>
                                     <br>
                                     <span class="cs-vakansiya-tegi">
                                         {% for service in company.services %}
@@ -136,7 +116,6 @@
                                     <br>
                                 </div>
                             </div>
-
                         </div>
                         {% endfor %}
                     </div>
