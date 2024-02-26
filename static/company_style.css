@@ -161,27 +161,27 @@ hr {
 
 .cs-input {
 
-    text-decoration: none;
-    padding: 15px;
-    height: 50px;
+    /* text-decoration: none; */
+    /* padding: 15px; */
+    /* height: 50px; */
     /* width: 390px; */
-    width: 50vw;
-    min-width: 100px;
-    margin-right: 10px;
-    border-radius: 8px;
-    border-style: hidden;
-    background-color: var(--colorBlack);
-    color: var(--colorWhite);
+    /* width: 50vw; */
+    /* min-width: 100px; */
+    /* margin-right: 10px; */
+    /* border-radius: 8px; */
+    /* border-style: hidden; */
+    /* background-color: var(--colorBlack); */
+    /* color: var(--colorWhite); */
 }
 
 .cs-button {
-    float: right;
-    height: 50px;
-    width: 120px;
-    border-radius: 8px;
-    background-color: var(--colorWhite);
-    color: var(--colorBlack);
-    border-style: hidden;
+    /* float: right; */
+    /* height: 50px; */
+    /* width: 120px; */
+    /* border-radius: 8px; */
+    /* background-color: var(--colorWhite); */
+    /* color: var(--colorBlack); */
+    /* border-style: hidden; */
 
     /* display: ; */
     /* margin: 0 auto; */

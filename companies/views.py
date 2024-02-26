@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse
 
 from companies.models import Company
 
+from companies.forms import CompanyLoginForm
 
 # Ремонт
 # Пошив
@@ -98,10 +99,13 @@ def index(request):
     return render(request, 'company_index.html', context)
 
 def registration(request):
-    return render(request, 'company_registration.html')
+   return render(request, 'company_registration.html')
 
 def login(request):
-    return render(request, 'company_login.html')
+  context = {
+    'form': CompanyLoginForm()
+  }
+  return render(request, 'company_login.html')
 
 def profile(request):
-    return render(request, 'company_profile.html')
+   return render(request, 'company_profile.html')

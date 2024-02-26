@@ -34,13 +34,14 @@
             <div class="col cs-form">
                 <div>
                     <form method="post" action="#">
-                        <input class="cs-input" placeholder="Имя для входа">
+                        {{ form.as_p }}
+                        {% comment %} <input class="cs-input" placeholder="Имя для входа">
                         <br>
                         <input class="cs-input" placeholder="Пароль">
                         <br>
                         <button type="button" class="cs-button">Войти</button>
                         <br>
-                        <a class="cs-a cs-voiti" href="{% url 'company_registration'%}">Регистрация</a>
+                        <a class="cs-a cs-voiti" href="{% url 'company_registration'%}">Регистрация</a> {% endcomment %}
                     </form>
                 </div>
 

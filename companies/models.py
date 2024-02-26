@@ -12,6 +12,14 @@ class Specialization(models.Model):
     class Meta:
         db_table = "specialization"
 
+class Specialization_Company(models.Model):
+    specialization = models.OneToOneField(Specialization, on_delete=models.CASCADE)
+    
+    class Meta:
+        db_table = "specialization_company"
+
+
+
 
 class Phone(models.Model):
     phone = models.CharField(max_length=15) # ????
@@ -21,29 +29,44 @@ class Phone(models.Model):
     class Meta:
         db_table = "phone"
 
+class Service_Company(models.Model):
+    
+    class Meta:
+        db_table = "service_company"
+
+class Service(models.Model):
+    id = models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=150)
+    companies = models.ForeignKey(Service_Company, on_delete=models.CASCADE)
+    
+    
+    # companies = models.ForeignKey(Company, on_delete=models.SET_NULL)
+    
+    class Meta:
+        db_table = "service"
+
+# class Specialization_Service(models.Model):
+    
+#     class Meta:
+#         db_table = "specailization_service"
 
 class Company(models.Model):
     id = models.IntegerField(primary_key=True)
+    nickname = models.CharField(max_length=150, null=False, unique=True)
     specialization = models.ForeignKey(Specialization, on_delete=models.SET_NULL, null=True) # on_delete = ...
     name = models.CharField(max_length=150)
     rank = models.IntegerField()
     type_of_ownership = models.CharField(max_length=150)
     address = models.CharField(max_length=200)
-    phones = models.ForeignKey(Phone, on_delete=models.SET_NULL, null=True) # on_delete = ...
-    # holidays = models.ForeignKey(Day_of_work) # ????
-    # orders = models.ForeignKey(Order)
-    # service = models.ForeignKey(Service)
     
+    services = models.ManyToManyField(Service)
+    phones = models.ForeignKey(Phone, on_delete=models.CASCADE, null=True)
+    specializations = models.ForeignKey(Specialization_Company, on_delete=models.CASCADE, null=True)
+
     class Meta:
         db_table = "company"
 
-class Service(models.Model):
-    id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=150)
-    # companies = models.ForeignKey(Company, on_delete=models.SET_NULL)
-    
-    class Meta:
-        db_table = "service"
+
 
 class Order(models.Model):
     id = models.IntegerField(primary_key=True)
@@ -80,12 +103,7 @@ class Day_of_work(models.Model):
         db_table = "day_of_work"
 
 
-class Service_Company(models.Model):
-    service = models.ForeignKey(Service, on_delete=models.SET_NULL, null=True)
-    company = models.OneToOneField(Company, on_delete=models.SET_NULL, null=True)
-    
-    class Meta:
-        db_table = "service_company"
+
 
 class Order_User(models.Model):
     order = models.OneToOneField(Order, on_delete=models.SET_NULL, null=True)

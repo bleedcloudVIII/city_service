@@ -20,19 +20,17 @@
             <div class="row">
                 <div class="col-11">
                     <h1 class="text-left cs-h1">CityService</h1>
-
-                    <h5 class="text-left cs-h5 cs-header-text">Найди практику своей мечты!</h5>
                 </div>
                 <div class="col-1 cs-registration">
                     {% comment %} Регистрация и вход пользователя {% endcomment %}
                     {% comment %} Если пользователь вошёл, то эти ссылки убираются и появляется ссылка на профиль {% endcomment %}
                     {% comment %} ???????? {% endcomment %}
-                    {% if request.user.is_authenticated %}
+                    {% comment %} {% if request.user.is_authenticated %} {% endcomment %}
                         <a href="" class="cs-a-registr">Профиль</a>                        
-                    {% else %}
+                    {% comment %} {% else %} {% endcomment %}
                         <a href="{% url 'company_login'%}" class="cs-a-registr">Войти</a>
                         <a href="{% url 'company_registration'%}" class="cs-a-registr">Регистрация</a>
-                    {% endif %}
+                    {% comment %} {% endif %} {% endcomment %}
                     
                 </div>
             </div>
