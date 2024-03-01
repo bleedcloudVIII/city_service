@@ -1,4 +1,6 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponseRedirect
+from django.contrib import auth
+from django.urls import reverse
 
 from companies.models import Company
 
@@ -12,7 +14,6 @@ from companies.forms import CompanyLoginForm
 # Баня
 # Парикмахерская
 # Ритуальные услуги
-
 
 def index(request):
     # Пока не выбраны услуги и т.д.
@@ -99,13 +100,29 @@ def index(request):
     return render(request, 'company_index.html', context)
 
 def registration(request):
-   return render(request, 'company_registration.html')
+   	return render(request, 'company_registration.html')
 
 def login(request):
-  context = {
-    'form': CompanyLoginForm()
-  }
-  return render(request, 'company_login.html')
+    if request.method == 'POST':
+        form = CompanyLoginForm(data=request.POST)
+        print(form.errors)
+        print('Valid')
+        print(form.is_valid())
+        if form.is_valid():
+            login = request.POST['login']
+            password = request.POST['password']
+            company = auth.authenticate(login=login, password=password)
+            if True:
+                print("asd")
+                auth.login(request, user)
+                return HttpResponseRedirect(reverse('cityservice'))
+    else:
+        form = CompanyLoginForm()
+    context = {
+		'form': form
+	}
+    return render(request, 'company_login.html', context)
+
 
 def profile(request):
-   return render(request, 'company_profile.html')
+   	return render(request, 'company_profile.html')

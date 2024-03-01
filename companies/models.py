@@ -54,8 +54,8 @@ class Order(models.Model):
 
 class Company(models.Model):
     id = models.IntegerField(primary_key=True)
-    nickname = models.CharField(max_length=150, null=False)
-    name = models.CharField(max_length=150, null=False)
+    login = models.CharField(max_length=150, null=False)
+    name = models.CharField(max_length=150, null=False) #blank = False?
     rank = models.IntegerField()
     type_of_ownership = models.CharField(max_length=150)
     address = models.CharField(max_length=200)
