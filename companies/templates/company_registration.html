@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/company_registration.css" rel="stylesheet">
+    <link href="/static/company_registration_style.css" rel="stylesheet">
     <title>CityService</title>
 </head>
 
@@ -33,14 +33,30 @@
         <div class="row">
             <div class="col cs-form">
                 <div>
-                    <form method="post" action="#">
-                        <input class="cs-input" placeholder="Название компании">
+                    <form method="post" action="{% url 'company_registration' %}">
+                        {% csrf_token %}
+                        <div>
+                            {{ form.name }}
+                        </div>
+                        <div>
+                            {{ form.login }}
+                        </div>
+                        <div>
+                            {{ form.password1 }}
+                        </div>
+                        <div>
+                            {{ form.password2 }}
+                        </div>
+                        {% comment %} </div> {% endcomment %}
+                        {% comment %} <input class="cs-input" placeholder="Название компании">
                         <br>
                         <input class="cs-input" placeholder="Имя для входа">
                         <br>
                         <input class="cs-input" placeholder="Пароль">
                         <br>
                         <button type="button" class="cs-button">Создать предприятие</button>
+                        <br> {% endcomment %}
+                        <input type="submit" class="cs-button"></input>
                         <br>
                         <a class="cs-a cs-voiti" href="{% url 'company_login'%}">Войти</a>
                     </form>

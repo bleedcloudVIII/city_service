@@ -83,5 +83,5 @@ hr {
     border-radius: 8px;
     border-style: hidden;
     background-color: var(--colorWhite);
-    color: var(--colorWhite);
+    color: var(--colorBlack);
 }

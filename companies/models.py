@@ -5,14 +5,14 @@ from django.db import models
 
 class Service(models.Model):
     id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=150)
+    name = models.CharField(max_length=150, null=False)
     
     class Meta:
         db_table = "service"
 
 class Specialization(models.Model):
     id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=150)
+    name = models.CharField(max_length=150, null=False)
     
     services = models.ForeignKey(Service, on_delete=models.CASCADE)
     
@@ -37,7 +37,7 @@ class Day_of_work(models.Model):
         db_table = "day_of_work"
 
 class Phone(models.Model):
-    phone = models.CharField(max_length=15)
+    phone = models.CharField(max_length=15, null=False)
 
     class Meta:
         db_table = "phone"
@@ -54,18 +54,19 @@ class Order(models.Model):
 
 class Company(models.Model):
     id = models.IntegerField(primary_key=True)
-    login = models.CharField(max_length=150, null=False)
+    login = models.CharField(max_length=150, null=False, unique=True)
     name = models.CharField(max_length=150, null=False) #blank = False?
-    rank = models.IntegerField()
-    type_of_ownership = models.CharField(max_length=150)
-    address = models.CharField(max_length=200)
+    rank = models.IntegerField(null=True)
+    type_of_ownership = models.CharField(max_length=150, null=True)
+    address = models.CharField(max_length=200, null=True)
+    password = models.CharField(max_length=50)
     
     services = models.ManyToManyField(Service)
     specializations = models.ManyToManyField(Specialization)
     holidays = models.ManyToManyField(Holiday)
     day_of_work = models.ManyToManyField(Day_of_work)
     
-    orders = models.ForeignKey(Order, on_delete=models.CASCADE)
+    orders = models.ForeignKey(Order, on_delete=models.CASCADE, null=True)
     phones = models.ForeignKey(Phone, on_delete=models.CASCADE, null=True)
 
     class Meta:

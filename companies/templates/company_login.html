@@ -38,11 +38,14 @@
                         {% csrf_token %}
                         {% comment %} {{ form.as_p }} {% endcomment %}
                         {% comment %} <input class="cs-input" placeholder="Логин"> {% endcomment %}
-                            {{ form.login }}
                             {% comment %} <input class="cs-input" type="text" id="inputLogin"> {% endcomment %}
                             {% comment %} {{ form.login }} {% endcomment %}
-                            
+                        <div>
+                            {{ form.login }}
+                        </div>
+                        <div>
                             {{ form.password }}
+                        </div>
                         <br>
                         <input type="submit" class="cs-button"></input>
                         <br>
