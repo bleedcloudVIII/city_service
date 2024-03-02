@@ -93,12 +93,22 @@ def registration(request):
 				login=request.POST['login'],
 				password=make_password(request.POST['password1'])
 			)
-			company.save()
+			# company.save()
 			return HttpResponseRedirect(reverse('company_login'))
 	else:
 		form = CompanyRegistrationForm()
 	context = {'form': form}
 	return render(request, 'company_registration.html', context)
+
+def authenticate(login=None, password=None, **kwargs):
+    try:
+        company = Company.objects.get(login=login)
+        if check_password(password, company.password):
+            return company
+        return None
+    except Company.DoesNotExist:
+        return None
+            
 
 def login(request):
     if request.method == 'POST':
@@ -108,11 +118,12 @@ def login(request):
             print('ASDQWDQWD')
             login = request.POST['login']
             password = request.POST['password']
-            company = auth.authenticate(login=login, password=password)
+            company = authenticate(login, password)
             print(company)
             if company:
                 print('wqdqqwd')
                 auth.login(request, company)
+                print('adwd')
                 return HttpResponseRedirect(reverse('company_index'))
             else:
               pass

@@ -29,7 +29,7 @@ urlpatterns = [
     
     path('cityservice/', c_index, name='company_index'),
     path('cityservice/company/registration/', c_registration, name='company_registration'),
-    path('cityservice/company/login/', c_login, name='company_login'),
+    # path('cityservice/company/login/', c_login, name='company_login'),
     path('cityservice/company/profile/', c_profile, name='company_profile'),
     
     # path('cityserivce/users/registration/'),
