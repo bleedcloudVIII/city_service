@@ -54,12 +54,12 @@ class Order(models.Model):
 
 class Company(models.Model):
     id = models.IntegerField(primary_key=True)
-    # login = models.CharField(max_length=150, null=False, unique=True)
+    login = models.CharField(max_length=150, null=False, unique=True)
     name = models.CharField(max_length=150, null=False) #blank = False?
     rank = models.IntegerField(null=True)
     type_of_ownership = models.CharField(max_length=150, null=True)
     address = models.CharField(max_length=200, null=True)
-    # password = models.CharField(max_length=50)
+    password = models.CharField(max_length=50)
     
     services = models.ManyToManyField(Service)
     specializations = models.ManyToManyField(Specialization)

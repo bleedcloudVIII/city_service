@@ -22,17 +22,21 @@ from companies.views import registration as c_registration
 from companies.views import login as c_login
 from companies.views import profile as c_profile
 
+from users.views import registration as u_registration
+from users.views import login as u_login
+from users.views import profile as u_profile
+
 
 
 urlpatterns = [
     path('cityservice/admin/', admin.site.urls),
     
     path('cityservice/', c_index, name='company_index'),
-    path('cityservice/company/registration/', c_registration, name='company_registration'),
-    # path('cityservice/company/login/', c_login, name='company_login'),
-    path('cityservice/company/profile/', c_profile, name='company_profile'),
+    path('cityservice/companies/registration/', c_registration, name='company_registration'),
+    path('cityservice/companies/login/', c_login, name='company_login'),
+    path('cityservice/companies/profile/', c_profile, name='company_profile'),
     
-    # path('cityserivce/users/registration/'),
-    # path('cityserivce/users/login/'),
-    # path('cityserivce/users/profile/'),
+    path('cityservice/users/registration/', u_registration, name='user_registration'),
+    path('cityservice/users/login/', u_login, name='user_login'),
+    path('cityservice/users/profile/', u_profile, name='user_profile'),
 ]

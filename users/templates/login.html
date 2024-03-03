@@ -1,3 +1,5 @@
+{% load static%}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/voiti.css" rel="stylesheet">
+    <link href="/static/login.css" rel="stylesheet">
     <title>findPractice</title>
 </head>
 
@@ -20,8 +22,7 @@
         <div class="container ">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="text-left fp-h1"><a href="./index.html" class="fp-a2">findPractice</a></h1>
-                    <h5 class="text-left fp-h5 fp-header-text">Найди практику своей мечты!</h5>
+                    <h1 class="text-left cs-h1"><a href={% url 'company_index' %} class="cs-a2">CityService</a></h1>
                 </div>
             </div>
         </div>
@@ -30,22 +31,17 @@
     <hr>
     <div class="container">
         <div class="row">
-            <div class="col fp-nadpis-div">
-                <span class="fp-nadpis">Войти</span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col fp-form">
+            <div class="col cs-form">
                 <br>
-                <form method="post" action="#">
-                    <input class="fp-input" placeholder="Email">
+                <form method="post" action={% url 'user_login' %}>
+                    {% csrf_token %}
+                    {{ form.username }}
                     <br>
-                    <input class="fp-input" placeholder="Пароль">
+                    {{ form.password }}
                     <br>
-                    <button class="fp-button">Войти</button>
+                    <input type="submit" class="cs-button"></input>
                     <br>
-                    <a href="./regist.html" class="fp-a">Нет аккаунта?</a>
-                    <a href="./zabil.html" class="fp-a">Забыли пароль?</a>
+                    <a href={% url 'user_registration' %} class="cs-a">Нет аккаунта?</a>
                 </form>
             </div>
         </div>

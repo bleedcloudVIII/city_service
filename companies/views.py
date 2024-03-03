@@ -122,7 +122,7 @@ def login(request):
             print(company)
             if company:
                 print('wqdqqwd')
-                auth.login(request, company)
+                # auth.login(request, company)
                 print('adwd')
                 return HttpResponseRedirect(reverse('company_index'))
             else:
