@@ -6,7 +6,7 @@ class UserLoginForm(AuthenticationForm):
     username = forms.CharField(widget=forms.TextInput(
         attrs={
             'class': 'cs-input',
-            'placeholder': 'Введите логин компании',
+            'placeholder': 'Введите имя пользователя',
         }
     ))
     

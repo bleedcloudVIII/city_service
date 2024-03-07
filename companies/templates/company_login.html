@@ -35,7 +35,7 @@
                 <div>
                     {% comment %} <form method="post" action="{% url 'login'  %}"> {% endcomment %}
                     <form method="post" action="{% url 'company_login'%}">
-                        {% comment %} {% csrf_token %} {% endcomment %}
+                        {% csrf_token %}
                         {% comment %} {{ form.as_p }} {% endcomment %}
                         {% comment %} <input class="cs-input" placeholder="Логин"> {% endcomment %}
                             {% comment %} <input class="cs-input" type="text" id="inputLogin"> {% endcomment %}

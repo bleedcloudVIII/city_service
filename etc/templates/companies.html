@@ -1,0 +1,127 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/company_style.css" rel=stylesheet>
+    <title>CityService</title>
+</head>
+
+<body>
+    <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/index.js"></script>
+
+    <header>
+        <div class="container ">
+            <div class="row">
+                <div class="col-11">
+                    <h1 class="text-left cs-h1">CityService</h1>
+                </div>
+                <div class="col-1 cs-registration">
+                    {% if request.user.is_authenticated %}
+                        <a href={%url 'account_profile'%} class="cs-a-registr">Профиль</a>                        
+                        <a href={% url 'account_logout'%} class="cs-a-registr">Выйти</a>                        
+                    {% else %}
+                        <a href={% url 'account_login'%} class="cs-a-registr">Войти</a>
+                        <a href={% url 'account_registration'%} class="cs-a-registr">Регистрация</a>
+                    {% endif %}
+                    
+                </div>
+            </div>
+        </div>
+        <h1></h1>
+    </header>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 cs-input-panel ">
+                <form class="cs-form" action="#" method="get">
+                    <input placeholder="Услуга" class="cs-input">
+                    <button class="cs-button">
+                        <span class="cs-span">Найти</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 cs-panel">
+                <div class="spez-name">Специализация</div>
+                <div class="spez">
+                    <!-- Выбранные специализации -->
+                    <label id="vibrannie_spez" hidden="true" class="cs-vibrannie-spez-label"></label>
+                    <div class="spez-cut" id="spez_cut_list">
+                        <ul class="cs-spez-list">
+                            {% for spez in spezs %}
+                                <li>
+                                    <label class="cs-label" >
+                                        <input type="checkbox" class="cs-checkbox">
+                                        <span>{{spez.name}}</span>
+                                    </label>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>       
+                </div>
+                <div class="spez-name">Услуги</div>
+                <div class="spez">
+                    <!-- Выбранные специализации -->
+                    <label id="vibrannie_spez" hidden="true" class="cs-vibrannie-spez-label"></label>
+                    <div class="spez-cut" id="spez_cut_list">
+                        <ul class="cs-spez-list">
+                            {% for service in services %}
+                                <li>
+                                    <label class="cs-label" >
+                                        <input type="checkbox" class="cs-checkbox">
+                                        <span>{{service.name}}</span>
+                                    </label>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>       
+                </div>
+            </div>
+
+            <div class="col-9 cs-spezi">
+                <div class="cs-spezi_list">
+                    <div class="container">
+                        {% for company in companies %}
+                        <div class="row">
+                            <div class="column-10">
+                                <div class="cs-spez">
+                                    <a class="cs-vakansiya-ssilka" href="#">
+                                        <span class="cs-vakansiya-name">{{company.name}}</span>
+                                    </a>
+                                    <br>
+                                    <span class="cs-vakansiya-spez">{{company.spez}}</span>
+                                    <span class="tochka"> • </span>
+                                    <span class="cs-vakansiya-company">{{company.address}}</span>
+                                    <br>
+                                    <span class="cs-vakansiya-tegi">
+                                        {% for service in company.services %}
+                                            <span class="teg">{{service}}</span>
+                                            <span class="tochka"> • </span>
+                                        {% endfor %}
+                                    </span>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+
+        </footer>
+
+</body>
+
+</html>

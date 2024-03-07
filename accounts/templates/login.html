@@ -1,0 +1,52 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/login.css" rel="stylesheet">
+    <title>CityService</title>
+</head>
+
+<body>
+    <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/index.js"></script>
+
+    <!-- Работникам, Работодателям -->
+    <!-- Создать резюме, войти, регистрация -->
+    <!-- footer - фигня снизу -->
+    <header>
+        <div class="container ">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-left cs-h1"><a href={% url 'companies' %} class="cs-a2">CityService</a></h1>
+                </div>
+            </div>
+        </div>
+        <h1></h1>
+    </header>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col cs-form">
+                <br>
+                <form method="post" action={% url 'account_login' %}>
+                    {% csrf_token %}
+                    {{ form.username }}
+                    <br>
+                    {{ form.password }}
+                    <br>
+                    <input type="submit" class="cs-button"></input>
+                    <br>
+                    <a href={% url 'account_registration' %} class="cs-a">Нет аккаунта?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

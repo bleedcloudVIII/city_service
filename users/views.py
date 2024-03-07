@@ -10,6 +10,12 @@ from users.models import User
     # path('cityserivce/users/login/'),
     # path('cityserivce/users/profile/'),
     
+def logout(request):
+    print(request)
+    print(request.user)
+    auth.logout(request)
+    return HttpResponseRedirect(reverse('company_index'))    
+    
 def registration(request):
     # 	form = CompanyRegistrationForm(data=request.POST)
 	# if form.is_valid():
@@ -26,6 +32,8 @@ def registration(request):
 	# context = {'form': form}
 	# return render(request, 'company_registration.html', context)
     if request.method == 'POST':
+        print("REGISTRATION")
+        print(request.POST)
         form = UserRegistrationForm(data=request.POST)
         print(form.errors.as_json)
         if form.is_valid():
@@ -73,13 +81,15 @@ def login(request):
 	# }
     # return render(request, 'company_login.html', context)
     if request.method == 'POST':
+        print("LOGIN")
+        print(request.POST)
         form = UserLoginForm(data=request.POST)
         if form.is_valid():
             username = request.POST['username']
             password = request.POST['password']
-            user = auth.authenticate(username, password)
+            user = auth.authenticate(username=username, password=password)
             if user:
-                auth.login()
+                auth.login(request, user)
                 return HttpResponseRedirect(reverse('company_index'))
     else:
         form = UserLoginForm()
