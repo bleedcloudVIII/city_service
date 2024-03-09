@@ -6,13 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/profile.css" rel="stylesheet">
+    <link href="/static/profile_style.css" rel="stylesheet">
     <title>CityService</title>
 </head>
 
 <body>
     <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/static/index.js"></script>
+    <script src="/static/profile.js"></script>
 
     <!-- Работникам, Работодателям -->
     <!-- Создать резюме, войти, регистрация -->
@@ -35,7 +35,14 @@
         <div class="row">
             <div class="col">
                 <div class="cs-profile-div">
-                    
+                    {% if form.errors %}
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                {{ error }}
+                                <br>
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
                     <form method="PUT" action="">
                         <label class="cs-label">Имя пользователя:</label>
                         {{ account.username }}
@@ -76,20 +83,34 @@
                         <br>
                         <label>Телефоны</label>
                         {% if phones %}
-                            <br>
                             {% for phone in phones %}
-                                <span class="tochka"> • </span>
-                                {{ phone.phone }}
+                                <div>
+                                    {% comment %} <span class="tochka"> • </span> {% endcomment %}
+                                    <form method="POST" action={% url 'delete_phone' %}>
+                                        {% csrf_token %}
+                                        {{ phone.phone }}
+                                        <input type="hidden" name='pk' value={{phone.pk}}>
+                                        <input type="hidden" name='phone' value={{phone.phone}}>
+                                        <input type="hidden" name='company_id' value={{phone.company.id}}>
+                                        <input type="submit" class="cs-button-delete" value="-">
+                                    </form>
+                                </div>
                             {% endfor %}
-                        {% endif %}                        
-                        <form method="POST" action={% url 'add_phone'%}>
-                            {% csrf_token %}
-                            {{ formPhone.phone}}
+                        {% endif %}
+                        <input type="submit" id="add_panel_knopka" class="cs-button-delete" value="Добавить" onclick=add_phone_panel(0)>
+                        <br>
+                        <div hidden=true id="add_phone_panel">                        
+                            <form method="POST" action={% url 'add_phone'%}>
+                                {% csrf_token %}
+                                {{ formPhone.phone}}
+                                <b></b>
+                                <br>
+                                <input type="submit" class="cs-button" value="Добавить">
+                            </form>
                             <br>
-                            <input type="submit" class="cs-button" value="Добавить">
-                        </form>
-                        <br>
-                        <br>
+                            <br>
+                            {% comment %} <input type="submit" class="cs-button-delete" value="Скрыть" onclick=add_phone_panel(1)> {% endcomment %}
+                        </div>
                         <label>Специализации</label>
                         <br>
                         {% if info.specialization %}

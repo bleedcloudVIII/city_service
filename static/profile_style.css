@@ -1,0 +1,141 @@
+:root {
+    --colorBlack: #1D0F0F;
+    /* --colorBlack: #2e2b29; */
+    --colorWhite: #fdfdfd;
+    --colorGray: #a3a3a3;
+    /* --colorGray: #878787; */
+
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--colorWhite);
+}
+.cs-header-text {
+    size: 10px;
+}
+.cs-nadpis{
+    padding: 15px;
+    margin: 10px;
+    color: var(--colorWhite);
+    background-color: var(--colorBlack);
+    
+}
+.cs-nadpis-div{
+    /* display: flex; */
+    align-items: center;
+    /* justify-content: space-around; */
+}
+/* .cs-button-div{ */
+/* text-align: right; */
+/* float: right; */
+/* } */
+.cs-h1 {
+    color: var(--colorWhite);
+}
+
+.cs-h5 {
+    color: var(--colorWhite);
+}
+
+.container-header {
+    background-color: var(--colorBlack);
+}
+
+header {
+    background-color: var(--colorBlack);
+    margin-bottom: -15px;
+}
+
+hr {
+    color: var(--colorWhite);
+}
+
+.cs-form {
+    margin-top: 10px;
+    margin-left: -12px;
+    display: flex;
+    /* margin-top: 20px; */
+
+    background-color: var(--colorBlack);
+    padding: 10px;
+    border-color: var(--colorWhite);
+    border-radius: 8px;
+    /* margin-right: 400px; */
+    margin-left: -12px;
+}
+.cs-button {
+    margin-top: 10px;
+    float: left;
+    height: 30px;
+    width: 100px;
+    border-radius: 8px;
+    background-color: var(--colorWhite);
+    color: var(--colorBlack);
+    border-style: hidden;
+}
+.cs-button-delete {
+    /* margin-top: 10px; */
+    /* float: left; */
+    /* height: 2px; */
+    /* width: 5px; */
+    /* width: 7px; */
+    border-radius: 4px;
+    background-color: var(--colorWhite);
+    color: var(--colorBlack);
+    border-style: hidden;
+}
+.cs-a2{
+    text-decoration: none;
+    color: var(--colorWhite);
+}
+.cs-a{
+    text-decoration: none;
+    color: var(--colorWhite);
+    margin-left: 10px;
+}
+.cs-voiti{
+    margin-left: 10px;
+}
+.cs-input {
+    margin-top: 10px;
+    text-decoration: none;
+    padding: 15px;
+    height: 30px;
+    /* width: 50vw; */
+    width: 100;
+    min-width: 100px;
+    margin-right: 10px;
+    border-radius: 8px;
+    /* border-style: hidden; */
+    border-color: var(--colorWhite);
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
+}
+
+.cs-label{
+    color: var(--colorWhite);
+
+}
+
+.cs-profile-div{
+    padding: 10px;
+    background-color: var(--colorBlack);
+    border-radius: 8px;
+    color: var(--colorWhite);
+}
+
+.tochka{
+    /* white-space: pre-wrap; */
+
+    color: var(--colorWhite);
+}
+input:invalid {
+    color: red;
+    /* turn to red as long as pattern do not match */
+}
+input:invalid+b:before {
+    content: 'Неправильный формат';/* add text untill patterns matches */
+}
+input:invalid+b+[type="submit"] {
+    display: none; /* hide input submit untill pattern matches */
+  }

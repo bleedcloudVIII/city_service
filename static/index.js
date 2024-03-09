@@ -37,3 +37,8 @@ function addRegion(region)
     string = string.replace(',', ', ');
     label.textContent = string;
 }
+
+function add_phone_panel()
+{
+    console.log("ADQWDQW")
+}

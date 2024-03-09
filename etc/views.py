@@ -56,5 +56,8 @@ def company_add_phone(request):
         phone = Phone.objects.create(phone=phone, company=company)
     return HttpResponseRedirect(reverse('account_profile'))
 
-# def company_delete_phone(request):
-#     form = CompanyAddPhone(request.Phone)
+def company_delete_phone(request):
+    pk = request.POST['pk']
+    phone = Phone.objects.get(id=pk)
+    phone.delete()
+    return HttpResponseRedirect(reverse('account_profile'))

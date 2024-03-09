@@ -31,6 +31,8 @@ from accounts.views import profile
 
 from etc.views import companies
 from etc.views import company_add_phone
+from etc.views import company_delete_phone
+
 urlpatterns = [
     path('cityservice/admin/', admin.site.urls),
     
@@ -40,6 +42,8 @@ urlpatterns = [
     path('cityservice/accounts/profile', profile, name='account_profile'),
     
     path('cityservice/account/add_phone', company_add_phone, name='add_phone'),
+    path('cityservice/account/delete_phone', company_delete_phone, name='delete_phone'),
+    
     
     path('cityservice/companies', companies, name='companies'),     
 ]
