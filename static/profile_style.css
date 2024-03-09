@@ -138,4 +138,12 @@ input:invalid+b:before {
 }
 input:invalid+b+[type="submit"] {
     display: none; /* hide input submit untill pattern matches */
-  }
+}
+
+.cs-input-base
+{
+    border: none;
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
+    width: 150px;
+}

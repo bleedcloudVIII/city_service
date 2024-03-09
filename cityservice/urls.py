@@ -32,6 +32,13 @@ from accounts.views import profile
 from etc.views import companies
 from etc.views import company_add_phone
 from etc.views import company_delete_phone
+from etc.views import change_rank
+from etc.views import change_email
+from etc.views import change_name
+from etc.views import change_ownership
+from etc.views import change_address
+
+
 
 urlpatterns = [
     path('cityservice/admin/', admin.site.urls),
@@ -43,6 +50,12 @@ urlpatterns = [
     
     path('cityservice/account/add_phone', company_add_phone, name='add_phone'),
     path('cityservice/account/delete_phone', company_delete_phone, name='delete_phone'),
+    path('cityservice/account/change_rank', change_rank, name='change_rank'),
+    path('cityservice/account/change_email', change_email, name='change_email'),
+    path('cityservice/account/change_name', change_name, name='change_name'),
+    path('cityservice/account/change_ownership', change_ownership, name='change_ownership'),
+    path('cityservice/account/change_address', change_address, name='change_address'),
+    
     
     
     path('cityservice/companies', companies, name='companies'),     

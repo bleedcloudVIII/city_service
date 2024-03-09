@@ -38,7 +38,3 @@ function addRegion(region)
     label.textContent = string;
 }
 
-function add_phone_panel()
-{
-    console.log("ADQWDQW")
-}

@@ -46,16 +46,20 @@
                     <form method="PUT" action="">
                         <label class="cs-label">Имя пользователя:</label>
                         {{ account.username }}
+                        {% comment %} <br>s {% endcomment %}
+                        {% comment %} <br> {% endcomment %}
+                        {% comment %} <label>Почта:</label> {% endcomment %}
                         <br>
-                        <br>
-                        <label>Почта:</label>
-                        {% if account.email %}    
-                            {{ account.email }}
-                        {% else %}
-                            
-                        {% endif %}
+                        <form action={% url 'change_email' %} method="POST">
+                            <label>Почта</label>
+                            {% csrf_token %}
+                            <input placeholder="X@mail.ru" class="cs-input-base" type="text" name="email" value={{ info.email }}>
+
+                            {% comment %} <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="X@mail.ru" class="cs-input-base" type="text" name="email" value={{ info.email }}> {% endcomment %}
+                            {% comment %} <input type="submit" id="button_rank" class="" hidden=true> {% endcomment %}
+                        </form>
                     </form>
-                    <br>
+                    {% comment %} <br> {% endcomment %}
                     {% if account.group.id == 1 %}
                         <label>Имя</label>
                         {{ info.first_name }}
@@ -65,22 +69,47 @@
                         {{ info.last_name }}
                         <br>
                     {% else %}
-                        <label>Имя компании</label>
-                        {{ info.name }}
-                        <br>
-                        <br>
-                        <label>Форма собственности</label>
-                        {{ info.type_of_ownership }}
-                        <br>
-                        <br>
-                        <label>Разряд</label>
-                        {{ info.rank }}
-                        <br>
+                        {% comment %} <label>Имя компании</label> {% endcomment %}
+                        <form action={% url 'change_name' %} method="POST">
+                            <label>Имя компании</label>
+                            {% csrf_token %}
+                            <input class="cs-input-base" type="text" name="name" value={{ info.name }}>
+                            {% comment %} <input type="submit" id="button_rank" class="" hidden=true> {% endcomment %}
+                        </form>
+                        {% comment %} <br> {% endcomment %}
+                        {% comment %} <label>Форма собственности</label> {% endcomment %}
+                        <form action={% url 'change_ownership' %} method="POST">
+                            <label>Форма собственности</label>
+                            {% csrf_token %}
+                            <input class="cs-input-base" type="text" name="type_of_ownership" value={{ info.type_of_ownership }}>
+                            {% comment %} <input type="submit" id="button_rank" class="" hidden=true> {% endcomment %}
+                        </form>
+                        {% comment %} <div> {% endcomment %}
+                        <form action={% url 'change_rank' %} method="POST">
+                            <label>Разряд</label>
+                            {% csrf_token %}
+                            <input  class="cs-input-base" type="text" name="rank" value={{ info.rank }}>
+                            {% comment %} <input type="submit" id="button_rank" class="" hidden=true> {% endcomment %}
+                        </form>
+                        {% comment %} </div> {% endcomment %}
+
+                        {% comment %} <form>
+                            <label>Разряд</label>
+                            <input class="cs-input" type="text" name="rank" value={{ info.rank }}>
+                        </form> {% endcomment %}
+                        {% comment %} {{ info.rank }} {% endcomment %}
+                        {% comment %} <br>
                         <br>
                         <label>Адрес</label>
                         {{ info.address }}
-                        <br>
-                        <br>
+                        <br> {% endcomment %}
+                        {% comment %} <br> {% endcomment %}
+                        <form action={% url 'change_address' %} method="POST">
+                            <label>Адрес</label>
+                            {% csrf_token %}
+                            <input  class="cs-input-base" type="text" name="address" value={{ info.address }}>
+                            {% comment %} <input type="submit" id="button_rank" class="" hidden=true> {% endcomment %}
+                        </form>
                         <label>Телефоны</label>
                         {% if phones %}
                             {% for phone in phones %}
@@ -97,7 +126,7 @@
                                 </div>
                             {% endfor %}
                         {% endif %}
-                        <input type="submit" id="add_panel_knopka" class="cs-button-delete" value="Добавить" onclick=add_phone_panel(0)>
+                        <input type="submit" id="add_panel_knopka" class="cs-button-delete" value="Добавить номер" onclick=add_phone_panel(0)>
                         <br>
                         <div hidden=true id="add_phone_panel">                        
                             <form method="POST" action={% url 'add_phone'%}>
@@ -111,6 +140,7 @@
                             <br>
                             {% comment %} <input type="submit" class="cs-button-delete" value="Скрыть" onclick=add_phone_panel(1)> {% endcomment %}
                         </div>
+                        <br>
                         <label>Специализации</label>
                         <br>
                         {% if info.specialization %}

@@ -13,3 +13,11 @@ function add_phone_panel(f)
         document.getElementById('add_panel_knopka').value='Добавить';
     }
 }
+
+function add_button_rank(f)
+{   
+    if (!f)
+    {
+        document.getElementById('button_rank').hidden = false;
+    }
+}

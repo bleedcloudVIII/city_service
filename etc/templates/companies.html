@@ -104,10 +104,10 @@
                                     <span class="cs-vakansiya-company">{{company.address}}</span>
                                     <br>
                                     <span class="cs-vakansiya-tegi">
-                                        {% for service in company.services %}
+                                        {% comment %} {% for service in company.services %}
                                             <span class="teg">{{service}}</span>
                                             <span class="tochka"> • </span>
-                                        {% endfor %}
+                                        {% endfor %} {% endcomment %}
                                     </span>
                                     <br>
                                 </div>
