@@ -10,12 +10,25 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--colorWhite);
 }
-
-
 .cs-header-text {
     size: 10px;
 }
-
+.cs-nadpis{
+    padding: 15px;
+    margin: 10px;
+    color: var(--colorWhite);
+    background-color: var(--colorBlack);
+    
+}
+.cs-nadpis-div{
+    /* display: flex; */
+    align-items: center;
+    /* justify-content: space-around; */
+}
+/* .cs-button-div{ */
+/* text-align: right; */
+/* float: right; */
+/* } */
 .cs-h1 {
     color: var(--colorWhite);
 }
@@ -36,9 +49,7 @@ header {
 hr {
     color: var(--colorWhite);
 }
-.cs-label{
-    color: var(--colorWhite);
-}
+
 .cs-form {
     margin-top: 10px;
     margin-left: -12px;
@@ -55,18 +66,21 @@ hr {
 .cs-button {
     margin-top: 10px;
     float: left;
-    height: 40px;
-    width: 180px;
+    height: 30px;
+    width: 100px;
     border-radius: 8px;
     background-color: var(--colorWhite);
     color: var(--colorBlack);
     border-style: hidden;
 }
-
-
+.cs-a2{
+    text-decoration: none;
+    color: var(--colorWhite);
+}
 .cs-a{
     text-decoration: none;
     color: var(--colorWhite);
+    margin-left: 10px;
 }
 .cs-voiti{
     margin-left: 10px;
@@ -75,81 +89,32 @@ hr {
     margin-top: 10px;
     text-decoration: none;
     padding: 15px;
-    height: 50px;
-    /* width: 390px; */
-    width: 50vw;
+    height: 30px;
+    /* width: 50vw; */
+    width: 100;
     min-width: 100px;
     margin-right: 10px;
     border-radius: 8px;
-    border-style: hidden;
-    background-color: var(--colorWhite);
-    color: var(--colorBlack);
+    /* border-style: hidden; */
+    border-color: var(--colorWhite);
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
 }
 
-.panel{
+.cs-label{
+    color: var(--colorWhite);
+
+}
+
+.cs-profile-div{
+    padding: 10px;
     background-color: var(--colorBlack);
     border-radius: 8px;
+    color: var(--colorWhite);
 }
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-  }
-  
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #000000;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #000000;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
 
-.cs-div{
-  color: var(--colorWhite);
+.tochka{
+    /* white-space: pre-wrap; */
+
+    color: var(--colorBlack);
 }

@@ -27,10 +27,10 @@ from accounts.views import registration
 from accounts.views import login
 from accounts.views import logout
 from accounts.views import profile
+# from accounts.views import comapny_add_phone
 
-from etc.views import companies as companies
-
-
+from etc.views import companies
+from etc.views import company_add_phone
 urlpatterns = [
     path('cityservice/admin/', admin.site.urls),
     
@@ -39,6 +39,7 @@ urlpatterns = [
     path('cityservice/accounts/logout', logout, name='account_logout'),
     path('cityservice/accounts/profile', profile, name='account_profile'),
     
-
-    path('cityservice/companies', companies, name='companies'),  
+    path('cityservice/account/add_phone', company_add_phone, name='add_phone'),
+    
+    path('cityservice/companies', companies, name='companies'),     
 ]

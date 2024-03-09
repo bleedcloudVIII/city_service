@@ -2,24 +2,52 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib import auth
 from django.core.exceptions import ValidationError
+from django.http import HttpResponse
 
 from accounts.forms import AccountRegistrationForm, AccountLoginForm
+from etc.forms import CompanyAddPhone
 
 from accounts.models import Account, Group
 
-from etc.models import User, Company
-    
+from etc.models import User, Company, Phone
+
 def logout(request):
-    print(request)
-    print(request.user)
     auth.logout(request)
     return HttpResponseRedirect(reverse('companies'))    
     
+
+
+
+def profile(request):
+    account = Account.objects.get(username=request.user)
+    context = {}
+    if account:
+        context['account'] = account
+        if account.group.id == 1:
+            # Account is user
+            user = User.objects.get(account=account.pk)
+            context['info'] = user
+        else:
+            # Account is company
+            company = Company.objects.get(account=account.pk)
+            # phones = Phone.objects.get(company=company.pk)
+            # print(company.services)
+            # print(company.services)
+            phones = Phone.objects.filter(company=company.pk)
+            print(phones)
+            context['info'] = company
+            context['formPhone'] = CompanyAddPhone()
+            context['phones'] = phones
+    else:
+            # Return Error
+        pass
+    return render(request, 'profile.html', context)
+
 def registration(request):
     if request.method == 'POST':
         form = AccountRegistrationForm(data=request.POST)
-        print(request.POST)
-        print(form.errors.as_json())
+        print(form.errors.as_data())
+        
         if form.is_valid():
             username = request.POST['username']
             password1 = request.POST['password1']
@@ -52,6 +80,7 @@ def registration(request):
 def login(request):
     if request.method == 'POST':
         form = AccountLoginForm(data=request.POST)
+        print(form.errors.as_data())
         if form.is_valid():
             username = request.POST['username']
             password = request.POST['password']
@@ -63,6 +92,3 @@ def login(request):
         form = AccountLoginForm()
     context = {'form': form}
     return render(request, 'login.html', context)
-
-def profile(request):
-    return render(request, 'profile.html')

@@ -1,6 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, forms,  UserCreationForm
 
 from accounts.models import Account
+from etc.models import Company
 
 class AccountLoginForm(AuthenticationForm):
     username = forms.CharField(widget=forms.TextInput(

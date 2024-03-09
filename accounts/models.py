@@ -17,6 +17,8 @@ class Account(AbstractUser):
     
     groups = None
     user_permissions = None
+    first_name = None
+    last_name = None
     
     class Meta:
         db_table = "auth_account"

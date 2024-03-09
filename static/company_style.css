@@ -1,0 +1,252 @@
+:root {
+    --colorBlack: #1D0F0F;
+    /* --colorBlack: #2e2b29; */
+    --colorWhite: #fdfdfd;
+    --colorGray: #a3a3a3;
+    /* --colorGray: #878787; */
+
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--colorWhite);
+}
+/* .cs-input{
+
+} */
+footer {
+    background-color: var(--colorBlack);
+    color: var(--colorBlack);
+}
+
+.cs-header-text {
+    size: 10px;
+}
+
+
+.cs-ww{
+    color: green;
+}
+
+.cs-h1 {
+    color: var(--colorWhite);
+}
+
+.cs-h5 {
+    color: var(--colorWhite);
+}
+
+.container-header {
+    background-color: var(--colorBlack);
+}
+
+header {
+    background-color: var(--colorBlack);
+    margin-bottom: -15px;
+}
+
+hr {
+    color: var(--colorWhite);
+}
+
+.cs-a-student {
+    /* margin-left: 120px; */
+    margin-right: 10px;
+    margin-left: -21px;
+}
+
+
+
+.cs-a-student{
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: var(--colorBlack);
+    color: var(--colorGray)
+}
+.cs-a-company {
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: var(--colorBlack);
+    color: var(--colorWhite)
+}
+
+.cs-users {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.cs-panel {
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 8px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.cs-spezi {
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.cs-spezi_list{
+
+}
+.cs-button-otklik{
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
+    border-radius: 8px;
+    margin-bottom: 5px;
+    border-style: hidden;
+    font-size: 13px;
+}
+.cs-spez{
+    background-color: var(--colorWhite);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    border-style: hidden;
+    padding-left: 10px;
+}
+.cs-vakansiya-ssilka{
+    text-decoration: none;
+}
+.cs-vakansiya-name, .cs-vakansiya-opisanie, .cs-vakansiya-spez, .cs-vakansiya-regioni, .cs-vakansiya-company {
+    color: var(--colorBlack);
+}
+.cs-vakansiya-name{
+    font-size: 30px;
+
+}
+.cs-vakansiya-spez, .cs-vakansiya-regioni, .cs-vakansiya-company{
+    font-size: 14px;
+}
+.cs-vakansiya-tegi{
+    font-size: 18px;
+}
+.teg{
+    color: var(--colorBlack);
+}
+.cs-vakansiya-company{
+
+}
+.tochka{
+    /* white-space: pre-wrap; */
+
+    color: var(--colorBlack);
+}
+.cs-logo-img{
+    width: 100px;
+    height: 100px;
+}
+/* .cs-button-div{ */
+/* text-align: right; */
+/* float: right; */
+/* } */
+.cs-spez-list, .cs-regioni-list {
+    list-style-type: none;
+    text-align: left;
+}
+
+.checkbox-a {
+    border-radius: 10px;
+}
+
+.cs-input {
+
+    /* text-decoration: none; */
+    /* padding: 15px; */
+    /* height: 50px; */
+    /* width: 390px; */
+    /* width: 50vw; */
+    /* min-width: 100px; */
+    /* margin-right: 10px; */
+    /* border-radius: 8px; */
+    /* border-style: hidden; */
+    /* background-color: var(--colorBlack); */
+    /* color: var(--colorWhite); */
+}
+
+.cs-button {
+    /* float: right; */
+    /* height: 50px; */
+    /* width: 120px; */
+    /* border-radius: 8px; */
+    /* background-color: var(--colorWhite); */
+    /* color: var(--colorBlack); */
+    /* border-style: hidden; */
+
+    /* display: ; */
+    /* margin: 0 auto; */
+
+}
+
+.cs-input-panel,
+.cs-users {
+    display: flex;
+    align-items: left;
+    /* justify-content: space-around; */
+}
+
+/* .cs-panel, .cs-vakansii{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+} */
+.cs-registration{
+    margin-top: 5px;
+}
+.cs-a-registr{
+    text-decoration: none;
+    color: var(--colorWhite);
+}
+.cs-form {
+    margin-top: 10px;
+    margin-left: -12px;
+    display: flex;
+    /* margin-top: 20px; */
+
+    background-color: var(--colorBlack);
+    padding: 10px;
+    border-color: var(--colorWhite);
+    border-radius: 8px;
+    /* margin-right: 400px; */
+    margin-left: -12px;
+}
+.cs-registration{
+    color: var(--colorWhite);
+}
+.cs-button-list{
+    border-radius: 6px;
+    color: var(--colorBlack);
+    background-color: var(--colorWhite);
+    border-style: hidden;
+    font-size: 13px;
+    /* display: flex; */
+}
+.spez_cut, .regioni_cut{
+    /* min-height: 100px;
+    min-width: 50px;
+    overflow: auto; */
+}
+.spez_all, .regioni_all{
+    max-height: 200px;
+    overflow: auto;
+}
+.cs-vibrannie-spez-label, .cs-vibrannie-regioni-label{
+    color: var(--colorGray);
+}
+
+/* Checkbox */
+.cs-label:hover{
+    color: var(--colorGray);
+    
+}
+
