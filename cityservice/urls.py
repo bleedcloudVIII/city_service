@@ -37,6 +37,9 @@ from etc.views import change_email
 from etc.views import change_name
 from etc.views import change_ownership
 from etc.views import change_address
+from etc.views import spec_create
+from etc.views import service_create
+
 
 
 
@@ -56,6 +59,8 @@ urlpatterns = [
     path('cityservice/account/change_ownership', change_ownership, name='change_ownership'),
     path('cityservice/account/change_address', change_address, name='change_address'),
     
+    path('cityservice/specialization/create', spec_create, name='spec_create'),
+    path('cityservice/service/create', service_create, name='service_create'),
     
     
     path('cityservice/companies', companies, name='companies'),     

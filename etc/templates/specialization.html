@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/regist.css" rel="stylesheet">
+    <title>CityService</title>
+</head>
+
+<body>
+    <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/index.js"></script>
+
+    <!-- Работникам, Работодателям -->
+    <!-- Создать резюме, войти, регистрация -->
+    <!-- footer - фигня снизу -->
+    <header>
+        <div class="container ">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-left cs-h1"><a class="cs-a" href={% url 'companies' %}>CityService</a></h1>
+                    {% comment %} <h1 class="text-left cs-h1"><a class="cs-a" href="#">CityService</a></h1> {% endcomment %}
+
+                    {% comment %} <h5 class="text-left cs-h5 cs-header-text">Найдqwdqwwdи практику своей мечты!</h5> {% endcomment %}
+                </div>
+            </div>
+        </div>
+        <h1></h1>
+    </header>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col cs-form">
+                <div style="color: red;">
+                    <form method="post" action={% url 'spec_create' %}>
+                        {% csrf_token %}
+                        {{ form.name }}
+                        <br>
+                        <input type="submit" class="cs-button"></input>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

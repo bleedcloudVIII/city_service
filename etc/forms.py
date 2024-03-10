@@ -1,6 +1,6 @@
 from django.contrib.auth.forms import forms
 
-from etc.models import Company
+from etc.models import Company, Specialization, Service
 
 class CompanyAddPhone(forms.Form):
     phone = forms.CharField(widget=forms.TextInput(
@@ -31,3 +31,36 @@ class CompanyChangeRank(forms.Form):
     class Meta:
         model = Company
         fields = ('rank')
+        
+class SpecializationCreate(forms.Form):
+    name = forms.CharField(widget=forms.TextInput(
+        attrs={
+            'class': 'cs-input',
+            'placeholder': 'Введите название специализации'
+        }
+    ))
+    
+    class Meta:
+        model = Specialization
+        fields = ('name')
+        
+        
+class ServiceCreate(forms.Form):
+    name = forms.CharField(widget=forms.TextInput(
+        attrs={
+            'class': 'cs-input',
+            'placeholder': 'Введите название услуги',
+            'onclick': 'select_spec()',
+        }
+    ))
+    
+    spec_name = forms.CharField(widget=forms.TextInput(
+        attrs={
+            'class': 'cs-input',
+            'placeholder': 'Введите название специализации'
+        }
+    ))
+    
+    class Meta:
+        model = Service
+        fields = ('name')

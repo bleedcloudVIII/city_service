@@ -1,9 +1,9 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse
 
-from etc.forms import CompanyAddPhone
+from etc.forms import CompanyAddPhone, SpecializationCreate, ServiceCreate
 
-from etc.models import Company, Phone
+from etc.models import Company, Phone, Specialization, Service
 from accounts.models import Account
 
 def companies(request):
@@ -49,7 +49,7 @@ def companies(request):
 
 def company_add_phone(request):
     form = CompanyAddPhone(request.POST)
-    if form:
+    if form.is_valid():
         phone = request.POST['phone']
         account = Account.objects.get(username=request.user)
         company = Company.objects.get(account=account.pk)
@@ -104,3 +104,33 @@ def change_address(request):
     company.address = address
     company.save()
     return HttpResponseRedirect(reverse('account_profile'))
+
+def spec_create(request):
+    print(request.POST)
+    if request.method == 'POST':
+        form = SpecializationCreate(request.POST)
+        if form.is_valid():
+            name = request.POST['name']
+            Specialization.objects.create(name=name)
+    else:
+        form = SpecializationCreate()
+    context = {'form': form}
+    return render(request, 'specialization.html', context)
+
+def service_create(request):
+    print(request.POST)
+    if request.method == 'POST':
+        form = ServiceCreate(request.POST)
+        if form.is_valid():
+            name = request.POST['name']
+            spec_name = request.POST['spec_name']
+            spec = Specialization.objects.get(name=spec_name)
+            Service.objects.create(
+                name=name,
+                specialization=spec
+            )
+    else:
+        form = ServiceCreate()
+    specializations = Specialization.objects.all()
+    context = {'form': form, 'specs': specializations}
+    return render(request, 'service.html', context)
