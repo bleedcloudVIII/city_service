@@ -5,11 +5,11 @@ from django.core.exceptions import ValidationError
 from django.http import HttpResponse
 
 from accounts.forms import AccountRegistrationForm, AccountLoginForm
-from etc.forms import CompanyAddPhone
+from etc.forms import CompanyAddPhone, CompanyAddService
 
 from accounts.models import Account, Group
 
-from etc.models import User, Company, Phone
+from etc.models import User, Company, Phone, Specialization, Service
 
 def logout(request):
     auth.logout(request)
@@ -35,9 +35,18 @@ def profile(request):
             # print(company.services)
             phones = Phone.objects.filter(company=company.pk)
             print(phones)
+            print(company)
+            # spec = Specialization.objects.get(id=1)
+            # service = Service.objects.get(id=1)
+            # company.specializations.add(spec)
+            # company.services.add(service)
+            print(company.services.all())
+            context['allServices'] = Service.objects.all()
             context['info'] = company
             context['formPhone'] = CompanyAddPhone()
+            context['formService'] = CompanyAddService()
             context['phones'] = phones
+            context['services'] = company.services.all()
     else:
             # Return Error
         pass

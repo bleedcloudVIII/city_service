@@ -1,7 +1,7 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse
 
-from etc.forms import CompanyAddPhone, SpecializationCreate, ServiceCreate
+from etc.forms import CompanyAddPhone, SpecializationCreate, ServiceCreate, CompanyAddService
 
 from etc.models import Company, Phone, Specialization, Service
 from accounts.models import Account
@@ -62,6 +62,25 @@ def company_delete_phone(request):
     phone.delete()
     return HttpResponseRedirect(reverse('account_profile'))
 
+def company_add_service(request):
+    print(request.POST)
+    form = CompanyAddService(request.POST)
+    if form.is_valid():
+        name = request.POST['name']
+        service = Service.objects.get(name=name)
+        account = Account.objects.get(username=request.user)
+        company = Company.objects.get(account=account.pk)
+        company.services.add(service)
+    return HttpResponseRedirect(reverse('account_profile'))
+
+def company_delete_service(request):
+    account = Account.objects.get(username=request.user)
+    company = Company.objects.get(account=account.pk)
+    pk = request.POST['pk']
+    service = Service.objects.get(id=pk)
+    company.services.remove(service)
+    return HttpResponseRedirect(reverse('account_profile'))
+
 def change_rank(request):
     rank = request.POST['rank']
     account = Account.objects.get(username=request.user)
@@ -80,12 +99,12 @@ def change_name(request):
     return HttpResponseRedirect(reverse('account_profile'))
 
 def change_email(request):
+    print("ASDDQW")
     print(request.POST)
     email = request.POST['email']
     account = Account.objects.get(username=request.user)
-    company = Company.objects.get(account=account.pk)
-    company.email = email
-    company.save()
+    account.email = email
+    account.save()
     return HttpResponseRedirect(reverse('account_profile'))
 
 def change_ownership(request):

@@ -46,20 +46,13 @@
                     <form method="PUT" action="">
                         <label class="cs-label">Имя пользователя:</label>
                         {{ account.username }}
-                        {% comment %} <br>s {% endcomment %}
-                        {% comment %} <br> {% endcomment %}
-                        {% comment %} <label>Почта:</label> {% endcomment %}
                         <br>
-                        <form action={% url 'change_email' %} method="POST">
-                            <label>Почта</label>
-                            {% csrf_token %}
-                            <input placeholder="X@mail.ru" class="cs-input-base" type="text" name="email" value={{ info.email }}>
-
-                            {% comment %} <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="X@mail.ru" class="cs-input-base" type="text" name="email" value={{ info.email }}> {% endcomment %}
-                            {% comment %} <input type="submit" id="button_rank" class="" hidden=true> {% endcomment %}
-                        </form>
                     </form>
-                    {% comment %} <br> {% endcomment %}
+                    <form action={% url 'change_email' %} method="POST">
+                        <label>Почта</label>
+                        {% csrf_token %}
+                        <input placeholder="X@mail.com" class="cs-input-base" type="text" name="email" value={{ account.email }}>
+                    </form>
                     {% if account.group.id == 1 %}
                         <label>Имя</label>
                         {{ info.first_name }}
@@ -69,55 +62,33 @@
                         {{ info.last_name }}
                         <br>
                     {% else %}
-                        {% comment %} <label>Имя компании</label> {% endcomment %}
                         <form action={% url 'change_name' %} method="POST">
                             <label>Имя компании</label>
                             {% csrf_token %}
-                            <input class="cs-input-base" type="text" name="name" value={{ info.name }}>
-                            {% comment %} <input type="submit" id="button_rank" class="" hidden=true> {% endcomment %}
+                            <input placeholder="Имя компании" class="cs-input-base" type="text" name="name" value={{ info.name }}>
                         </form>
-                        {% comment %} <br> {% endcomment %}
-                        {% comment %} <label>Форма собственности</label> {% endcomment %}
                         <form action={% url 'change_ownership' %} method="POST">
                             <label>Форма собственности</label>
                             {% csrf_token %}
-                            <input class="cs-input-base" type="text" name="type_of_ownership" value={{ info.type_of_ownership }}>
-                            {% comment %} <input type="submit" id="button_rank" class="" hidden=true> {% endcomment %}
+                            <input placeholder="Форма собственности" class="cs-input-base" type="text" name="type_of_ownership" value={{ info.type_of_ownership }}>
                         </form>
-                        {% comment %} <div> {% endcomment %}
                         <form action={% url 'change_rank' %} method="POST">
                             <label>Разряд</label>
                             {% csrf_token %}
-                            <input  class="cs-input-base" type="text" name="rank" value={{ info.rank }}>
-                            {% comment %} <input type="submit" id="button_rank" class="" hidden=true> {% endcomment %}
+                            <input placeholder="Разряд" class="cs-input-base" type="text" name="rank" value={{ info.rank }}>
                         </form>
-                        {% comment %} </div> {% endcomment %}
-
-                        {% comment %} <form>
-                            <label>Разряд</label>
-                            <input class="cs-input" type="text" name="rank" value={{ info.rank }}>
-                        </form> {% endcomment %}
-                        {% comment %} {{ info.rank }} {% endcomment %}
-                        {% comment %} <br>
-                        <br>
-                        <label>Адрес</label>
-                        {{ info.address }}
-                        <br> {% endcomment %}
-                        {% comment %} <br> {% endcomment %}
                         <form action={% url 'change_address' %} method="POST">
                             <label>Адрес</label>
                             {% csrf_token %}
-                            <input  class="cs-input-base" type="text" name="address" value={{ info.address }}>
-                            {% comment %} <input type="submit" id="button_rank" class="" hidden=true> {% endcomment %}
+                            <input placeholder="Адрес" class="cs-input-base" type="text" name="address" value={{ info.address }}>
                         </form>
                         <label>Телефоны</label>
                         {% if phones %}
                             {% for phone in phones %}
                                 <div>
-                                    {% comment %} <span class="tochka"> • </span> {% endcomment %}
                                     <form method="POST" action={% url 'delete_phone' %}>
                                         {% csrf_token %}
-                                        {{ phone.phone }}
+                                        <span class="tochka"> • </span> {{ phone.phone }}
                                         <input type="hidden" name='pk' value={{phone.pk}}>
                                         <input type="hidden" name='phone' value={{phone.phone}}>
                                         <input type="hidden" name='company_id' value={{phone.company.id}}>
@@ -132,36 +103,51 @@
                             <form method="POST" action={% url 'add_phone'%}>
                                 {% csrf_token %}
                                 {{ formPhone.phone}}
-                                <b></b>
                                 <br>
                                 <input type="submit" class="cs-button" value="Добавить">
                             </form>
                             <br>
                             <br>
-                            {% comment %} <input type="submit" class="cs-button-delete" value="Скрыть" onclick=add_phone_panel(1)> {% endcomment %}
                         </div>
+                        <label>Услуги</label>
+                        {% if services %}
+                            {% for service in services %}
+                            <div>
+                                <form method="POST" action={% url 'delete_service' %}>
+                                    {% csrf_token %}
+                                    <span class="tochka"> • </span> {{ service.name }}
+                                    <input type="hidden" name='pk' value={{service.pk}}>
+                                    <input type="hidden" name='name' value={{service.name}}>
+                                    <input type="submit" class="cs-button-delete" value="-">
+                                </form>
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+                        <input type="submit" id="add_panel_knopka_service" class="cs-button-delete" value="Добавить услугу" onclick=add_service_panel(0)>
                         <br>
-                        <label>Специализации</label>
-                        <br>
-                        {% if info.specialization %}
-                            {% for spec in info.specialization %}
-                                {{ spec }}
+                        <div hidden=true id="add_service_panel">                        
+                            <form method="POST" action={% url 'add_service'%}>
+                                {% csrf_token %}
+                                <select id="select" onclick="select_service()">
+                                    {% for service in allServices%}
+                                        <option> {{ service.name }} </option>
+                                    {% endfor %}
+                                </select>
+                                <input hidden name="name" id="service_input" value="">
+                                {% comment %} {{ formService.name}} {% endcomment %}
+                                <br>
+                                <input type="submit" class="cs-button" value="Добавить">
+                            </form>
+                            <br>
+                            <br>
+                        </div>
+                        {% comment %} {% if info.services %}
+                            {% for service in services %}
+                                <span class="tochka"> • </span>
+                                {{ service.name }}
                                 <br>
                             {% endfor %}
-                            
-                        {% endif %}
-                        
-                        <br>
-                        <label>Услуги</label>
-                        <br>
-                        {% if info.services %}
-                            {% comment %} {% for service in info.services %}
-                                {{ service }}
-                                <br>
-                            {% endfor %} {% endcomment %}
-                        {% endif %}
-                        <br>
-                        <br>
+                        {% endif %} {% endcomment %}
                     {% endif %}
                 </div>
             </div>
