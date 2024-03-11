@@ -38,3 +38,7 @@ function addRegion(region)
     label.textContent = string;
 }
 
+function a()
+{
+    console.log(document.getElementById('input_spec'));
+}

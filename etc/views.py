@@ -10,40 +10,8 @@ def companies(request):
     context = {
         # 'companies': Company.objects.all(),
         'companies': Company.objects.all()[:10],
-        'spezs': [
-            {
-                'name': 'Ремонт',
-            },
-            {
-                'name': 'Пошив',
-            },
-            {
-                'name': 'Техническое обслуживание',
-            },
-            {
-                'name': 'Прачечная',
-            },
-            {
-                'name': 'Фотоателье',
-            },
-            {
-                'name': 'Баня',
-            },
-            {
-                'name': 'Парикмахерчкая',
-            },
-            {
-                'name': 'Ритуальные услуги',
-            },
-        ],
-        'services': [
-            {
-                'name': 'Ремонт часов',
-            },
-            {
-                'name': 'Ремонт мебели',
-            },
-        ],
+        'specs': Specialization.objects.all(),
+        # 'services': ,
     }
     return render(request, 'companies.html', context)
 
