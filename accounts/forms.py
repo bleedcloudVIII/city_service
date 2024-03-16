@@ -31,6 +31,13 @@ class AccountRegistrationForm(UserCreationForm):
         }
     ))
     
+    email = forms.CharField(widget=forms.EmailInput(
+        attrs={
+            'class': 'cs-input',
+            'placeholder': 'Введите email',
+        }
+    ))
+    
     password1 = forms.CharField(widget=forms.PasswordInput(
         attrs={
             'class': 'cs-input',
@@ -49,4 +56,4 @@ class AccountRegistrationForm(UserCreationForm):
     
     class Meta:
       model = Account
-      fields = ('username', 'password1', 'password2', 'choice') 
+      fields = ('username', 'password1', 'password2', 'choice', 'email') 

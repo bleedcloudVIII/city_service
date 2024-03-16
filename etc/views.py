@@ -3,7 +3,7 @@ from django.urls import reverse
 
 from etc.forms import CompanyAddPhone, SpecializationCreate, ServiceCreate, CompanyAddService
 
-from etc.models import Company, Phone, Specialization, Service
+from etc.models import Company, Phone, Specialization, Service, User
 from accounts.models import Account
 
 def companies(request):
@@ -66,13 +66,29 @@ def change_name(request):
     company.save()
     return HttpResponseRedirect(reverse('account_profile'))
 
-def change_email(request):
-    print("ASDDQW")
-    print(request.POST)
-    email = request.POST['email']
+# def change_email(request):
+#     print("ASDDQW")
+#     print(request.POST)
+#     email = request.POST['email']
+#     account = Account.objects.get(username=request.user)
+#     account.email = email
+#     account.save()
+#     return HttpResponseRedirect(reverse('account_profile'))
+
+def change_first_name(request):
+    first_name = request.POST['first_name']
     account = Account.objects.get(username=request.user)
-    account.email = email
-    account.save()
+    user = User.objects.get(account=account.pk)
+    user.first_name=first_name
+    user.save()
+    return HttpResponseRedirect(reverse('account_profile'))
+
+def change_last_name(request):
+    last_name = request.POST['last_name']
+    account = Account.objects.get(username=request.user)
+    user = User.objects.get(account=account.pk)
+    user.last_name=last_name
+    user.save()
     return HttpResponseRedirect(reverse('account_profile'))
 
 def change_ownership(request):

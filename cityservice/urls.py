@@ -35,13 +35,14 @@ from etc.views import company_delete_phone
 from etc.views import company_add_service
 from etc.views import company_delete_service
 from etc.views import change_rank
-from etc.views import change_email
+# from etc.views import change_email
 from etc.views import change_name
 from etc.views import change_ownership
 from etc.views import change_address
 from etc.views import spec_create
 from etc.views import service_create
-
+from etc.views import change_first_name
+from etc.views import change_last_name
 
 
 
@@ -60,12 +61,16 @@ urlpatterns = [
     path('cityservice/account/change_name', change_name, name='change_name'),
     path('cityservice/account/change_ownership', change_ownership, name='change_ownership'),
     path('cityservice/account/change_address', change_address, name='change_address'),
-    path('cityservice/account/change_email', change_email, name='change_email'),
+    # path('cityservice/account/change_email', change_email, name='change_email'),
     
     path('cityservice/specialization/create', spec_create, name='spec_create'),
     path('cityservice/service/create', service_create, name='service_create'),
     
-        path('cityservice/account/add_service', company_add_service, name='add_service'),
+    path('cityservice/account/change_first_name', change_first_name, name='change_first_name'),
+    path('cityservice/account/change_last_name', change_last_name, name='change_last_name'),
+    
+    
+    path('cityservice/account/add_service', company_add_service, name='add_service'),
     path('cityservice/account/delete_service', company_delete_service, name='delete_service'),
     
     path('cityservice/companies', companies, name='companies'),     

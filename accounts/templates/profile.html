@@ -43,104 +43,127 @@
                             {% endfor %}
                         {% endfor %}
                     {% endif %}
-                    <form method="PUT" action="">
-                        <label class="cs-label">Имя пользователя:</label>
+                    <div class="panel">
+                        <label>Имя пользователя:</label>
                         {{ account.username }}
-                        <br>
-                    </form>
-                    <form action={% url 'change_email' %} method="POST">
-                        <label>Почта</label>
-                        {% csrf_token %}
-                        <input placeholder="X@mail.com" class="cs-input-base" type="text" name="email" value={{ account.email }}>
-                    </form>
+                    <div>
+                    <div class="panel">
+                        <label>Почта:</label>           
+                        {% if account.email %}
+                                {{ account.email }}                     
+                        {% else %}
+                            <label>Отсутствует</label>
+                            {% comment %} <br> {% endcomment %}
+                        {% endif %}
+                    </div>
                     {% if account.group.id == 1 %}
-                        <label>Имя</label>
-                        {{ info.first_name }}
-                        <br>
-                        <br>
-                        <label>Фамилия</label>
-                        {{ info.last_name }}
-                        <br>
+                        <div class="panel">
+                            <form action={% url 'change_first_name' %} method="POST">
+                                <label>Имя:</label>
+                                {% csrf_token %}
+                                <input placeholder="Имя" class="cs-input-base" type="text" name="first_name" value={{ info.first_name }}>
+                            </form>
+                        </div>
+                        <div class="panel">
+                            <form action={% url 'change_last_name' %} method="POST">
+                                <label>Фамилия:</label>
+                                {% csrf_token %}
+                                <input placeholder="Фамилия" class="cs-input-base" type="text" name="last_name" value={{ info.last_name }}>
+                            </form>
+                        </div>
                     {% else %}
-                        <form action={% url 'change_name' %} method="POST">
-                            <label>Имя компании</label>
-                            {% csrf_token %}
-                            <input placeholder="Имя компании" class="cs-input-base" type="text" name="name" value={{ info.name }}>
-                        </form>
-                        <form action={% url 'change_ownership' %} method="POST">
-                            <label>Форма собственности</label>
-                            {% csrf_token %}
-                            <input placeholder="Форма собственности" class="cs-input-base" type="text" name="type_of_ownership" value={{ info.type_of_ownership }}>
-                        </form>
-                        <form action={% url 'change_rank' %} method="POST">
-                            <label>Разряд</label>
-                            {% csrf_token %}
-                            <input placeholder="Разряд" class="cs-input-base" type="text" name="rank" value={{ info.rank }}>
-                        </form>
-                        <form action={% url 'change_address' %} method="POST">
-                            <label>Адрес</label>
-                            {% csrf_token %}
-                            <input placeholder="Адрес" class="cs-input-base" type="text" name="address" value={{ info.address }}>
-                        </form>
-                        <label>Телефоны</label>
-                        {% if phones %}
-                            {% for phone in phones %}
+                        <div class="panel">
+                            <form action={% url 'change_name' %} method="POST">
+                                <label>Имя компании:</label>
+                                {% csrf_token %}
+                                <input placeholder="Имя компании" class="cs-input-base" type="text" name="name" value={{ info.name }}>
+                            </form>
+                        </div>
+                        <div class="panel">
+                            <form action={% url 'change_ownership' %} method="POST">
+                                <label>Форма собственности:</label>
+                                {% csrf_token %}
+                                <input placeholder="Форма собственности" class="cs-input-base" type="text" name="type_of_ownership" value={{ info.type_of_ownership }}>
+                            </form>
+                        </div>
+                        <div class="panel">
+                            <form action={% url 'change_rank' %} method="POST">
+                                <label>Разряд:</label>
+                                {% csrf_token %}
+                                <input placeholder="Разряд" class="cs-input-base" type="text" name="rank" value={{ info.rank }}>
+                            </form>
+                        </div>
+                        <div class="panel">
+                            <form action={% url 'change_address' %} method="POST">
+                                <label>Адрес:</label>
+                                {% csrf_token %}
+                                <input placeholder="Адрес" class="cs-input-base" type="text" name="address" value={{ info.address }}>
+                            </form>
+                        </div>
+                        <div class="panel">
+                            <label>Телефоны:</label>
+                            {% if phones %}
+                                {% for phone in phones %}
+                                    <div>
+                                        <form method="POST" action={% url 'delete_phone' %}>
+                                            {% csrf_token %}
+                                            <span class="tochka"> • </span> {{ phone.phone }}
+                                            <input type="hidden" name='pk' value={{phone.pk}}>
+                                            <input type="hidden" name='phone' value={{phone.phone}}>
+                                            <input type="hidden" name='company_id' value={{phone.company.id}}>
+                                            <input type="submit" class="cs-button-delete" value="-">
+                                        </form>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                            <input type="submit" id="add_panel_knopka" class="cs-button-delete" value="Добавить номер" onclick=add_phone_panel(0)>
+                            <br>
+                            <div hidden=true id="add_phone_panel">                        
+                                <form method="POST" action={% url 'add_phone'%}>
+                                    {% csrf_token %}
+                                    {{ formPhone.phone}}
+                                    <br>
+                                    <input type="submit" class="cs-button" value="Добавить">
+                                </form>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <label>Услуги:</label>
+                            {% if services %}
+                                {% for service in services %}
                                 <div>
-                                    <form method="POST" action={% url 'delete_phone' %}>
+                                    <form method="POST" action={% url 'delete_service' %}>
                                         {% csrf_token %}
-                                        <span class="tochka"> • </span> {{ phone.phone }}
-                                        <input type="hidden" name='pk' value={{phone.pk}}>
-                                        <input type="hidden" name='phone' value={{phone.phone}}>
-                                        <input type="hidden" name='company_id' value={{phone.company.id}}>
+                                        <span class="tochka"> • </span> {{ service.name }}
+                                        <input type="hidden" name='pk' value={{service.pk}}>
+                                        <input type="hidden" name='name' value={{service.name}}>
                                         <input type="submit" class="cs-button-delete" value="-">
                                     </form>
                                 </div>
-                            {% endfor %}
-                        {% endif %}
-                        <input type="submit" id="add_panel_knopka" class="cs-button-delete" value="Добавить номер" onclick=add_phone_panel(0)>
-                        <br>
-                        <div hidden=true id="add_phone_panel">                        
-                            <form method="POST" action={% url 'add_phone'%}>
-                                {% csrf_token %}
-                                {{ formPhone.phone}}
-                                <br>
-                                <input type="submit" class="cs-button" value="Добавить">
-                            </form>
+                                {% endfor %}
+                            {% endif %}
+                            <input type="submit" id="add_panel_knopka_service" class="cs-button-delete" value="Добавить услугу" onclick=add_service_panel(0)>
                             <br>
-                            <br>
-                        </div>
-                        <label>Услуги</label>
-                        {% if services %}
-                            {% for service in services %}
-                            <div>
-                                <form method="POST" action={% url 'delete_service' %}>
+                            <div hidden=true id="add_service_panel">                        
+                                <form method="POST" action={% url 'add_service'%}>
                                     {% csrf_token %}
-                                    <span class="tochka"> • </span> {{ service.name }}
-                                    <input type="hidden" name='pk' value={{service.pk}}>
-                                    <input type="hidden" name='name' value={{service.name}}>
-                                    <input type="submit" class="cs-button-delete" value="-">
+                                    <select id="select" onclick="select_service()">
+                                        {% for service in allServices%}
+                                            <option> {{ service.name }} </option>
+                                        {% endfor %}
+                                    </select>
+                                    <input hidden name="name" id="service_input" value="">
+                                    {% comment %} {{ formService.name}} {% endcomment %}
+                                    <br>
+                                    <input type="submit" class="cs-button" value="Добавить">
                                 </form>
-                            </div>
-                            {% endfor %}
-                        {% endif %}
-                        <input type="submit" id="add_panel_knopka_service" class="cs-button-delete" value="Добавить услугу" onclick=add_service_panel(0)>
-                        <br>
-                        <div hidden=true id="add_service_panel">                        
-                            <form method="POST" action={% url 'add_service'%}>
-                                {% csrf_token %}
-                                <select id="select" onclick="select_service()">
-                                    {% for service in allServices%}
-                                        <option> {{ service.name }} </option>
-                                    {% endfor %}
-                                </select>
-                                <input hidden name="name" id="service_input" value="">
-                                {% comment %} {{ formService.name}} {% endcomment %}
                                 <br>
-                                <input type="submit" class="cs-button" value="Добавить">
-                            </form>
-                            <br>
-                            <br>
+                                <br>
+                            </div>
                         </div>
+                        
                         {% comment %} {% if info.services %}
                             {% for service in services %}
                                 <span class="tochka"> • </span>

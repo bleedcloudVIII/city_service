@@ -51,21 +51,21 @@
                         <span class="cs-span">Найти</span>
                     </button>
                 </form>
-                <div class="spez-name">Специализация</div>
+                <div class="spez-name">Специализации</div>
                 <div class="spez">
                     <!-- Выбранные специализации -->
                     <label id="vibrannie_spez" hidden="true" class="cs-vibrannie-spez-label"></label>
-                    <div class="spez-cut row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-6" id="spez_cut_list">
+                    <div class="row">
                         <form method="POST" action="#">
                             {% for spec in specs %}
-                                <article class="row ">
+                            <div class="">
                                     <input name="spec" onclick="a()" id="input_spec" type="checkbox">
                                     <label for="input_spec">{{ spec.name }}</label>
                                     <br>
-                                </article>
+                            </div>
                             {% endfor %}
                         </form>
-                    </div>       
+                    </div>
                 </div>
                 <div class="spez-name">Услуги</div>
                 <div class="spez">

@@ -55,18 +55,24 @@ def profile(request):
 def registration(request):
     if request.method == 'POST':
         form = AccountRegistrationForm(data=request.POST)
-        print(form.errors.as_data())
-        
+        email = request.POST['email']
+        is_email_used = Account.objects.filter(email=email)
+        print(email)
+        print(is_email_used)
+        if is_email_used.count() != 0:
+            form.add_error('email', 'Этот email уже занят')
         if form.is_valid():
             username = request.POST['username']
             password1 = request.POST['password1']
             password2 = request.POST['password2']
             group = request.POST['choice']
+            email = request.POST['email']
             if group == 'user':
                 account = Account.objects.create_user(
                     username=username,
                     password=password1,
                     group_id=1,
+                    email=email,
                 )
                 user = User.objects.create(
                     account=account,
@@ -76,6 +82,7 @@ def registration(request):
                     username=username,
                     password=password1,
                     group_id=2,
+                    email=email,
                 )
                 company = Company.objects.create(
                     account=account,

@@ -140,6 +140,10 @@ input:invalid+b+[type="submit"] {
     display: none; /* hide input submit untill pattern matches */
 }
 
+.panel{
+    margin-bottom: 5px;
+}
+
 .cs-input-base
 {
     border: none;
