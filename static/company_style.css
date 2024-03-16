@@ -107,6 +107,7 @@ hr {
     border-style: hidden;
     font-size: 13px;
 }
+
 .cs-spez{
     background-color: var(--colorWhite);
     margin-top: 5px;
@@ -238,7 +239,7 @@ hr {
     max-height: 200px;
     overflow: auto;
 }
-.cs-vibrannie-spez-label, .cs-vibrannie-regioni-label{
+.cs-vibrannie-spec-label, .cs-vibrannie-regioni-label{
     color: var(--colorGray);
 }
 
@@ -248,3 +249,11 @@ hr {
     
 }
 
+.cs-button-find{
+    width: 100px;
+    height: 100px;
+}
+
+.label-phone{
+    color: var(--colorBlack);
+}

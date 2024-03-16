@@ -43,8 +43,7 @@ from etc.views import spec_create
 from etc.views import service_create
 from etc.views import change_first_name
 from etc.views import change_last_name
-
-
+from etc.views import get_service
 
 urlpatterns = [
     path('cityservice/admin/', admin.site.urls),
@@ -69,6 +68,7 @@ urlpatterns = [
     path('cityservice/account/change_first_name', change_first_name, name='change_first_name'),
     path('cityservice/account/change_last_name', change_last_name, name='change_last_name'),
     
+    # path('cityservice/service/get_service', companies, name='get_service'),
     
     path('cityservice/account/add_service', company_add_service, name='add_service'),
     path('cityservice/account/delete_service', company_delete_service, name='delete_service'),

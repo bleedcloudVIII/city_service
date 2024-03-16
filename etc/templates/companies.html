@@ -42,53 +42,49 @@
     </div>
     <br>
     <div class="container">
-
         <div class="row">
             <div class="col-3 cs-panel">
-                <form class="cs-form" action="#" method="get">
-                    <input placeholder="Услуга" class="cs-input">
-                    <button class="cs-button">
-                        <span class="cs-span">Найти</span>
-                    </button>
+                <form class="cs-form" action="#" method="POST">
+                    <input placeholder="Услуга" class="cs-input" name="enter">
+                    <input type="button" value="Найти">
                 </form>
                 <div class="spez-name">Специализации</div>
                 <div class="spez">
-                    <!-- Выбранные специализации -->
-                    <label id="vibrannie_spez" hidden="true" class="cs-vibrannie-spez-label"></label>
-                    <div class="row">
-                        <form method="POST" action="#">
+                    {% comment %} <label id="vibrannie_spez" hidden="true" class="cs-vibrannie-spez-label"></label> {% endcomment %}
+                        <form method="POST" action={% url 'companies' %}>
+                            <input name="specs_choose" hidden type="text" value='{{specs_choose}}' id="checked_spec">
+                            {% csrf_token %}
                             {% for spec in specs %}
-                            <div class="">
-                                    <input name="spec" onclick="a()" id="input_spec" type="checkbox">
-                                    <label for="input_spec">{{ spec.name }}</label>
-                                    <br>
-                            </div>
+                                <div class="">
+                                        <input onclick="spec('{{ spec.name }}')" id='spec_{{forloop.counter}}' type="checkbox">
+                                        <label class="cs-label" for='spec_{{forloop.counter}}' onchange="this.form.submit()">{{ spec.name }}</label>
+                                </div>
                             {% endfor %}
-                        </form>
-                    </div>
                 </div>
-                <div class="spez-name">Услуги</div>
+                {% comment %} <button onclick="q()">Aadas</button> {% endcomment %}
+                {% if services %}
+                    <div class="spez-name">Услуги</div>
+                {% endif %}
                 <div class="spez">
-                    <!-- Выбранные специализации -->
-                    <label id="vibrannie_spez" hidden="true" class="cs-vibrannie-spez-label"></label>
-                    <div class="spez-cut" id="spez_cut_list">
-                        <ul class="cs-spez-list">
-                            {% for service in services %}
-                                <li>
-                                    <label class="cs-label" >
-                                        <input type="checkbox" class="cs-checkbox">
-                                        <span>{{service.name}}</span>
-                                    </label>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </div>       
+                        <input name='services_choose' hidden type="text" value='{{services_choose}}' id='checked_services'>
+                        {% csrf_token %}
+                        {% for service in services %}
+                            <div>
+                                <input onclick="service('{{service.name}}')" type="checkbox" id='service_{{forloop.counter}}'>
+                                <label class="cs-label" for='service_{{forloop.counter}}'>{{ service.name }}</label>                                
+                            </div>
+                        {% endfor %}
+                        <button>Найти</button>
+                    </form>
                 </div>
             </div>
 
             <div class="col-9 cs-spezi">
                 <div class="cs-spezi_list">
                     <div class="container">
+                        {% if not companies %}
+                        <label>Ничего не найдено</label>
+                        {% endif %}
                         {% for company in companies %}
                         <div class="row">
                             <div class="column-10">
@@ -97,7 +93,20 @@
                                         <span class="cs-vakansiya-name">{{company.name}}</span>
                                     </a>
                                     <br>
-                                    <span class="cs-vakansiya-spez">{{company.spez}}</span>
+                                    {% with count=forloop.counter %}
+                                        {% for ph in phones %}
+                                            {% if forloop.counter == count %}
+                                                {% for p in ph%}
+                                                    {% comment %} count {% endcomment %}
+                                                    {% comment %} forloop.counter {% endcomment %}
+                                                    <span class="tochka"> • </span>
+                                                    <label class="label-phone">{{ p.phone }}</label>
+                                                {% endfor %}
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% endwith %}
+                                    <br>
+                                    {% comment %} <span class="cs-vakansiya-spez">{{company.spe}}</span> {% endcomment %}
                                     <span class="tochka"> • </span>
                                     <span class="cs-vakansiya-company">{{company.address}}</span>
                                     <br>

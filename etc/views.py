@@ -6,13 +6,48 @@ from etc.forms import CompanyAddPhone, SpecializationCreate, ServiceCreate, Comp
 from etc.models import Company, Phone, Specialization, Service, User
 from accounts.models import Account
 
+from django.db.models import Q
+
 def companies(request):
-    context = {
-        # 'companies': Company.objects.all(),
-        'companies': Company.objects.all()[:10],
-        'specs': Specialization.objects.all(),
-        # 'services': ,
-    }
+    context = {}
+    if request.method == 'POST':
+        print(request.POST)
+        if request.POST['specs_choose'] != '':
+            specs = request.POST['specs_choose'].split(',')
+            services = []
+            for spec in specs:
+                specialization = Specialization.objects.get(name=spec)
+                l = list(Service.objects.filter(specialization=specialization))
+                for item in l:
+                    services.append(item)
+            print(services)
+            context['services'] = services
+        if request.POST['services_choose'] != '':
+            services = request.POST['services_choose'].split(',')
+            print(services)
+            companies = []
+            phones = []
+            for service in services:
+                s = Service.objects.get(name=service)
+                l = list(Company.objects.filter(services=s))
+                for item in l:
+                    phones.append(list(Phone.objects.filter(company=item.pk)))
+                    # print(item.services)
+                    # print(item.phones)
+                    # item['phones'] = Phone.objects.filter(company=item.pk)
+                    
+                    companies.append(item)
+            print(companies)
+            context['companies'] = companies
+            print(phones)
+            context['phones'] = phones
+        context['specs_choose'] = request.POST['specs_choose']
+        context['services_choose'] = request.POST['services_choose']
+    else:
+        context['companies'] = Company.objects.all()[:10],
+        context['specs_choose'] = ''
+        context['services_choose'] = ''
+    context['specs'] = Specialization.objects.all()
     return render(request, 'companies.html', context)
 
 def company_add_phone(request):
@@ -137,3 +172,8 @@ def service_create(request):
     specializations = Specialization.objects.all()
     context = {'form': form, 'specs': specializations}
     return render(request, 'service.html', context)
+
+def get_service(request):
+    print(request.POST)
+    context = {}
+    return render(request, 'companies.html', context)

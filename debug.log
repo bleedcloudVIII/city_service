@@ -45,3 +45,1286 @@ AttributeError: 'NoneType' object has no attribute 'all'
 2024-03-16 14:37:01,923 django.request WARNING  Not Found: /favicon.ico
 2024-03-16 14:38:01,308 django.request WARNING  Not Found: /favicon.ico
 2024-03-16 14:39:28,671 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 14:41:35,889 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 14:42:28,501 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 14:44:07,182 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 14:44:55,695 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 14:48:59,726 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 14:53:32,772 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 14:55:30,557 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 16, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'spacify'
+2024-03-16 14:55:30,676 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 14:55:56,674 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 16, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'spacify'
+2024-03-16 14:55:57,720 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 16, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'spacify'
+2024-03-16 14:55:57,829 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 15:00:48,349 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:00:48,841 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:00:55,511 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\cityservice\urls.py changed, reloading.
+2024-03-16 15:00:55,917 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:01:20,354 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\cityservice\urls.py changed, reloading.
+2024-03-16 15:01:20,772 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:01:26,402 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\cityservice\urls.py changed, reloading.
+2024-03-16 15:01:26,809 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:01:32,438 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\cityservice\urls.py changed, reloading.
+2024-03-16 15:01:32,870 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:01:36,185 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\cityservice\urls.py changed, reloading.
+2024-03-16 15:01:36,608 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:01:54,788 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\cityservice\urls.py changed, reloading.
+2024-03-16 15:01:55,193 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:02:00,857 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\cityservice\urls.py changed, reloading.
+2024-03-16 15:02:01,279 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:02:16,031 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\cityservice\urls.py changed, reloading.
+2024-03-16 15:02:16,439 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:02:24,970 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\cityservice\urls.py changed, reloading.
+2024-03-16 15:02:25,432 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:02:56,128 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:02:56,576 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:02:59,095 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:02:59,509 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:03:00,988 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:03:01,431 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:03:11,283 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:03:11,704 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:03:16,300 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:03:16,754 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:03:40,156 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\cityservice\urls.py changed, reloading.
+2024-03-16 15:03:40,588 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:03:44,174 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\cityservice\urls.py changed, reloading.
+2024-03-16 15:03:44,582 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:04:02,765 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:04:03,181 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:04:10,669 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:04:11,076 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:04:12,536 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:04:12,967 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:04:25,906 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:04:26,317 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:04:31,721 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:04:32,135 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:04:36,504 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:04:36,922 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:04:55,902 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:04:56,323 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:05:02,000 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:05:02,446 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:05:03,963 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:05:04,389 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:05:22,518 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:05:22,927 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:05:27,524 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:05:27,942 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:05:42,717 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:05:43,131 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:05:44,367 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:05:44,800 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:05:49,151 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:05:49,556 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:05:50,810 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:05:51,216 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:05:53,518 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:05:53,921 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:05:57,242 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:05:57,649 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:05:59,932 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:06:00,362 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:06:07,029 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:06:07,467 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:06:14,771 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 25, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'spacify'
+2024-03-16 15:06:15,890 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 25, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'spacify'
+2024-03-16 15:06:15,992 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 15:06:23,440 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 25, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'spacify'
+2024-03-16 15:06:24,251 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 25, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'spacify'
+2024-03-16 15:08:47,589 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:08:48,031 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:09:06,639 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 15:09:45,225 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 15:10:10,414 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:11:23,604 django.security.csrf WARNING  Forbidden (CSRF token missing.): /cityservice/companies
+2024-03-16 15:11:40,096 django.security.csrf WARNING  Forbidden (CSRF token missing.): /cityservice/companies
+2024-03-16 15:11:44,529 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:14:25,610 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 15:23:47,409 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 26, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 1491, in do_with
+    nodelist = parser.parse(("endwith",))
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '+=1' from 'count+=1'
+2024-03-16 15:24:21,520 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'count+=1'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 26, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 1491, in do_with
+    nodelist = parser.parse(("endwith",))
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 66: 'count+=1', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+2024-03-16 15:26:39,282 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:26:39,734 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:26:46,430 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:26:46,847 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:26:56,682 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:26:57,119 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:27:03,589 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:27:04,018 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:27:48,403 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:27:48,828 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:27:54,459 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:27:54,881 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:28:12,215 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:28:12,668 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:28:14,200 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:28:14,634 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:28:20,280 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:28:20,711 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:28:39,662 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:28:40,069 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:29:01,423 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:29:01,836 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:29:19,019 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:29:19,429 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:29:33,436 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:29:33,862 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:29:48,893 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 15:34:11,588 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:34:12,030 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:35:06,886 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:35:07,295 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:35:50,559 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:35:51,011 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:35:54,577 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:35:55,003 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:36:07,732 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:36:08,139 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:36:30,559 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:36:31,009 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:37:46,974 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:37:47,440 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:38:00,409 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:38:00,825 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:38:11,893 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:38:12,423 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:38:14,961 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:38:15,449 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:38:18,923 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 15:38:40,462 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 18, in companies
+    specialization = Specialization.objects.get(name=spec)
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+etc.models.Specialization.DoesNotExist: Specialization matching query does not exist.
+2024-03-16 15:38:56,139 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 18, in companies
+    specialization = Specialization.objects.get(name=spec)
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+etc.models.Specialization.DoesNotExist: Specialization matching query does not exist.
+2024-03-16 15:39:38,999 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:39:39,461 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:39:42,739 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 19, in companies
+    specialization = Specialization.objects.get(name=spec)
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+etc.models.Specialization.DoesNotExist: Specialization matching query does not exist.
+2024-03-16 15:39:48,592 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:39:49,079 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:39:50,616 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 19, in companies
+    specialization = Specialization.objects.get(name=spec)
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+etc.models.Specialization.DoesNotExist: Specialization matching query does not exist.
+2024-03-16 15:40:08,484 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:40:08,929 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:40:27,151 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:40:27,560 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:40:29,067 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:40:29,558 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:40:43,762 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:40:44,203 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:46:35,783 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:46:36,241 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:47:20,703 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:47:21,139 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:47:36,937 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:47:37,385 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:47:39,883 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:47:40,300 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:47:48,077 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:47:48,489 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:47:54,170 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:47:54,574 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:48:00,244 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:48:00,672 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:48:08,452 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:48:08,938 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:48:37,175 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:48:37,618 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:48:39,083 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:48:39,525 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:48:56,685 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:48:57,131 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:49:03,852 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:49:04,306 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:49:08,968 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\db\models\fields\__init__.py", line 2053, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: '—ауна'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 30, in companies
+    l = list(Company.objects.filter(services=service))
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1318, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Python310\lib\site-packages\django\db\models\lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Python310\lib\site-packages\django\db\models\fields\related_lookups.py", line 166, in get_prep_lookup
+    self.rhs = target_field.get_prep_value(self.rhs)
+  File "C:\Python310\lib\site-packages\django\db\models\fields\__init__.py", line 2055, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got '—ауна'.
+2024-03-16 15:49:46,916 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:49:47,357 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:49:49,863 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:49:50,321 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:52:04,851 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 39, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 193, in render
+    values = list(values)
+TypeError: 'ManyRelatedManager' object is not iterable
+2024-03-16 15:52:41,638 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:52:42,118 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:52:44,861 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 40, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 193, in render
+    values = list(values)
+TypeError: 'ManyRelatedManager' object is not iterable
+2024-03-16 15:53:03,677 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:53:04,103 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:55:17,386 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:55:17,800 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:55:19,650 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 34, in companies
+    print(item.phones)
+AttributeError: 'Company' object has no attribute 'phones'
+2024-03-16 15:55:58,197 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:55:58,623 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:56:14,782 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:56:15,191 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:56:18,771 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:56:19,179 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:56:21,322 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 35, in companies
+    item['phones'] = Phone.objects.filter(company=item.pk)
+TypeError: 'Company' object does not support item assignment
+2024-03-16 15:56:24,950 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 35, in companies
+    item['phones'] = Phone.objects.filter(company=item.pk)
+TypeError: 'Company' object does not support item assignment
+2024-03-16 15:56:37,547 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:56:37,975 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:56:50,957 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:56:51,373 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:57:08,472 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:57:08,899 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:57:16,627 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:57:17,054 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:57:25,902 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:57:26,310 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:57:33,013 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:57:33,420 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:57:53,657 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:57:54,074 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:57:55,574 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 33, in companies
+    phones.append(list(Phone.objects.filter(company=item.pk)))
+NameError: name 'phones' is not defined
+2024-03-16 15:58:04,096 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 15:58:04,542 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 15:58:27,208 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 46, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 852, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '[forloop.counter]' from 'phones[forloop.counter]'
+2024-03-16 15:59:45,387 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 46, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 1484, in do_with
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'with' expected at least one variable assignment
+2024-03-16 15:59:57,376 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 46, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 1484, in do_with
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'with' expected at least one variable assignment
+2024-03-16 16:00:13,331 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 46, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 1484, in do_with
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'with' expected at least one variable assignment
+2024-03-16 16:00:18,929 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 46, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 1484, in do_with
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'with' expected at least one variable assignment
+2024-03-16 16:01:53,191 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:01:53,627 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:05:08,866 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 16:12:57,366 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:12:57,816 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:12:59,300 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:12:59,714 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:13:01,214 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:13:01,628 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:13:12,494 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:13:12,904 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:13:14,395 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:13:14,848 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:13:50,840 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:13:51,284 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:13:53,598 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'specs_choose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 15, in companies
+    if request.POST['specs_choose'] != '':
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'specs_choose'
+2024-03-16 16:14:10,205 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'specs_choose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 15, in companies
+    if request.POST['specs_choose'] != '':
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'specs_choose'
+2024-03-16 16:14:10,270 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 16:14:13,055 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'specs_choose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 47, in companies
+    context['specs_choose'] = request.POST['specs_choose']
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'specs_choose'
+2024-03-16 16:14:25,584 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:14:26,001 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:14:27,472 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:14:27,909 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:14:39,520 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:14:39,943 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:14:43,541 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:14:43,973 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:14:49,355 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:14:49,766 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:14:53,323 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:14:53,735 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:15:11,897 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:15:12,319 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:15:24,220 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:15:24,649 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:15:29,255 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:15:29,717 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:15:30,338 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'specs_choose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 47, in companies
+    if request.POST['specs_choose']:
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'specs_choose'
+2024-03-16 16:15:31,047 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'specs_choose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 47, in companies
+    if request.POST['specs_choose']:
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'specs_choose'
+2024-03-16 16:15:32,090 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'specs_choose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 47, in companies
+    if request.POST['specs_choose']:
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'specs_choose'
+2024-03-16 16:15:32,150 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 16:15:34,268 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'specs_choose'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 47, in companies
+    if request.POST['specs_choose']:
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'specs_choose'
+2024-03-16 16:16:02,614 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:16:03,026 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:16:04,524 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:16:04,946 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:16:11,629 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:16:12,054 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:16:14,552 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:16:14,952 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:16:18,516 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:16:18,944 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:16:21,250 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:16:21,675 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:16:26,025 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:16:26,434 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:16:41,499 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:16:41,933 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:16:47,355 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:16:47,774 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:17:01,752 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:17:02,185 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:17:42,149 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 19, in companies
+    specialization = Specialization.objects.get(name=spec)
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+etc.models.Specialization.DoesNotExist: Specialization matching query does not exist.
+2024-03-16 16:19:30,752 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 19, in companies
+    specialization = Specialization.objects.get(name=spec)
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+etc.models.Specialization.DoesNotExist: Specialization matching query does not exist.
+2024-03-16 16:19:35,755 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 19, in companies
+    specialization = Specialization.objects.get(name=spec)
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+etc.models.Specialization.DoesNotExist: Specialization matching query does not exist.
+2024-03-16 16:20:25,666 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:20:26,122 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-16 16:20:26,756 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 19, in companies
+    specialization = Specialization.objects.get(name=spec)
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+etc.models.Specialization.DoesNotExist: Specialization matching query does not exist.
+2024-03-16 16:20:35,523 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 19, in companies
+    specialization = Specialization.objects.get(name=spec)
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+etc.models.Specialization.DoesNotExist: Specialization matching query does not exist.
+2024-03-16 16:21:36,271 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 19, in companies
+    specialization = Specialization.objects.get(name=spec)
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+etc.models.Specialization.DoesNotExist: Specialization matching query does not exist.
+2024-03-16 16:21:39,919 django.request WARNING  Not Found: /favicon.ico
+2024-03-16 16:27:42,846 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-16 16:27:43,303 django.utils.autoreload INFO     Watching for file changes with StatReloader

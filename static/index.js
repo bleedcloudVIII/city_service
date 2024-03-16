@@ -1,5 +1,5 @@
 
-function getRegioniAllList()
+function getSpeciAllList()
 {
     const div_regioni = document.getElementById('regioni_all_list');
     const button_for_regioni = document.getElementById('button_regioni');
@@ -20,7 +20,7 @@ function getRegioniAllList()
 
 let regioni = [];
 
-function addRegion(region)
+function addSpec(region)
 {
     label = document.getElementById('vibrannie_regioni');
     label.hidden = false;
@@ -38,7 +38,51 @@ function addRegion(region)
     label.textContent = string;
 }
 
-function a()
+let specs = document.getElementById('checked_spec')? document.getElementById('checked_spec').split(','): [];
+
+function spec(spec)
 {
-    console.log(document.getElementById('input_spec'));
+    // checked_spec
+    values = document.getElementById('checked_spec');
+    if (!specs.includes(spec))
+    {
+        specs.push(spec);
+    }
+    else
+    {
+        const index = specs.indexOf(spec);
+        specs.splice(index, 1);
+    }
+    let string = specs.toString();
+    values.value = string;
+    // console.log(spec);
+    console.log(values.value);
+}
+
+
+let services = document.getElementById('checked_services') ? document.getElementById('checked_services').split(','): [];
+
+function q()
+{
+    console.log(specs)
+    console.log(services)
+}
+function service(s)
+{
+    // checked_spec
+    console.log(services)
+    values = document.getElementById('checked_services');
+    if (!services.includes(s))
+    {
+        services.push(s);
+    }
+    else
+    {
+        const index = services.indexOf(s);
+        services.splice(index, 1);
+    }
+    let string = services.toString();
+    values.value = string;
+    // console.log(spec);
+    console.log(values.value)
 }
