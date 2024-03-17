@@ -206,6 +206,11 @@ hr {
     text-decoration: none;
     color: var(--colorWhite);
 }
+.cs-a{
+    text-decoration: none;
+    color: var(--colorWhite);
+    margin-left: 10px;
+}
 .cs-form {
     /* margin-top: 10px; */
     /* margin-left: -12px; */

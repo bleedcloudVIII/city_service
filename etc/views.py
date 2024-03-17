@@ -8,6 +8,9 @@ from accounts.models import Account
 
 from django.db.models import Q
 
+# from django.template import Library 
+
+
 def companies(request):
     context = {}
     if request.method == 'POST':
@@ -43,6 +46,8 @@ def companies(request):
             context['phones'] = phones
         context['specs_choose'] = request.POST['specs_choose']
         context['services_choose'] = request.POST['services_choose']
+        # return render(request, context)
+        # pass
     else:
         context['companies'] = Company.objects.all()[:10],
         context['specs_choose'] = ''

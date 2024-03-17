@@ -1,5 +1,5 @@
 {% load static %}
-
+{% load my_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +19,9 @@
         <div class="container ">
             <div class="row">
                 <div class="col-11">
-                    <h1 class="text-left cs-h1">CityService</h1>
+                    {% comment %} <h1 class="text-left cs-h1">CityService</h1> {% endcomment %}
+                    <h1 class="text-left cs-h1"><a class="cs-a" href={% url 'companies' %}>CityService</a></h1>
+
                 </div>
                 <div class="col-1 cs-registration">
                     {% if request.user.is_authenticated %}
@@ -49,6 +51,8 @@
                     <input type="button" value="Найти">
                 </form>
                 <div class="spez-name">Специализации</div>
+                <label style="color: white;">{{ specs_choose }}</label>
+                <label style="color: white;">{{ services_choose }}</label>
                 <div class="spez">
                     {% comment %} <label id="vibrannie_spez" hidden="true" class="cs-vibrannie-spez-label"></label> {% endcomment %}
                         <form method="POST" action={% url 'companies' %}>
@@ -56,26 +60,31 @@
                             {% csrf_token %}
                             {% for spec in specs %}
                                 <div class="">
-                                        <input onclick="spec('{{ spec.name }}')" id='spec_{{forloop.counter}}' type="checkbox">
-                                        <label class="cs-label" for='spec_{{forloop.counter}}' onchange="this.form.submit()">{{ spec.name }}</label>
+                                        <input onclick="spec('{{ spec.name }}')" id='spec_{{spec.name}}' type="checkbox">
+                                        <label id='label_{{spec.name}}' class="cs-label" for='spec_{{spec.name}}' onchange="this.form.submit()">{{ spec.name }}</label>
                                 </div>
                             {% endfor %}
                 </div>
                 {% comment %} <button onclick="q()">Aadas</button> {% endcomment %}
+                {% comment %} {% get_services as services %} {% endcomment %}
                 {% if services %}
                     <div class="spez-name">Услуги</div>
                 {% endif %}
                 <div class="spez">
                         <input name='services_choose' hidden type="text" value='{{services_choose}}' id='checked_services'>
-                        {% csrf_token %}
+                        {% comment %} {% csrf_token %} {% endcomment %}
                         {% for service in services %}
                             <div>
-                                <input onclick="service('{{service.name}}')" type="checkbox" id='service_{{forloop.counter}}'>
-                                <label class="cs-label" for='service_{{forloop.counter}}'>{{ service.name }}</label>                                
+                                <input onclick="service('{{service.name}}')" type="checkbox" id='service_{{service.name}}'>
+                                <label id='label_{{service.name}}' class="cs-label" for='service_{{service.name}}'>{{ service.name }}</label>                                
                             </div>
                         {% endfor %}
-                        <button>Найти</button>
+                        {% comment %} <button type="submit" value={% get_services '{{ specs_choosed }}' %}>Найти</button> {% endcomment %}
+                        <button type="submit">Найти</button>
+
                     </form>
+                        <button onclick="_start()">W</button>
+
                 </div>
             </div>
 
