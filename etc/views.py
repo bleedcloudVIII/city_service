@@ -6,11 +6,6 @@ from etc.forms import CompanyAddPhone, SpecializationCreate, ServiceCreate, Comp
 from etc.models import Company, Phone, Specialization, Service, User
 from accounts.models import Account
 
-from django.db.models import Q
-
-# from django.template import Library 
-
-
 def companies(request):
     context = {}
     if request.method == 'POST':
