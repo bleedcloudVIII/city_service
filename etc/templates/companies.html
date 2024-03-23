@@ -18,8 +18,10 @@
     <header>
         <div class="container ">
             <div class="row">
-                <div class="">
+                <div class="col-11">
                     <h1 class="text-left cs-h1"><a class="cs-a" href={% url 'companies' %}>CityService</a></h1>
+                </div>
+                <div class="col-1">
                     {% if request.user.is_authenticated %}
                         <a href={%url 'account_profile'%} class="cs-a-registr">Профиль</a>   
                         <br>                     
@@ -43,15 +45,16 @@
     <div class="container">
         <div class="row">
             <div class="col-3 cs-panel">
-                <form class="cs-form" action="#" method="POST">
-                    <input placeholder="Услуга" class="cs-input" name="enter">
-                    <input type="button" value="Найти">
-                </form>
+                <form class="cs-form" action={% url 'companies' %} method="POST">
+                    {% csrf_token %}
+                        <input placeholder="Поиск" class="cs-input" name="search">
+                    <input type="submit" value="Найти">
+                {% comment %} </form> {% endcomment %}
                 <div class="spez-name">Специализации</div>
                 <div class="spez">
-                        <form method="POST" action={% url 'companies' %}>
+                        {% comment %} <form method="POST" action={% url 'companies' %}> {% endcomment %}
                             <input name="specs_choose" hidden type="text" value='{{specs_choose}}' id="checked_spec">
-                            {% csrf_token %}
+                            {% comment %} {% csrf_token %} {% endcomment %}
                             {% for spec in specs %}
                                 <div class="">
                                         <input onclick="spec('{{ spec.name }}')" id='spec_{{spec.name}}' type="checkbox">

@@ -5,48 +5,57 @@ from etc.forms import CompanyAddPhone, SpecializationCreate, ServiceCreate, Comp
 
 from etc.models import Company, Phone, Specialization, Service, User
 from accounts.models import Account
+from django.db.models import Q
 
 def companies(request):
     context = {}
     if request.method == 'POST':
-        print(request.POST)
+        companies = []
+        phones = []
         if request.POST['specs_choose'] != '':
             specs = request.POST['specs_choose'].split(',')
             services = []
             for spec in specs:
                 specialization = Specialization.objects.get(name=spec)
-                l = list(Service.objects.filter(specialization=specialization))
-                for item in l:
+                service_list = list(Service.objects.filter(specialization=specialization))
+                companies.extend(list(Company.objects.filter(specializations=specialization)))
+                for item in service_list:
                     services.append(item)
-            print(services)
             context['services'] = services
         if request.POST['services_choose'] != '':
             services = request.POST['services_choose'].split(',')
-            print(services)
             companies = []
             phones = []
             for service in services:
                 s = Service.objects.get(name=service)
-                l = list(Company.objects.filter(services=s))
-                for item in l:
-                    phones.append(list(Phone.objects.filter(company=item.pk)))
-                    # print(item.services)
-                    # print(item.phones)
-                    # item['phones'] = Phone.objects.filter(company=item.pk)
-                    
-                    companies.append(item)
-            print(companies)
-            context['companies'] = companies
-            print(phones)
-            context['phones'] = phones
+                companies.extend(list(Company.objects.filter(services=s)))
+        if request.POST['search'] != '':
+            search = request.POST['search']
+            services = list(Service.objects.filter(name__icontains=search))
+            specializations = list(Specialization.objects.filter(name__icontains=search))
+            companies.extend(list(Company.objects.filter(name__icontains=search)))
+            for service in services:
+                companies.extend(list(Company.objects.filter(services=service)))
+            for spec in specializations:
+                companies.extend(list(Company.objects.filter(specializations=spec)))
+        companies = set(companies)
+        for elem in companies:
+            phones.append(list(Phone.objects.filter(company=elem)))
+        context['companies'] = companies
+        context['phones'] = phones
+        context['search'] = request.POST['search']
         context['specs_choose'] = request.POST['specs_choose']
         context['services_choose'] = request.POST['services_choose']
-        # return render(request, context)
-        # pass
     else:
-        context['companies'] = Company.objects.all()[:10],
+        comps = list(Company.objects.all())[0:10]
+        phones = []
+        for comp in comps:
+            phones.append(list(Phone.objects.filter(company=comp)))
+        context['phones'] = phones
+        context['companies'] = comps
         context['specs_choose'] = ''
         context['services_choose'] = ''
+        context['search'] = ''
     context['specs'] = Specialization.objects.all()
     return render(request, 'companies.html', context)
 
@@ -66,13 +75,13 @@ def company_delete_phone(request):
     return HttpResponseRedirect(reverse('account_profile'))
 
 def company_add_service(request):
-    print(request.POST)
     form = CompanyAddService(request.POST)
     if form.is_valid():
         name = request.POST['name']
         service = Service.objects.get(name=name)
         account = Account.objects.get(username=request.user)
         company = Company.objects.get(account=account.pk)
+        company.specializations.add(service.specialization)
         company.services.add(service)
     return HttpResponseRedirect(reverse('account_profile'))
 
@@ -81,6 +90,12 @@ def company_delete_service(request):
     company = Company.objects.get(account=account.pk)
     pk = request.POST['pk']
     service = Service.objects.get(id=pk)
+    
+    count = len(list(company.services.filter(specialization=service.specialization)))
+    
+    if count == 1:
+        company.specializations.remove(service.specialization)
+            
     company.services.remove(service)
     return HttpResponseRedirect(reverse('account_profile'))
 
