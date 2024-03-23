@@ -1,0 +1,351 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+    <head>
+        <title>CityService</title>
+        <style type="text/css">
+            :root {
+                --colorBlack: #1D0F0F;
+                /* --colorBlack: #2e2b29; */
+                --colorWhite: #fdfdfd;
+                --colorGray: #a3a3a3;
+                /* --colorGray: #878787; */
+            
+            }
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: var(--colorWhite);
+            }
+            /* .cs-input{
+            
+            } */
+            footer {
+                background-color: var(--colorBlack);
+                color: var(--colorBlack);
+            }
+            
+            .cs-header-text {
+                size: 10px;
+            }
+            
+            
+            .cs-ww{
+                color: green;
+            }
+            
+            .cs-h1 {
+                color: var(--colorWhite);
+            }
+            
+            .cs-h5 {
+                color: var(--colorWhite);
+            }
+            
+            .container-header {
+                background-color: var(--colorBlack);
+            }
+            
+            header {
+                background-color: var(--colorBlack);
+                margin-bottom: -15px;
+            }
+            
+            hr {
+                color: var(--colorWhite);
+            }
+            
+            .cs-a-student {
+                /* margin-left: 120px; */
+                margin-right: 10px;
+                margin-left: -21px;
+            }
+            
+            
+            
+            .cs-a-student{
+                padding: 10px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border-radius: 8px;
+                text-decoration: none;
+                background-color: var(--colorBlack);
+                color: var(--colorGray)
+            }
+            .cs-a-company {
+                padding: 10px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border-radius: 8px;
+                text-decoration: none;
+                background-color: var(--colorBlack);
+                color: var(--colorWhite)
+            }
+            
+            .cs-users {
+                text-align: left;
+                margin-left: 10px;
+            }
+            
+            .cs-panel {
+                background-color: var(--colorBlack);
+                color: var(--colorWhite);
+                padding: 5px;
+                padding-left: 10px;
+                border-radius: 8px;
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+            
+            .cs-spezi {
+                background-color: var(--colorBlack);
+                color: var(--colorWhite);
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+            .cs-spezi_list{
+            
+            }
+            .cs-button-otklik{
+                background-color: var(--colorBlack);
+                color: var(--colorWhite);
+                border-radius: 8px;
+                margin-bottom: 5px;
+                border-style: hidden;
+                font-size: 13px;
+            }
+            
+            .cs-spez{
+                background-color: var(--colorWhite);
+                margin-top: 5px;
+                margin-bottom: 5px;
+                border-radius: 8px;
+                border-style: hidden;
+                padding-left: 10px;
+            }
+            .cs-vakansiya-ssilka{
+                text-decoration: none;
+            }
+            .cs-vakansiya-name, .cs-vakansiya-opisanie, .cs-vakansiya-spez, .cs-vakansiya-regioni, .cs-vakansiya-company {
+                color: var(--colorBlack);
+            }
+            .cs-vakansiya-name{
+                font-size: 30px;
+            
+            }
+            .cs-vakansiya-spez, .cs-vakansiya-regioni, .cs-vakansiya-company{
+                font-size: 14px;
+            }
+            .cs-vakansiya-tegi{
+                font-size: 18px;
+            }
+            .teg{
+                color: var(--colorBlack);
+            }
+            
+            .tochka{
+                /* white-space: pre-wrap; */
+            
+                color: var(--colorBlack);
+            }
+            .cs-logo-img{
+                width: 100px;
+                height: 100px;
+            }
+            /* .cs-button-div{ */
+            /* text-align: right; */
+            /* float: right; */
+            /* } */
+            .cs-spez-list, .cs-regioni-list {
+                list-style-type: none;
+                text-align: left;
+            }
+            
+            .checkbox-a {
+                border-radius: 10px;
+            }
+            
+            .cs-input {
+                margin-top: 10px;
+                /* text-decoration: none; */
+                /* padding: 15px; */
+                /* height: 25px; */
+                /* width: 390px; */
+                /* width: 200px; */
+                width: auto;
+            
+                /* min-width: 100px; */
+                /* margin-right: 10px; */
+                border-radius: 8px;
+                border-style: hidden;
+                background-color: var(--colorBlack);
+                color: var(--colorWhite);
+            }
+            
+            .cs-button {
+                /* float: right; */
+                /* height: 50px; */
+                /* width: 120px; */
+                /* border-radius: 8px; */
+                /* background-color: var(--colorWhite); */
+                /* color: var(--colorBlack); */
+                /* border-style: hidden; */
+            
+                /* display: ; */
+                /* margin: 0 auto; */
+            
+            }
+            
+            .cs-input-panel,
+            .cs-users {
+                display: flex;
+                align-items: left;
+                /* justify-content: space-around; */
+            }
+            
+            /* .cs-panel, .cs-vakansii{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            } */
+            .cs-registration{
+                margin-top: 5px;
+            }
+            .cs-a-registr{
+                text-decoration: none;
+                color: var(--colorWhite);
+            }
+            .cs-a{
+                text-decoration: none;
+                color: var(--colorWhite);
+                margin-left: 10px;
+            }   
+            .cs-form {
+                /* margin-top: 10px; */
+                /* margin-left: -12px; */
+                /* display: flex; */
+                /* margin-top: 20px; */
+            
+                background-color: var(--colorBlack);
+                /* padding: 10px; */
+                border-color: var(--colorWhite);
+                /* border-radius: 8px; */
+                /* margin-right: 400px; */
+                /* margin-left: -12px; */
+            }
+            .cs-registration{
+                color: var(--colorWhite);
+            }
+            .cs-button-list{
+                border-radius: 6px;
+                color: var(--colorBlack);
+                background-color: var(--colorWhite);
+                border-style: hidden;
+                font-size: 13px;
+                /* display: flex; */
+            }
+            .spez_cut, .regioni_cut{
+                /* min-height: 100px;
+                min-width: 50px;
+                overflow: auto; */
+            }
+            .spez_all, .regioni_all{
+                max-height: 200px;
+                overflow: auto;
+            }
+            .cs-vibrannie-spec-label, .cs-vibrannie-regioni-label{
+                color: var(--colorGray);
+            }
+            
+            /* Checkbox */
+            .cs-label:hover{
+                color: var(--colorGray);
+                
+            }
+            
+            .cs-button-find{
+                width: 100px;
+                height: 100px;
+            }
+            
+            .label-phone{
+                color: var(--colorBlack);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container ">
+            <div class="row">
+                <div class="col-11">
+                    <h1 class="text-left cs-h1"><a class="cs-a" href={% url 'companies' %}>CityService</a></h1>
+                </div>
+            </div>
+        </div>
+        <h1></h1>
+    </header>
+    <hr>
+    <div class="container">
+        <div class="row">
+    </div>
+    <br>
+    <div class="container">
+        <div>
+            {% if specs %}
+                <label>Специализации:</label>
+
+            {% endif %}
+        </div>
+        <div>
+            {% if services %}
+                <label>Услуги:</label>
+
+            {% endif %}
+        </div>  
+        <div class="row">
+            <div class="col-9 cs-spezi">
+                <div class="cs-spezi_list">
+                    <div class="container">
+                        {% if not companies %}
+                        <label>Ничего не найдено</label>
+                        {% endif %}
+                        {% for company in companies %}
+                        <div class="row">
+                            <div class="column-10">
+                                <div class="cs-spez">
+                                    <a class="cs-vakansiya-ssilka" href="#">
+                                        <span class="cs-vakansiya-name">{{company.name}}</span>
+                                    </a>
+                                    <br>
+                                    {% with count=forloop.counter %}
+                                        {% for ph in phones %}
+                                            {% if forloop.counter == count %}
+                                                {% for p in ph%}
+                                                    {% comment %} count {% endcomment %}
+                                                    {% comment %} forloop.counter {% endcomment %}
+                                                    <span class="tochka"> • </span>
+                                                    <label class="label-phone">{{ p.phone }}</label>
+                                                {% endfor %}
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% endwith %}
+                                    <br>
+                                    {% comment %} <span class="cs-vakansiya-spez">{{company.spe}}</span> {% endcomment %}
+                                    <span class="tochka"> • </span>
+                                    <span class="cs-vakansiya-company">{{company.address}}</span>
+                                    <br>
+                                    <span class="cs-vakansiya-tegi">
+                                        {% comment %} {% for service in company.services %}
+                                            <span class="teg">{{service}}</span>
+                                            <span class="tochka"> • </span>
+                                        {% endfor %} {% endcomment %}
+                                    </span>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

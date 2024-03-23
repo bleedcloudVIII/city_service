@@ -1,11 +1,43 @@
 from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse
-
+from django.core import serializers
 from etc.forms import CompanyAddPhone, SpecializationCreate, ServiceCreate, CompanyAddService
 
 from etc.models import Company, Phone, Specialization, Service, User
 from accounts.models import Account
 from django.db.models import Q
+
+from cityservice import renderers
+
+import json
+
+def create_pdf(request):
+    print(request.POST)
+    print(request.POST['companies'])
+    context = {
+        'search': request.POST['search'],
+        'specs_choose': request.POST['specs_choose'],
+        'services_choose': request.POST['services_choose'],
+        'companies': request.POST['companies'],
+        'phones': request.POST['phones'],
+    }
+    response = renderers.render_to_pdf("pdfs/invoice.html", context)
+    if response.status_code == 404:
+        raise HTTP404("Invoice not found")
+
+    filename = f"CityService.pdf"
+    """
+    Tell browser to view inline (default)
+    """
+    content = f"inline; filename={filename}"
+    download = request.GET.get("download")
+    if download:
+        """
+        Tells browser to initiate download
+        """
+        content = f"attachment; filename={filename}"
+    response["Content-Disposition"] = content
+    return response
 
 def companies(request):
     context = {}
@@ -42,17 +74,42 @@ def companies(request):
         for elem in companies:
             phones.append(list(Phone.objects.filter(company=elem)))
         context['companies'] = companies
+        
         context['phones'] = phones
         context['search'] = request.POST['search']
         context['specs_choose'] = request.POST['specs_choose']
         context['services_choose'] = request.POST['services_choose']
     else:
-        comps = list(Company.objects.all())[0:10]
+        qs_companies = Company.objects.all()
+        
+        comps = list(qs_companies)
         phones = []
+        qs_phones = {}
         for comp in comps:
+            
             phones.append(list(Phone.objects.filter(company=comp)))
+        json_companies = {}    
+        for i in range(len(qs_companies)):
+            json_companies[i] = serializers.serialize('json', [qs_companies[i], ])
+        print(str(json_companies))
+        w = serializers.serialize('json', qs_companies)
+        # print(str(comps[0]))
+        # str_companies = "".join(str(elem) for elem in comps)
+        # json_companies = {serializers.serialize('json', [elem, ]) for elem in qs_companies}
+        # print(json.dumps(qs_companies))
+        # print(json.dumps(json_companies))
+        # json_phones = {}
+        # print(json_companies)
+        # print(w)
+        # json_companies = serializers.serialize('json', [c, ])
+        # print(json_companies)
+        # context['str_companies'] = str_companies
+        context['json_companies'] = json_companies
         context['phones'] = phones
         context['companies'] = comps
+        
+        # context['str_companies'] = comps
+        
         context['specs_choose'] = ''
         context['services_choose'] = ''
         context['search'] = ''

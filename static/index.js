@@ -1,25 +1,3 @@
-
-// function getSpeciAllList()
-// {
-//     const div_regioni = document.getElementById('regioni_all_list');
-//     const button_for_regioni = document.getElementById('button_regioni');
-//     const div_cut_regioni = document.getElementById('regioni_cut_list');
-
-//     if (button_for_regioni.textContent == 'Показать все')
-//     {
-//         div_cut_regioni.hidden = true;
-//         div_regioni.hidden = false;
-//         button_for_regioni.textContent = 'Свернуть';
-//     }
-//     else {
-//         div_cut_regioni.hidden = false;
-//         div_regioni.hidden = true;
-//         button_for_regioni.textContent = 'Показать все';
-//     }
-// }
-
-// let regioni = [];
-
 function addSpec(region)
 {
     label = document.getElementById('vibrannie_regioni');
@@ -81,7 +59,6 @@ function service(s)
     _start();
 }
 
-
 async function _start()
 {
     await new Promise(r => setTimeout(r, 1));
@@ -109,3 +86,20 @@ async function _start()
     }
 }
 _start();
+
+function pdf()
+{
+    const data = document.currentScript.dataset;
+    console.log(data);
+    // const username = data.username;
+    // const data = JSON.parse(
+    //     document.currentScript.nextElementSibling.textContent
+    // );
+    // var companies = JSON.parse('{{companies|escapejs}}');
+    // console.log("DWWDSQQD");
+    // const data = document.currentScript;
+    // const username = data.username;
+    // console.log(username);
+    console.log(data);
+    // console.log(companies)
+}

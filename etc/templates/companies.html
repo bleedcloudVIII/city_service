@@ -1,5 +1,4 @@
 {% load static %}
-{% load my_tags %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,8 +12,8 @@
 
 <body>
     <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/static/index.js"></script>
-
+    <script src={% static 'index.js'%} defer data-companies="json_companies"></script>
+    {% comment %} {{ json_companies|json_script }} {% endcomment %}
     <header>
         <div class="container ">
             <div class="row">
@@ -45,6 +44,17 @@
     <div class="container">
         <div class="row">
             <div class="col-3 cs-panel">
+                <form class="cs-form" action={% url 'create_pdf' %} method="POST">
+                    {% csrf_token %}
+                    <input hidden type="text" name="search" value={{ search }}>
+                    <input hidden type="text" name="specs_choose" value={{ specs_choose }}>
+                    <input hidden type="text" name="services_choose" value={{ services_choose }}>
+                    <input id="pdf_companies" hidden type="text" name="companies" value={{ companies }}>
+                    <input id="pdf_phones" hidden type="text" name="phones" value={{ phones }}>
+                    <input type="submit" value="PDF">
+                </form>
+                {{ str_companies }}
+                <button  onclick="pdf()" >ADS</button>
                 <form class="cs-form" action={% url 'companies' %} method="POST">
                     {% csrf_token %}
                         <input placeholder="Поиск" class="cs-input" name="search">

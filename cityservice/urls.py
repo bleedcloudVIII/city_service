@@ -45,6 +45,8 @@ from etc.views import change_first_name
 from etc.views import change_last_name
 from etc.views import get_service
 
+from etc.views import create_pdf
+
 urlpatterns = [
     path('cityservice/admin/', admin.site.urls),
     
@@ -67,6 +69,8 @@ urlpatterns = [
     
     path('cityservice/account/change_first_name', change_first_name, name='change_first_name'),
     path('cityservice/account/change_last_name', change_last_name, name='change_last_name'),
+    
+    path('cityservice/companies/create_pdf', create_pdf, name='create_pdf'),
     
     # path('cityservice/service/get_service', companies, name='get_service'),
     

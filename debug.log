@@ -5012,3 +5012,632 @@ Traceback (most recent call last):
 TypeError: unhashable type: 'list'
 2024-03-23 16:13:39,412 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
 2024-03-23 16:13:39,805 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:27:39,807 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:27:43,345 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 1026, in find_library
+    return parser.libraries[name]
+KeyError: 'my_tags'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 87, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Python310\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Python310\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 1088, in load
+    lib = find_library(parser, name)
+  File "C:\Python310\lib\site-packages\django\template\defaulttags.py", line 1028, in find_library
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'my_tags' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+i18n
+l10n
+log
+static
+tz
+2024-03-23 16:27:55,242 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 15, in create_pdf
+    "amount": locale.currency(100_000, grouping=True),
+NameError: name 'locale' is not defined
+2024-03-23 16:28:23,975 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:28:24,393 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:28:39,233 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:28:39,636 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:28:39,796 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 19, in create_pdf
+    response = renderers.render_to_pdf("pdfs/invoice.html", context)
+NameError: name 'renderers' is not defined
+2024-03-23 16:28:41,967 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 19, in create_pdf
+    response = renderers.render_to_pdf("pdfs/invoice.html", context)
+NameError: name 'renderers' is not defined
+2024-03-23 16:28:47,443 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:28:47,844 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:28:53,410 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:28:53,841 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:29:27,273 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:29:27,668 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:29:31,103 xhtml2pdf.document DEBUG    pisaDocument options:
+  src = <_io.BytesIO object at 0x000001E57C8927A0>
+  dest = <_io.BytesIO object at 0x000001E57C8923E0>
+  path = ''
+  link_callback = None
+  xhtml = False
+  context_meta = None
+2024-03-23 16:34:34,518 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:34:35,062 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:36:30,343 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:36:30,840 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:37:02,622 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:37:03,093 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:37:15,915 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:37:16,434 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:37:25,019 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:37:25,503 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:37:40,054 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:37:40,444 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:37:50,895 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:37:51,276 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:38:16,139 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:38:16,525 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:38:25,917 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:38:26,312 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:38:31,640 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:38:32,044 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:38:33,224 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:38:33,641 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:38:45,119 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:38:45,518 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:38:49,161 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'search'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 15, in create_pdf
+    'search': request.POST['search'],
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'search'
+2024-03-23 16:39:07,204 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:39:07,770 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:39:09,008 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'search'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 15, in create_pdf
+    'search': request.POST['search'],
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'search'
+2024-03-23 16:39:23,931 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:39:24,495 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:39:26,255 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'search'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 16, in create_pdf
+    'search': request.POST['search'],
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'search'
+2024-03-23 16:39:36,411 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:39:36,993 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:40:42,112 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 22, in create_pdf
+    response = renderers.render_to_pdf("pdfs/invoice.html", context)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\cityservice\renderers.py", line 11, in render_to_pdf
+    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u2022' in position 9677: ordinal not in range(256)
+2024-03-23 16:41:33,160 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:41:33,687 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:41:38,244 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 26, in create_pdf
+    filename = f"Invoice_{invoice_number}.pdf"
+NameError: name 'invoice_number' is not defined
+2024-03-23 16:42:42,228 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:42:42,733 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:42:47,221 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 38, in create_pdf
+    response["Content-Disposition"] = content
+NameError: name 'response' is not defined
+2024-03-23 16:43:08,994 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:43:09,460 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:43:15,341 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 23, in create_pdf
+    response = renderers.render_to_pdf("pdfs/invoice.html", context)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\cityservice\renderers.py", line 11, in render_to_pdf
+    pdf = pisa.pisaDocument(BytesIO(html.encode("ISO-8859-1")), result)
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u2022' in position 9677: ordinal not in range(256)
+2024-03-23 16:45:01,473 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\cityservice\renderers.py changed, reloading.
+2024-03-23 16:45:02,023 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:45:05,420 xhtml2pdf.document DEBUG    pisaDocument options:
+  src = <_io.BytesIO object at 0x00000174D83B6340>
+  dest = <_io.BytesIO object at 0x00000174D83B6250>
+  path = ''
+  link_callback = None
+  xhtml = False
+  context_meta = None
+2024-03-23 16:45:27,942 xhtml2pdf.document DEBUG    pisaDocument options:
+  src = <_io.BytesIO object at 0x00000174D84DC590>
+  dest = <_io.BytesIO object at 0x00000174D84DC7C0>
+  path = ''
+  link_callback = None
+  xhtml = False
+  context_meta = None
+2024-03-23 16:46:06,367 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:46:06,901 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:46:09,063 xhtml2pdf.document DEBUG    pisaDocument options:
+  src = <_io.BytesIO object at 0x00000122BDFD06D0>
+  dest = <_io.BytesIO object at 0x00000122BDFD05E0>
+  path = ''
+  link_callback = None
+  xhtml = False
+  context_meta = None
+2024-03-23 16:46:47,745 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:46:48,234 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:46:50,420 xhtml2pdf.document DEBUG    pisaDocument options:
+  src = <_io.BytesIO object at 0x00000232180A4860>
+  dest = <_io.BytesIO object at 0x00000232180A4770>
+  path = ''
+  link_callback = None
+  xhtml = False
+  context_meta = None
+2024-03-23 16:50:28,619 xhtml2pdf.document DEBUG    pisaDocument options:
+  src = <_io.BytesIO object at 0x00000232180A4D60>
+  dest = <_io.BytesIO object at 0x00000232180A4590>
+  path = ''
+  link_callback = None
+  xhtml = False
+  context_meta = None
+2024-03-23 16:57:19,662 xhtml2pdf.document DEBUG    pisaDocument options:
+  src = <_io.BytesIO object at 0x00000232180ED260>
+  dest = <_io.BytesIO object at 0x00000232180EC950>
+  path = ''
+  link_callback = None
+  xhtml = False
+  context_meta = None
+2024-03-23 16:57:45,408 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:57:45,924 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:57:55,560 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:57:56,060 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:57:57,722 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 87, in companies
+    context['companies'] = json.dumps(companies)
+UnboundLocalError: local variable 'companies' referenced before assignment
+2024-03-23 16:58:09,964 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:58:10,466 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:58:11,127 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 87, in companies
+    context['companies'] = json.dumps(comps)
+  File "C:\Python310\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python310\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python310\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python310\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Company is not JSON serializable
+2024-03-23 16:58:25,449 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:58:25,924 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:58:30,197 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 16:58:30,573 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 16:58:33,668 xhtml2pdf.document DEBUG    pisaDocument options:
+  src = <_io.BytesIO object at 0x0000018C3D0D6160>
+  dest = <_io.BytesIO object at 0x0000018C3D0D6070>
+  path = ''
+  link_callback = None
+  xhtml = False
+  context_meta = None
+2024-03-23 17:00:24,806 xhtml2pdf.document DEBUG    pisaDocument options:
+  src = <_io.BytesIO object at 0x0000018C3CEE62A0>
+  dest = <_io.BytesIO object at 0x0000018C3CEE5A30>
+  path = ''
+  link_callback = None
+  xhtml = False
+  context_meta = None
+2024-03-23 17:01:08,852 django.request WARNING  Not Found: /favicon.ico
+2024-03-23 17:01:11,897 xhtml2pdf.document DEBUG    pisaDocument options:
+  src = <_io.BytesIO object at 0x0000018C3D0D4720>
+  dest = <_io.BytesIO object at 0x0000018C3D0D4090>
+  path = ''
+  link_callback = None
+  xhtml = False
+  context_meta = None
+2024-03-23 17:01:14,098 xhtml2pdf.document DEBUG    pisaDocument options:
+  src = <_io.BytesIO object at 0x0000018C3CF85D50>
+  dest = <_io.BytesIO object at 0x0000018C3CF85D00>
+  path = ''
+  link_callback = None
+  xhtml = False
+  context_meta = None
+2024-03-23 17:10:24,416 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:10:24,980 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:11:26,793 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:11:27,417 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:11:35,100 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:11:35,608 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:11:42,159 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:11:42,656 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:12:43,330 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:12:43,889 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:12:46,160 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:12:46,655 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:12:57,682 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:12:58,165 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:13:00,398 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:13:00,947 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:13:10,622 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:13:11,142 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:13:16,552 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:13:17,084 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:13:50,210 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:13:50,610 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:13:52,886 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:13:53,448 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:13:59,878 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:14:00,395 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:15:36,037 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:15:36,582 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:16:03,714 django.request WARNING  Not Found: /favicon.ico
+2024-03-23 17:16:24,898 django.request WARNING  Not Found: /favicon.ico
+2024-03-23 17:16:25,101 django.request WARNING  Not Found: /favicon.ico
+2024-03-23 17:16:25,321 django.request WARNING  Not Found: /favicon.ico
+2024-03-23 17:19:06,348 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 99, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 742, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "C:\Python310\lib\site-packages\django\template\defaultfilters.py", line 92, in json_script
+    return _json_script(value, element_id)
+  File "C:\Python310\lib\site-packages\django\utils\html.py", line 70, in json_script
+    json_str = json.dumps(value, cls=encoder or DjangoJSONEncoder).translate(
+  File "C:\Python310\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Python310\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python310\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python310\lib\site-packages\django\core\serializers\json.py", line 106, in default
+    return super().default(o)
+  File "C:\Python310\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Company is not JSON serializable
+2024-03-23 17:21:58,673 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:21:59,205 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:22:04,675 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:22:05,264 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:22:13,840 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:22:14,373 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:22:26,875 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:22:27,261 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:22:31,616 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:22:32,111 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:22:35,484 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:22:35,963 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:22:38,227 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:22:38,745 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:22:57,160 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 89, in companies
+    json_companies = serializers.serialize('json', [comps, ])
+  File "C:\Python310\lib\site-packages\django\core\serializers\__init__.py", line 134, in serialize
+    s.serialize(queryset, **options)
+  File "C:\Python310\lib\site-packages\django\core\serializers\base.py", line 136, in serialize
+    concrete_model = obj._meta.concrete_model
+AttributeError: 'list' object has no attribute '_meta'
+2024-03-23 17:23:09,978 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:23:10,470 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:23:14,524 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 89, in companies
+    json_companies = serializers.serialize('json', [comps, ])[0]
+  File "C:\Python310\lib\site-packages\django\core\serializers\__init__.py", line 134, in serialize
+    s.serialize(queryset, **options)
+  File "C:\Python310\lib\site-packages\django\core\serializers\base.py", line 136, in serialize
+    concrete_model = obj._meta.concrete_model
+AttributeError: 'list' object has no attribute '_meta'
+2024-03-23 17:23:21,576 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:23:22,066 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:24:16,059 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:24:16,547 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:24:21,959 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:24:22,497 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:24:39,958 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:24:40,476 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:24:41,519 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 90, in companies
+    json_companies = serializers.serialize('json', [c, ])
+  File "C:\Python310\lib\site-packages\django\core\serializers\__init__.py", line 134, in serialize
+    s.serialize(queryset, **options)
+  File "C:\Python310\lib\site-packages\django\core\serializers\base.py", line 136, in serialize
+    concrete_model = obj._meta.concrete_model
+AttributeError: 'QuerySet' object has no attribute '_meta'
+2024-03-23 17:24:57,633 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:24:58,136 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:25:03,592 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:25:04,061 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:25:31,990 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:25:32,368 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:25:33,612 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:25:34,002 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:25:42,576 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:25:43,035 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:25:52,816 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:25:53,299 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:26:11,401 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:26:11,892 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:26:15,154 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:26:15,553 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:26:18,824 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:26:19,226 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:26:34,844 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:26:35,253 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:26:38,576 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:26:39,109 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:26:56,566 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:26:57,040 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:27:11,942 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:27:12,422 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:27:14,641 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:27:15,168 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:27:19,531 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:27:20,026 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:27:26,482 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:27:26,942 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:27:29,248 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:27:29,742 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:27:36,252 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:27:36,765 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:27:51,806 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:27:52,285 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:27:54,529 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:27:55,002 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:28:14,125 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:28:14,626 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:28:18,987 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:28:19,489 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:28:23,849 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:28:24,315 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:28:59,391 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:28:59,888 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:29:05,290 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:29:05,789 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:29:40,246 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:29:40,747 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:30:02,559 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:30:02,951 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:30:23,130 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:30:23,636 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:30:26,988 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:30:27,477 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:30:37,117 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:30:37,589 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:30:39,986 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 94, in companies
+    print(json.dumps(qs_companies))
+  File "C:\Python310\lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "C:\Python310\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python310\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python310\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type QuerySet is not JSON serializable
+2024-03-23 17:30:51,814 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:30:52,286 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:30:59,801 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:31:00,273 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:31:13,120 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:31:13,642 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:31:23,632 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 111, in companies
+    return render(request, 'companies.html', context)
+  File "C:\Python310\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Python310\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Python310\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\Python310\lib\site-packages\django\template\base.py", line 742, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "C:\Python310\lib\site-packages\django\template\defaultfilters.py", line 92, in json_script
+    return _json_script(value, element_id)
+  File "C:\Python310\lib\site-packages\django\utils\html.py", line 70, in json_script
+    json_str = json.dumps(value, cls=encoder or DjangoJSONEncoder).translate(
+  File "C:\Python310\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Python310\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Python310\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Python310\lib\site-packages\django\core\serializers\json.py", line 106, in default
+    return super().default(o)
+  File "C:\Python310\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type set is not JSON serializable
+2024-03-23 17:32:22,114 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:32:22,644 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:32:25,978 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:32:26,528 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:32:36,256 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:32:36,732 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:32:46,135 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:32:46,533 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:33:13,453 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:33:13,866 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:33:19,250 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:33:19,774 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:33:40,546 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:33:41,045 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:33:44,438 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:33:44,977 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:34:01,094 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:34:01,658 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:34:15,612 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:34:16,102 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:34:41,653 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:34:42,233 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-23 17:36:38,253 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-23 17:36:38,865 django.utils.autoreload INFO     Watching for file changes with StatReloader
