@@ -1,43 +1,91 @@
-from django.shortcuts import render, HttpResponseRedirect
+from django.shortcuts import render, HttpResponseRedirect, HttpResponse
 from django.urls import reverse
 from django.core import serializers
 from etc.forms import CompanyAddPhone, SpecializationCreate, ServiceCreate, CompanyAddService
-
+from django.template.loader import get_template
 from etc.models import Company, Phone, Specialization, Service, User
 from accounts.models import Account
 from django.db.models import Q
-
+from cityservice import settings
 from cityservice import renderers
-
+from xhtml2pdf import pisa
+from xhtml2pdf.files import pisaFileObject
+import os
 import json
 
+def fetch_pdf_resources(uri, rel):
+    # if uri.find(settings.MEDIA_URL) != -1:
+    #     path = os.path.join(settings.MEDIA_ROOT, uri.replace(settings.MEDIA_URL, ''))
+    if uri.find(settings.STATIC_URL) != -1:
+        path = os.path.join(settings.STATIC_ROOT, uri.replace(settings.STATIC_URL, ''))
+    else:
+        path = None
+    return path
+
 def create_pdf(request):
-    print(request.POST)
-    print(request.POST['companies'])
+    template_path = 'pdfs/invoice.html'
+    comp = request.POST['companies']
+    comp = comp.replace("'", "\"")
+    comp = json.loads(comp)
     context = {
         'search': request.POST['search'],
         'specs_choose': request.POST['specs_choose'],
         'services_choose': request.POST['services_choose'],
-        'companies': request.POST['companies'],
-        'phones': request.POST['phones'],
+        'companies': comp,
+        # 'phones': request.POST['phones'],
     }
-    response = renderers.render_to_pdf("pdfs/invoice.html", context)
-    if response.status_code == 404:
-        raise HTTP404("Invoice not found")
+    # Create a Django response object, and specify content_type as pdf
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'attachment; filename="report.pdf"'
+    # find the template and render it.
+    template = get_template(template_path)
+    html = template.render(context)
 
-    filename = f"CityService.pdf"
-    """
-    Tell browser to view inline (default)
-    """
-    content = f"inline; filename={filename}"
-    download = request.GET.get("download")
-    if download:
-        """
-        Tells browser to initiate download
-        """
-        content = f"attachment; filename={filename}"
-    response["Content-Disposition"] = content
+    # create a pdf
+    pisaFileObject.getNamedFile = lambda self: self.uri
+    pisa_status = pisa.CreatePDF(html, dest=response, encoding='UTF-8', link_callback=fetch_pdf_resources)
+    # if error then show some funny view
+    if pisa_status.err:
+       return HttpResponse('We had some errors <pre>' + html + '</pre>')
     return response
+    
+    
+    # # print(request.POST)
+    # # print(request.POST['companies'])
+    # companies_req = request.POST['companies']
+    # # IF
+    # # companies_list = list(request.POST['companies'])
+    # print(companies_req)
+    # print(request.POST['phones'])
+    # comp = request.POST['companies']
+    # comp = comp.replace("'", "\"")
+    # comp = json.loads(comp)
+    # print(comp[0])
+    # print(type(request.POST['companies']))
+    # # print(comp)
+    # context = {
+    #     'search': request.POST['search'],
+    #     'specs_choose': request.POST['specs_choose'],
+    #     'services_choose': request.POST['services_choose'],
+    #     'companies': comp,
+    #     # 'phones': request.POST['phones'],
+    #     # 'comp': request.POST['companies'][0],
+    #     # 'qwe': 'qwerty',
+    #     # 'comps': Company.objects.all(),
+    # }
+    # response = renderers.render_to_pdf("pdfs/invoice.html", context)
+    # if response.status_code == 404:
+    #     raise HTTP404("Invoice not found")
+
+    # filename = f"CityService.pdf"
+    # content = f"inline; filename={filename}"
+    
+    # download = request.GET.get("download")
+    # if download:
+    #     content = f"attachment; filename={filename}"
+        
+    # response["Content-Disposition"] = content
+    # return response
 
 def companies(request):
     context = {}
@@ -85,29 +133,31 @@ def companies(request):
         comps = list(qs_companies)
         phones = []
         qs_phones = {}
-        for comp in comps:
-            
+        for comp in comps:    
             phones.append(list(Phone.objects.filter(company=comp)))
-        json_companies = {}    
-        for i in range(len(qs_companies)):
-            json_companies[i] = serializers.serialize('json', [qs_companies[i], ])
-        print(str(json_companies))
-        w = serializers.serialize('json', qs_companies)
-        # print(str(comps[0]))
-        # str_companies = "".join(str(elem) for elem in comps)
-        # json_companies = {serializers.serialize('json', [elem, ]) for elem in qs_companies}
-        # print(json.dumps(qs_companies))
-        # print(json.dumps(json_companies))
-        # json_phones = {}
-        # print(json_companies)
-        # print(w)
-        # json_companies = serializers.serialize('json', [c, ])
-        # print(json_companies)
-        # context['str_companies'] = str_companies
-        context['json_companies'] = json_companies
+            
+        pdf_companies = [{'pk': company.pk, 'name': company.name, 'address': company.address} for company in qs_companies]
+        pdf_phones = [[p.phone for p in phone] for phone in phones]
+        
+        context['pdf_companies'] = pdf_companies
+        context['pdf_phones'] = pdf_phones
+        
+        print(pdf_companies)
+        print(pdf_phones)
+        # data = [{'id': blog.pk, 'name': blog.name} for blog in blogs]
+        # print()
+        # print(context['companies'])
+        # json_companies = {}    
+        # for i in range(len(qs_companies)):
+            # json_companies[i] = serializers.serialize('json', [qs_companies[i], ])
+        # print(str(json_companies))
+        
+        
+        
+        # context['json_companies'] = json_companies
         context['phones'] = phones
         context['companies'] = comps
-        
+        # context['json'] = json.dumps(json_companies)
         # context['str_companies'] = comps
         
         context['specs_choose'] = ''

@@ -12,7 +12,19 @@
 
 <body>
     <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src={% static 'index.js'%} defer data-companies="json_companies"></script>
+    <script src='/static/index.js'></script>
+    <script>
+        function pdf()
+        {
+            var pdf_companies = '{{pdf_companies|escapejs}}';
+            var pdf_phones = '{{pdf_phones|escapejs}}';
+            document.getElementById('pdf_companies').value = pdf_companies;
+            document.getElementById('pdf_phones').value = pdf_phones;
+
+            console.log(pdf_companies);
+            console.log(pdf_phones);
+        }
+    </script>
     {% comment %} {{ json_companies|json_script }} {% endcomment %}
     <header>
         <div class="container ">

@@ -87,10 +87,11 @@ async function _start()
 }
 _start();
 
-function pdf()
-{
-    const data = document.currentScript.dataset;
-    console.log(data);
+// function pdf()
+// {
+    // var data = JSON.parse('{{ json|escapejs }}')
+    // const data = document.currentScript.dataset;
+    // console.log(data);
     // const username = data.username;
     // const data = JSON.parse(
     //     document.currentScript.nextElementSibling.textContent
@@ -100,6 +101,6 @@ function pdf()
     // const data = document.currentScript;
     // const username = data.username;
     // console.log(username);
-    console.log(data);
+    // console.log(data);
     // console.log(companies)
-}
+// }
