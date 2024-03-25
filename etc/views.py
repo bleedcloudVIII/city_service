@@ -17,24 +17,17 @@ from django.http import FileResponse
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-def fetch_pdf_resources(uri, rel):
-    # if uri.find(settings.MEDIA_URL) != -1:
-    #     path = os.path.join(settings.MEDIA_ROOT, uri.replace(settings.MEDIA_URL, ''))
-    # if uri.find(settings.STATIC_URL) != -1:
-    #     path = os.path.join(settings.STATIC_ROOT, uri.replace(settings.STATIC_URL, ''))
-    # else:
-    #     path = None
-    # return path
-    pass
 
 def create_pdf(request):
     buffer = io.BytesIO()
     p = canvas.Canvas(buffer)
     # (0; 0) - левый нижний угол
 
-    font = TTFont('MyFont', './times.ttf')
+    font = TTFont('MyFont', 'static/arial/Times_New_Roman.ttf')
     pdfmetrics.registerFont(font)
     p.setFont('MyFont', 14)
+    
+    print(request.POST)
     
     if request.POST['companies'] != '':
         companies = json.loads(request.POST['companies'].replace("'", "\""))
@@ -45,86 +38,14 @@ def create_pdf(request):
     
     
     for i in range(len(companies)):
-        p.drawString((i+1)* 100, (7 - i)*100, companies[i]['name'])
-        p.drawString((i+2)* 100, (7 - i)*100, companies[i]['address'])
-        
-    
-    # context = {
-    #     'search': request.POST['search'],
-    #     'specs_choose': request.POST['specs_choose'],
-    #     'services_choose': request.POST['services_choose'],
-    #     'companies': comp,
-    #     # 'phones': request.POST['phones'],
-    # }
+        y = 100 * (7 - i)
+        p.drawString(50, y, companies[i]['name'])
+        p.drawString(50, y - 15, companies[i]['address'])
 
     p.showPage()
     p.save()
     buffer.seek(0)
     return FileResponse(buffer, as_attachment=True, filename="CityService.pdf")
-    
-    # template_path = 'pdfs/invoice.html'
-    # comp = request.POST['companies']
-    # comp = comp.replace("'", "\"")
-    # comp = json.loads(comp)
-    # context = {
-    #     'search': request.POST['search'],
-    #     'specs_choose': request.POST['specs_choose'],
-    #     'services_choose': request.POST['services_choose'],
-    #     'companies': comp,
-    #     # 'phones': request.POST['phones'],
-    # }
-    # # Create a Django response object, and specify content_type as pdf
-    # response = HttpResponse(content_type='application/pdf')
-    # response['Content-Disposition'] = 'attachment; filename="report.pdf"'
-    # # find the template and render it.
-    # template = get_template(template_path)
-    # html = template.render(context)
-
-    # # create a pdf
-    # pisaFileObject.getNamedFile = lambda self: self.uri
-    # pisa_status = pisa.CreatePDF(html, dest=response, encoding='UTF-8', link_callback=fetch_pdf_resources)
-    # # if error then show some funny view
-    # if pisa_status.err:
-    #    return HttpResponse('We had some errors <pre>' + html + '</pre>')
-    # return response
-    
-    
-    # # print(request.POST)
-    # # print(request.POST['companies'])
-    # companies_req = request.POST['companies']
-    # # IF
-    # # companies_list = list(request.POST['companies'])
-    # print(companies_req)
-    # print(request.POST['phones'])
-    # comp = request.POST['companies']
-    # comp = comp.replace("'", "\"")
-    # comp = json.loads(comp)
-    # print(comp[0])
-    # print(type(request.POST['companies']))
-    # # print(comp)
-    # context = {
-    #     'search': request.POST['search'],
-    #     'specs_choose': request.POST['specs_choose'],
-    #     'services_choose': request.POST['services_choose'],
-    #     'companies': comp,
-    #     # 'phones': request.POST['phones'],
-    #     # 'comp': request.POST['companies'][0],
-    #     # 'qwe': 'qwerty',
-    #     # 'comps': Company.objects.all(),
-    # }
-    # response = renderers.render_to_pdf("pdfs/invoice.html", context)
-    # if response.status_code == 404:
-    #     raise HTTP404("Invoice not found")
-
-    # filename = f"CityService.pdf"
-    # content = f"inline; filename={filename}"
-    
-    # download = request.GET.get("download")
-    # if download:
-    #     content = f"attachment; filename={filename}"
-        
-    # response["Content-Disposition"] = content
-    # return response
 
 def companies(request):
     context = {}
@@ -160,8 +81,13 @@ def companies(request):
         companies = set(companies)
         for elem in companies:
             phones.append(list(Phone.objects.filter(company=elem)))
-        context['companies'] = companies
         
+        pdf_companies = [{'pk': company.pk, 'name': company.name, 'address': company.address} for company in companies]
+        pdf_phones = [[p.phone for p in phone] for phone in phones]
+        
+        context['companies'] = companies
+        context['pdf_companies'] = pdf_companies
+        context['pdf_phones'] = pdf_phones
         context['phones'] = phones
         context['search'] = request.POST['search']
         context['specs_choose'] = request.POST['specs_choose']
@@ -180,25 +106,8 @@ def companies(request):
         
         context['pdf_companies'] = pdf_companies
         context['pdf_phones'] = pdf_phones
-        
-        print(pdf_companies)
-        print(pdf_phones)
-        # data = [{'id': blog.pk, 'name': blog.name} for blog in blogs]
-        # print()
-        # print(context['companies'])
-        # json_companies = {}    
-        # for i in range(len(qs_companies)):
-            # json_companies[i] = serializers.serialize('json', [qs_companies[i], ])
-        # print(str(json_companies))
-        
-        
-        
-        # context['json_companies'] = json_companies
         context['phones'] = phones
         context['companies'] = comps
-        # context['json'] = json.dumps(json_companies)
-        # context['str_companies'] = comps
-        
         context['specs_choose'] = ''
         context['services_choose'] = ''
         context['search'] = ''

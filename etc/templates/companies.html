@@ -14,16 +14,16 @@
     <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src='/static/index.js'></script>
     <script>
-        function pdf()
+        function _pdf()
         {
             var pdf_companies = '{{pdf_companies|escapejs}}';
             var pdf_phones = '{{pdf_phones|escapejs}}';
             document.getElementById('pdf_companies').value = pdf_companies;
             document.getElementById('pdf_phones').value = pdf_phones;
-
             console.log(pdf_companies);
             console.log(pdf_phones);
         }
+        _pdf();
     </script>
     {% comment %} {{ json_companies|json_script }} {% endcomment %}
     <header>
@@ -63,10 +63,10 @@
                     <input hidden type="text" name="services_choose" value={{ services_choose }}>
                     <input id="pdf_companies" hidden type="text" name="companies" value={{ companies }}>
                     <input id="pdf_phones" hidden type="text" name="phones" value={{ phones }}>
-                    <input type="submit" value="PDF">
+                    <input type="submit" onclick="_pdf()" value="PDF">
                 </form>
                 {{ str_companies }}
-                <button  onclick="pdf()" >ADS</button>
+                <button  onclick="_pdf()" >ADS</button>
                 <form class="cs-form" action={% url 'companies' %} method="POST">
                     {% csrf_token %}
                         <input placeholder="Поиск" class="cs-input" name="search">

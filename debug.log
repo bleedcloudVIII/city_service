@@ -7843,3 +7843,585 @@ TypeError: Canvas.setFont() missing 1 required positional argument: 'size'
 2024-03-25 12:37:38,033 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-03-25 12:37:47,062 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
 2024-03-25 12:37:47,900 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:38:17,676 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:39:25,390 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:39:26,244 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:39:54,416 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:39:55,485 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:40:10,857 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:40:11,771 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:40:15,125 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:40:16,052 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:40:22,636 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:40:23,384 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:41:02,341 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:41:03,503 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:41:05,926 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 49, in create_pdf
+    p.drawString(50 + len(companies[i]['name'] + 10), (7 - i)*100, companies[i]['address'])
+TypeError: can only concatenate str (not "int") to str
+2024-03-25 12:41:18,000 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:41:19,051 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:41:40,959 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:41:41,952 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:42:48,760 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:42:49,679 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:42:58,425 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:42:59,314 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:43:03,680 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:43:04,568 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:43:11,230 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:43:12,167 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:43:27,489 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:43:28,535 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:43:58,417 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:43:59,515 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:44:02,642 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:44:03,467 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:44:09,929 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:44:10,992 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:44:29,190 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:44:30,272 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:45:13,284 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:45:14,325 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:45:21,016 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:45:21,991 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:45:27,298 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: './../static/arial/Times_New_Roman.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+  File "C:\Python310\lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python310\lib\urllib\request.py", line 503, in open
+    req = Request(fullurl, data)
+  File "C:\Python310\lib\urllib\request.py", line 322, in __init__
+    self.full_url = url
+  File "C:\Python310\lib\urllib\request.py", line 348, in full_url
+    self._parse()
+  File "C:\Python310\lib\urllib\request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: './../static/arial/Times_New_Roman.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 151, in TTFOpenFile
+    f = open_for_read(fn,'rb')
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    return open_for_read(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "./../static/arial/Times_New_Roman.ttf"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 35, in create_pdf
+    font = TTFont('MyFont', './../static/arial/Times_New_Roman.ttf')
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1185, in __init__
+    self.face = TTFontFace(filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1073, in __init__
+    TTFontFile.__init__(self, filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 439, in __init__
+    TTFontParser.__init__(self, file, validate=validate,subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 175, in __init__
+    self.readFile(file)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 251, in readFile
+    self.filename, f = TTFOpenFile(f)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 161, in TTFOpenFile
+    raise TTFError('Can\'t open file "%s"' % fn)
+reportlab.pdfbase.ttfonts.TTFError: Can't open file "./../static/arial/Times_New_Roman.ttf"
+2024-03-25 12:45:37,995 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:45:38,975 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:45:51,230 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:45:52,159 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:46:01,006 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:46:01,975 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:46:05,329 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:46:06,232 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:46:11,958 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: './../static/arial/Times_New_Roman.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+  File "C:\Python310\lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python310\lib\urllib\request.py", line 503, in open
+    req = Request(fullurl, data)
+  File "C:\Python310\lib\urllib\request.py", line 322, in __init__
+    self.full_url = url
+  File "C:\Python310\lib\urllib\request.py", line 348, in full_url
+    self._parse()
+  File "C:\Python310\lib\urllib\request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: './../static/arial/Times_New_Roman.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 151, in TTFOpenFile
+    f = open_for_read(fn,'rb')
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    return open_for_read(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "./../static/arial/Times_New_Roman.ttf"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 35, in create_pdf
+    font = TTFont('MyFont', './../static/arial/Times_New_Roman.ttf')
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1185, in __init__
+    self.face = TTFontFace(filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1073, in __init__
+    TTFontFile.__init__(self, filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 439, in __init__
+    TTFontParser.__init__(self, file, validate=validate,subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 175, in __init__
+    self.readFile(file)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 251, in readFile
+    self.filename, f = TTFOpenFile(f)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 161, in TTFOpenFile
+    raise TTFError('Can\'t open file "%s"' % fn)
+reportlab.pdfbase.ttfonts.TTFError: Can't open file "./../static/arial/Times_New_Roman.ttf"
+2024-03-25 12:46:16,978 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:46:17,954 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:46:19,170 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: './../static/arial/arial.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+  File "C:\Python310\lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python310\lib\urllib\request.py", line 503, in open
+    req = Request(fullurl, data)
+  File "C:\Python310\lib\urllib\request.py", line 322, in __init__
+    self.full_url = url
+  File "C:\Python310\lib\urllib\request.py", line 348, in full_url
+    self._parse()
+  File "C:\Python310\lib\urllib\request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: './../static/arial/arial.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 151, in TTFOpenFile
+    f = open_for_read(fn,'rb')
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    return open_for_read(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "./../static/arial/arial.ttf"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 35, in create_pdf
+    font = TTFont('MyFont', './../static/arial/arial.ttf')
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1185, in __init__
+    self.face = TTFontFace(filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1073, in __init__
+    TTFontFile.__init__(self, filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 439, in __init__
+    TTFontParser.__init__(self, file, validate=validate,subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 175, in __init__
+    self.readFile(file)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 251, in readFile
+    self.filename, f = TTFOpenFile(f)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 161, in TTFOpenFile
+    raise TTFError('Can\'t open file "%s"' % fn)
+reportlab.pdfbase.ttfonts.TTFError: Can't open file "./../static/arial/arial.ttf"
+2024-03-25 12:46:38,942 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:46:40,036 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:46:41,270 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: './.../static/arial/arial.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+  File "C:\Python310\lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python310\lib\urllib\request.py", line 503, in open
+    req = Request(fullurl, data)
+  File "C:\Python310\lib\urllib\request.py", line 322, in __init__
+    self.full_url = url
+  File "C:\Python310\lib\urllib\request.py", line 348, in full_url
+    self._parse()
+  File "C:\Python310\lib\urllib\request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: './.../static/arial/arial.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 151, in TTFOpenFile
+    f = open_for_read(fn,'rb')
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    return open_for_read(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "./.../static/arial/arial.ttf"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 35, in create_pdf
+    font = TTFont('MyFont', './.../static/arial/arial.ttf')
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1185, in __init__
+    self.face = TTFontFace(filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1073, in __init__
+    TTFontFile.__init__(self, filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 439, in __init__
+    TTFontParser.__init__(self, file, validate=validate,subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 175, in __init__
+    self.readFile(file)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 251, in readFile
+    self.filename, f = TTFOpenFile(f)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 161, in TTFOpenFile
+    raise TTFError('Can\'t open file "%s"' % fn)
+reportlab.pdfbase.ttfonts.TTFError: Can't open file "./.../static/arial/arial.ttf"
+2024-03-25 12:46:46,895 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:46:47,744 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:47:38,930 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:47:39,799 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:47:50,805 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:47:51,732 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:47:54,221 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/static/arial/arial.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+  File "C:\Python310\lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python310\lib\urllib\request.py", line 503, in open
+    req = Request(fullurl, data)
+  File "C:\Python310\lib\urllib\request.py", line 322, in __init__
+    self.full_url = url
+  File "C:\Python310\lib\urllib\request.py", line 348, in full_url
+    self._parse()
+  File "C:\Python310\lib\urllib\request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: '/static/arial/arial.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 151, in TTFOpenFile
+    f = open_for_read(fn,'rb')
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    return open_for_read(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "/static/arial/arial.ttf"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 35, in create_pdf
+    font = TTFont('MyFont', '/static/arial/arial.ttf')
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1185, in __init__
+    self.face = TTFontFace(filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1073, in __init__
+    TTFontFile.__init__(self, filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 439, in __init__
+    TTFontParser.__init__(self, file, validate=validate,subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 175, in __init__
+    self.readFile(file)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 251, in readFile
+    self.filename, f = TTFOpenFile(f)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 161, in TTFOpenFile
+    raise TTFError('Can\'t open file "%s"' % fn)
+reportlab.pdfbase.ttfonts.TTFError: Can't open file "/static/arial/arial.ttf"
+2024-03-25 12:48:22,537 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:48:23,604 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:48:25,437 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: './../../static/arial/arial.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+  File "C:\Python310\lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python310\lib\urllib\request.py", line 503, in open
+    req = Request(fullurl, data)
+  File "C:\Python310\lib\urllib\request.py", line 322, in __init__
+    self.full_url = url
+  File "C:\Python310\lib\urllib\request.py", line 348, in full_url
+    self._parse()
+  File "C:\Python310\lib\urllib\request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: './../../static/arial/arial.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 151, in TTFOpenFile
+    f = open_for_read(fn,'rb')
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    return open_for_read(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "./../../static/arial/arial.ttf"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 35, in create_pdf
+    font = TTFont('MyFont', './../../static/arial/arial.ttf')
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1185, in __init__
+    self.face = TTFontFace(filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1073, in __init__
+    TTFontFile.__init__(self, filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 439, in __init__
+    TTFontParser.__init__(self, file, validate=validate,subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 175, in __init__
+    self.readFile(file)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 251, in readFile
+    self.filename, f = TTFOpenFile(f)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 161, in TTFOpenFile
+    raise TTFError('Can\'t open file "%s"' % fn)
+reportlab.pdfbase.ttfonts.TTFError: Can't open file "./../../static/arial/arial.ttf"
+2024-03-25 12:48:41,283 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:48:42,202 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:48:48,848 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:48:49,732 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:48:58,534 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:48:59,414 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:49:18,954 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:49:20,045 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:49:32,333 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:49:33,179 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:49:50,468 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:49:51,377 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:49:52,826 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:49:53,573 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:49:56,787 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:49:57,687 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:50:03,102 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:50:04,061 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:50:16,219 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:50:17,367 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:50:30,689 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:50:31,554 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:51:04,323 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 40, in create_pdf
+    companies = json.loads(request.POST['companies'].replace("'", "\""))
+  File "C:\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 2 (char 1)
+2024-03-25 12:51:40,056 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:51:41,062 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:51:46,479 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:51:47,539 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:51:53,221 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 42, in create_pdf
+    companies = json.loads(request.POST['companies'].replace("'", "\""))
+  File "C:\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 2 (char 1)
+2024-03-25 12:52:21,216 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 42, in create_pdf
+    companies = json.loads(request.POST['companies'].replace("'", "\""))
+  File "C:\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 2 (char 1)
+2024-03-25 12:52:24,391 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 42, in create_pdf
+    companies = json.loads(request.POST['companies'].replace("'", "\""))
+  File "C:\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 2 (char 1)
+2024-03-25 12:52:40,948 django.request WARNING  Not Found: /favicon.ico
+2024-03-25 12:52:41,575 django.request WARNING  Not Found: /favicon.ico
+2024-03-25 12:52:41,793 django.request WARNING  Not Found: /favicon.ico
+2024-03-25 12:52:41,955 django.request WARNING  Not Found: /favicon.ico
+2024-03-25 12:52:43,343 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 42, in create_pdf
+    companies = json.loads(request.POST['companies'].replace("'", "\""))
+  File "C:\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python310\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 2 (char 1)
+2024-03-25 12:53:21,488 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 44, in create_pdf
+    print(companies)
+UnboundLocalError: local variable 'companies' referenced before assignment
+2024-03-25 12:53:42,062 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 44, in create_pdf
+    print(companies)
+UnboundLocalError: local variable 'companies' referenced before assignment
+2024-03-25 12:55:21,600 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:55:22,488 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:55:25,469 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:55:26,197 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:55:36,751 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:55:37,679 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:55:40,147 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:55:40,892 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:55:50,173 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 158, in companies
+    pdf_companies = [{'pk': company.pk, 'name': company.name, 'address': company.address} for company in qs_companies]
+UnboundLocalError: local variable 'qs_companies' referenced before assignment
+2024-03-25 12:56:05,912 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:56:06,916 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:56:11,362 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:56:12,273 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:56:40,012 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:56:41,152 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:56:44,287 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:56:45,075 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:56:48,409 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:56:49,210 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:56:58,751 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:56:59,752 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:57:05,245 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:57:06,154 django.utils.autoreload INFO     Watching for file changes with StatReloader
