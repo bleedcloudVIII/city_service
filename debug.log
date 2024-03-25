@@ -7330,3 +7330,516 @@ AttributeError: module 'cityservice.settings' has no attribute 'STATIC_ROOT'
 2024-03-24 16:40:07,700 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\cityservice\settings.py changed, reloading.
 2024-03-24 16:40:08,242 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-03-24 16:40:09,214 django.request WARNING  Not Found: /favicon.ico
+2024-03-25 11:58:49,673 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 11:58:55,231 django.request WARNING  Not Found: /
+2024-03-25 11:58:55,387 django.request WARNING  Not Found: /favicon.ico
+2024-03-25 11:59:19,788 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 11:59:20,592 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:00:01,513 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:00:02,465 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:00:46,420 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:00:47,396 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:01:03,904 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:01:04,841 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:01:08,035 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:01:08,899 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:01:12,679 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:01:13,460 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:01:16,350 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:01:17,320 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:01:20,499 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:01:21,092 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:01:24,066 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:01:25,052 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:01:28,367 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:01:29,218 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:01:37,506 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:01:38,644 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:05:37,645 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:05:38,588 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:05:53,944 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:05:54,764 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:06:08,875 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:06:09,903 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:06:25,223 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:06:26,194 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:06:30,511 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:06:31,522 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:06:38,550 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 35, in create_pdf
+    companies = json.loads(request['companies'].replace("'", "\'"))
+TypeError: 'WSGIRequest' object is not subscriptable
+2024-03-25 12:06:54,135 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:06:55,143 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:06:56,498 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:06:57,299 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:07:02,774 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:07:03,814 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:07:06,687 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 35, in create_pdf
+    companies = request['companies']
+TypeError: 'WSGIRequest' object is not subscriptable
+2024-03-25 12:07:15,516 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:07:16,520 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:07:22,074 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:07:22,952 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:07:29,434 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:07:30,313 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:07:33,669 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:07:34,471 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:07:38,137 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 38, in create_pdf
+    companies = json.loads(companies)
+  File "C:\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python310\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+2024-03-25 12:08:06,846 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:08:07,678 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:08:12,946 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 38, in create_pdf
+    print(compaines)
+NameError: name 'compaines' is not defined
+2024-03-25 12:08:21,538 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:08:22,644 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:08:24,453 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 38, in create_pdf
+    print(compaines)
+NameError: name 'compaines' is not defined
+2024-03-25 12:08:35,875 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:08:36,865 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:08:38,264 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 39, in create_pdf
+    companies = json.loads(companies)
+  File "C:\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python310\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+2024-03-25 12:09:13,240 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:09:14,244 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:09:18,000 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 42, in create_pdf
+    companies = json.loads(companies)
+  File "C:\Python310\lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python310\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Python310\lib\json\decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 3 (char 2)
+2024-03-25 12:09:49,050 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:09:50,033 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:10:00,577 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:10:01,492 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:10:04,798 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:10:05,698 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:10:24,444 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:10:25,439 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:10:28,698 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:10:29,562 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:10:36,274 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:10:37,086 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:10:48,144 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:10:49,055 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:10:54,470 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:10:55,393 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:10:58,670 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:10:59,412 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:11:03,772 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:11:04,568 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:11:11,824 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:11:12,788 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:11:19,398 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:11:20,239 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:11:27,920 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:11:28,625 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:11:39,348 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:11:40,182 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:11:48,853 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:11:49,744 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:11:53,064 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:11:53,987 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:11:58,236 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:11:59,169 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:12:02,238 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:12:02,968 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:12:12,694 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:12:13,565 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:12:21,165 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:12:22,067 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:12:27,573 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:12:28,545 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:12:41,483 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:12:42,360 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:12:54,449 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:12:55,397 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:13:04,083 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:13:04,980 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:13:13,679 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:13:14,410 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:13:16,821 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:13:17,529 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:13:32,770 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:13:33,790 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:13:36,977 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:13:37,818 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:13:43,234 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:13:44,203 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:13:49,127 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 41, in create_pdf
+    for i in len(companies):
+TypeError: 'int' object is not iterable
+2024-03-25 12:14:01,221 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:14:02,116 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:14:06,395 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:14:07,408 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:14:09,583 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 41, in create_pdf
+    for i in len(companies):
+TypeError: 'int' object is not iterable
+2024-03-25 12:14:19,715 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:14:20,585 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:14:23,769 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 42, in create_pdf
+    p.drawString((i+1)*100, (7 - i)*100, companies[i].name)
+AttributeError: 'dict' object has no attribute 'name'
+2024-03-25 12:14:39,144 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:14:40,190 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:14:47,950 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:14:48,907 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:14:54,298 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:14:55,359 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:14:57,385 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 43, in create_pdf
+    p.drawString((i+1)*100, (7 - i)*100, companies[i].name)
+AttributeError: 'dict' object has no attribute 'name'
+2024-03-25 12:15:22,877 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:15:23,927 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:15:28,566 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 43, in create_pdf
+    p.drawString((i+1)*100, (7 - i)*100, companies[i].name)
+AttributeError: 'dict' object has no attribute 'name'
+2024-03-25 12:15:54,071 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:15:55,047 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:15:58,317 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:15:59,215 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:16:01,856 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 41, in create_pdf
+    print(companies[0].name)
+AttributeError: 'dict' object has no attribute 'name'
+2024-03-25 12:17:04,165 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:17:05,183 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:17:09,698 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 45, in create_pdf
+    p.drawString((i+1)*100, (7 - i)*100, companies[i].name)
+AttributeError: 'dict' object has no attribute 'name'
+2024-03-25 12:17:23,716 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:17:24,780 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:17:44,000 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:17:44,887 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:17:48,179 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:17:48,884 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:17:53,102 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:17:53,945 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:20:52,882 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:20:53,858 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:20:58,411 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:20:59,301 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:21:08,017 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:21:08,978 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:21:13,391 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:21:14,417 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:21:45,419 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 49, in create_pdf
+    pdfmetrics.registerFont(TTFont('Arial', './../static/arial/arial.ttf'))
+NameError: name 'pdfmetrics' is not defined
+2024-03-25 12:22:18,869 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:22:19,936 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:22:24,749 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 50, in create_pdf
+    pdfmetrics.registerFont(TTFont('Arial', './../static/arial/arial.ttf'))
+NameError: name 'TTFont' is not defined
+2024-03-25 12:22:38,167 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:22:39,250 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:22:45,946 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:22:47,009 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:22:51,807 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: './../static/arial/arial.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+  File "C:\Python310\lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python310\lib\urllib\request.py", line 503, in open
+    req = Request(fullurl, data)
+  File "C:\Python310\lib\urllib\request.py", line 322, in __init__
+    self.full_url = url
+  File "C:\Python310\lib\urllib\request.py", line 348, in full_url
+    self._parse()
+  File "C:\Python310\lib\urllib\request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: './../static/arial/arial.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 151, in TTFOpenFile
+    f = open_for_read(fn,'rb')
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    return open_for_read(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "./../static/arial/arial.ttf"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 31, in create_pdf
+    pdfmetrics.registerFont(TTFont('Arial', './../static/arial/arial.ttf'))
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1185, in __init__
+    self.face = TTFontFace(filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1073, in __init__
+    TTFontFile.__init__(self, filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 439, in __init__
+    TTFontParser.__init__(self, file, validate=validate,subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 175, in __init__
+    self.readFile(file)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 251, in readFile
+    self.filename, f = TTFOpenFile(f)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 161, in TTFOpenFile
+    raise TTFError('Can\'t open file "%s"' % fn)
+reportlab.pdfbase.ttfonts.TTFError: Can't open file "./../static/arial/arial.ttf"
+2024-03-25 12:23:57,764 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:23:58,664 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:24:04,076 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:24:05,185 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:24:07,457 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'Times_New_Roman.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+  File "C:\Python310\lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Python310\lib\urllib\request.py", line 503, in open
+    req = Request(fullurl, data)
+  File "C:\Python310\lib\urllib\request.py", line 322, in __init__
+    self.full_url = url
+  File "C:\Python310\lib\urllib\request.py", line 348, in full_url
+    self._parse()
+  File "C:\Python310\lib\urllib\request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: 'Times_New_Roman.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 151, in TTFOpenFile
+    f = open_for_read(fn,'rb')
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    return open_for_read(name,mode)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "Times_New_Roman.ttf"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 31, in create_pdf
+    pdfmetrics.registerFont(TTFont('Times New Roman', 'Times_New_Roman.ttf'))
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1185, in __init__
+    self.face = TTFontFace(filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 1073, in __init__
+    TTFontFile.__init__(self, filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 439, in __init__
+    TTFontParser.__init__(self, file, validate=validate,subfontIndex=subfontIndex)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 175, in __init__
+    self.readFile(file)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 251, in readFile
+    self.filename, f = TTFOpenFile(f)
+  File "C:\Users\ёрий\AppData\Roaming\Python\Python310\site-packages\reportlab\pdfbase\ttfonts.py", line 161, in TTFOpenFile
+    raise TTFError('Can\'t open file "%s"' % fn)
+reportlab.pdfbase.ttfonts.TTFError: Can't open file "Times_New_Roman.ttf"
+2024-03-25 12:25:45,386 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:25:46,304 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:25:56,122 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:25:56,970 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:26:06,577 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:26:07,686 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:29:21,883 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:29:22,933 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:29:28,436 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:29:29,439 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:30:13,986 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:30:14,926 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:30:43,377 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:30:44,222 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:30:57,105 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:30:57,937 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:31:31,801 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:31:32,681 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:31:39,297 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:31:40,045 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:31:50,878 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:31:51,608 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:31:56,098 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:31:56,886 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:32:04,599 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:32:05,380 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:32:21,743 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:32:22,645 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:32:25,800 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:32:26,630 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:32:33,838 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 38, in create_pdf
+    canvas.setFont('MyFont')
+AttributeError: module 'reportlab.pdfgen.canvas' has no attribute 'setFont'
+2024-03-25 12:32:47,777 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:32:48,686 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:32:55,214 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:32:56,209 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:33:02,769 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:33:03,844 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:33:37,911 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:33:38,911 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:33:47,794 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:33:48,626 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:34:01,195 django.request ERROR    Internal Server Error: /cityservice/companies/create_pdf
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 46, in create_pdf
+    p.setFont('MyFont')
+TypeError: Canvas.setFont() missing 1 required positional argument: 'size'
+2024-03-25 12:36:34,546 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:36:35,674 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:36:48,540 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:36:49,558 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:37:03,322 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:37:04,417 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:37:22,701 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:37:23,847 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:37:37,125 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:37:38,033 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-25 12:37:47,062 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-03-25 12:37:47,900 django.utils.autoreload INFO     Watching for file changes with StatReloader

@@ -12,42 +12,81 @@ from xhtml2pdf import pisa
 from xhtml2pdf.files import pisaFileObject
 import os
 import json
-
+import io
+from django.http import FileResponse
+from reportlab.pdfgen import canvas
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 def fetch_pdf_resources(uri, rel):
     # if uri.find(settings.MEDIA_URL) != -1:
     #     path = os.path.join(settings.MEDIA_ROOT, uri.replace(settings.MEDIA_URL, ''))
-    if uri.find(settings.STATIC_URL) != -1:
-        path = os.path.join(settings.STATIC_ROOT, uri.replace(settings.STATIC_URL, ''))
-    else:
-        path = None
-    return path
+    # if uri.find(settings.STATIC_URL) != -1:
+    #     path = os.path.join(settings.STATIC_ROOT, uri.replace(settings.STATIC_URL, ''))
+    # else:
+    #     path = None
+    # return path
+    pass
 
 def create_pdf(request):
-    template_path = 'pdfs/invoice.html'
-    comp = request.POST['companies']
-    comp = comp.replace("'", "\"")
-    comp = json.loads(comp)
-    context = {
-        'search': request.POST['search'],
-        'specs_choose': request.POST['specs_choose'],
-        'services_choose': request.POST['services_choose'],
-        'companies': comp,
-        # 'phones': request.POST['phones'],
-    }
-    # Create a Django response object, and specify content_type as pdf
-    response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = 'attachment; filename="report.pdf"'
-    # find the template and render it.
-    template = get_template(template_path)
-    html = template.render(context)
+    buffer = io.BytesIO()
+    p = canvas.Canvas(buffer)
+    # (0; 0) - левый нижний угол
 
-    # create a pdf
-    pisaFileObject.getNamedFile = lambda self: self.uri
-    pisa_status = pisa.CreatePDF(html, dest=response, encoding='UTF-8', link_callback=fetch_pdf_resources)
-    # if error then show some funny view
-    if pisa_status.err:
-       return HttpResponse('We had some errors <pre>' + html + '</pre>')
-    return response
+    font = TTFont('MyFont', './times.ttf')
+    pdfmetrics.registerFont(font)
+    p.setFont('MyFont', 14)
+    
+    if request.POST['companies'] != '':
+        companies = json.loads(request.POST['companies'].replace("'", "\""))
+    
+    print(companies)
+    print(type(companies))
+    print(companies[0]['name'])
+    
+    
+    for i in range(len(companies)):
+        p.drawString((i+1)* 100, (7 - i)*100, companies[i]['name'])
+        p.drawString((i+2)* 100, (7 - i)*100, companies[i]['address'])
+        
+    
+    # context = {
+    #     'search': request.POST['search'],
+    #     'specs_choose': request.POST['specs_choose'],
+    #     'services_choose': request.POST['services_choose'],
+    #     'companies': comp,
+    #     # 'phones': request.POST['phones'],
+    # }
+
+    p.showPage()
+    p.save()
+    buffer.seek(0)
+    return FileResponse(buffer, as_attachment=True, filename="CityService.pdf")
+    
+    # template_path = 'pdfs/invoice.html'
+    # comp = request.POST['companies']
+    # comp = comp.replace("'", "\"")
+    # comp = json.loads(comp)
+    # context = {
+    #     'search': request.POST['search'],
+    #     'specs_choose': request.POST['specs_choose'],
+    #     'services_choose': request.POST['services_choose'],
+    #     'companies': comp,
+    #     # 'phones': request.POST['phones'],
+    # }
+    # # Create a Django response object, and specify content_type as pdf
+    # response = HttpResponse(content_type='application/pdf')
+    # response['Content-Disposition'] = 'attachment; filename="report.pdf"'
+    # # find the template and render it.
+    # template = get_template(template_path)
+    # html = template.render(context)
+
+    # # create a pdf
+    # pisaFileObject.getNamedFile = lambda self: self.uri
+    # pisa_status = pisa.CreatePDF(html, dest=response, encoding='UTF-8', link_callback=fetch_pdf_resources)
+    # # if error then show some funny view
+    # if pisa_status.err:
+    #    return HttpResponse('We had some errors <pre>' + html + '</pre>')
+    # return response
     
     
     # # print(request.POST)
