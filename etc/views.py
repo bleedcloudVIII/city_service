@@ -18,34 +18,69 @@ from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
-def create_pdf(request):
-    buffer = io.BytesIO()
-    p = canvas.Canvas(buffer)
-    # (0; 0) - левый нижний угол
+def fetch_pdf_resources(uri, rel):
+    # if uri.find(settings.MEDIA_URL) != -1:
+    #     path = os.path.join(settings.MEDIA_ROOT, uri.replace(settings.MEDIA_URL, ''))
+    if uri.find(settings.STATIC_URL) != -1:
+        path = os.path.join('static/', uri.replace(settings.STATIC_URL, ''))
+    else:
+        path = None
+    return path
 
-    font = TTFont('MyFont', 'static/arial/Times_New_Roman.ttf')
-    pdfmetrics.registerFont(font)
-    p.setFont('MyFont', 14)
-    
-    print(request.POST)
+def create_pdf(request):
+    template_path = 'pdfs/invoice.html'
+    phones = []
+    companies = []
     
     if request.POST['companies'] != '':
         companies = json.loads(request.POST['companies'].replace("'", "\""))
     
-    print(companies)
-    print(type(companies))
-    print(companies[0]['name'])
-    
-    
-    for i in range(len(companies)):
-        y = 100 * (7 - i)
-        p.drawString(50, y, companies[i]['name'])
-        p.drawString(50, y - 15, companies[i]['address'])
+    if request.POST['phones'] != '':
+        phones = []
+        
+    context = {
+        "companies": companies,
+        "phones": phones,
+    }
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'attachment; filename="report.pdf"'
+    template = get_template(template_path)
+    html = template.render(context)
 
-    p.showPage()
-    p.save()
-    buffer.seek(0)
-    return FileResponse(buffer, as_attachment=True, filename="CityService.pdf")
+    pisaFileObject.getNamedFile = lambda self: self.uri
+    pisa_status = pisa.CreatePDF(html, dest=response, encoding='UTF-8', link_callback=fetch_pdf_resources)
+    if pisa_status.err:
+       return HttpResponse('We had some errors <pre>' + html + '</pre>')
+    return response
+
+# def w(request):
+#     buffer = io.BytesIO()
+#     p = canvas.Canvas(buffer)
+#     # (0; 0) - левый нижний угол
+
+#     font = TTFont('MyFont', 'static/arial/Times_New_Roman.ttf')
+#     pdfmetrics.registerFont(font)
+#     p.setFont('MyFont', 14)
+    
+#     print(request.POST)
+    
+#     if request.POST['companies'] != '':
+#         companies = json.loads(request.POST['companies'].replace("'", "\""))
+    
+#     print(companies)
+#     print(type(companies))
+#     print(companies[0]['name'])
+    
+    
+#     for i in range(len(companies)):
+#         y = 100 * (7 - i)
+#         p.drawString(50, y, companies[i]['name'])
+#         p.drawString(50, y - 15, companies[i]['address'])
+
+#     p.showPage()
+#     p.save()
+#     buffer.seek(0)
+#     return FileResponse(buffer, as_attachment=True, filename="CityService.pdf")
 
 def companies(request):
     context = {}

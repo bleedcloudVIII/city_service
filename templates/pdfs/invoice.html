@@ -2,14 +2,134 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="static/company_style.css" rel=stylesheet>
         <title>CityService</title>
         <style type="text/css">
                 @page { size: A4; margin: 1cm; }
-                @font-face { font-family: Arial; src: url(static/arial/Times_New_Roman.ttf); }
+                @font-face { font-family: MyFont; src: url(static/arial/arial.ttf); }
+                p, label, span { font-family: MyFont }
+                body{
+                    background-color: black;
+                }
+                header {
+                    background-color: black;
+                    margin-bottom: -15px;
+                }
+                .cs-h1 {
+                    color: white;
+                }
+                .cs-spez{
+                    background-color: white;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    border-radius: 8px;
+                    border-style: hidden;
+                    padding-left: 10px;
+                }
+                .tochka{
+                    /* white-space: pre-wrap; */
+                
+                    color: black;
+                }
+                .container{
+                    background-color: black;
+                }
+                .cs-spezi {
+                    background-color: black;
+                    color: white;
+                    border-top-right-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                }
+                .cs-vakansiya-ssilka{
+                    text-decoration: none;
+                }
+                .cs-vakansiya-name, .cs-vakansiya-opisanie, .cs-vakansiya-spez, .cs-vakansiya-regioni, .cs-vakansiya-company {
+                    color: black;
+                }
+                .cs-vakansiya-name{
+                    font-size: 30px;
+                
+                }
+                .cs-vakansiya-spez, .cs-vakansiya-regioni, .cs-vakansiya-company{
+                    font-size: 14px;
+                }
+                .cs-vakansiya-tegi{
+                    font-size: 18px;
+                }
+                .cs-spez-list, .cs-regioni-list {
+                    list-style-type: none;
+                    text-align: left;
+                }
+                .cs-spezi {
+                    background-color: black;
+                    color: white;
+                    border-top-right-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                }
+                .cs-spezi_list{
+                
+                }
+                .cs-panel {
+                    background-color: black;
+                    color: white;
+                    padding: 5px;
+                    padding-left: 10px;
+                    border-radius: 8px;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
         </style>
     </head>
     <body>
-        <div class="container ">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 cs-spezi">
+                    <div class="cs-spezi_list">
+                        <div class="container">
+                            {% if not companies %}
+                            <label>Ничего не найдено</label>
+                            {% endif %}
+                            {% for company in companies %}
+                            <div class="row">
+                                <div class="column-10">
+                                    <div class="cs-spez">
+                                        <a class="cs-vakansiya-ssilka" href="#">
+                                            <span class="cs-vakansiya-name">{{company.name}}</span>
+                                        </a>
+                                        <br>
+                                        {% comment %} {% with count=forloop.counter %} {% endcomment %}
+                                            {% comment %} {% for ph in phones %} {% endcomment %}
+                                                {% comment %} {% if forloop.counter == count %} {% endcomment %}
+                                                    {% comment %} {% for p in ph%} {% endcomment %}
+                                                        {% comment %} <span class="tochka"> • </span> {% endcomment %}
+                                                        {% comment %} <label class="label-phone">{{ p.phone }}</label> {% endcomment %}
+                                                    {% comment %} {% endfor %} {% endcomment %}
+                                                {% comment %} {% endif %} {% endcomment %}
+                                            {% comment %} {% endfor %} {% endcomment %}
+                                        {% comment %} {% endwith %} {% endcomment %}
+                                        <br>
+                                        {% comment %} <span class="cs-vakansiya-spez">{{company.spe}}</span> {% endcomment %}
+                                        <span class="tochka"> • </span>
+                                        <span class="cs-vakansiya-company">{{company.address}}</span>
+                                        <br>
+                                        <span class="cs-vakansiya-tegi">
+                                            {% comment %} {% for service in company.services %}
+                                                <span class="teg">{{service}}</span>
+                                                <span class="tochka"> • </span>
+                                            {% endfor %} {% endcomment %}
+                                        </span>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        <!-- <div class="container ">
             <div class="row">
                 <div class="col-11">
                     <h1 class="text-left cs-h1">CityService</h1>
@@ -34,19 +154,31 @@
             {% endif %}
         </div>  
         <div class="row">
-            <div class="col-9 cs-spezi">
+            <div class="col-12 cs-spezi">
                 <div class="cs-spezi_list">
                     <div class="container">
                         {% for company in companies %}
-                            <label style="color: black;">{{ company.name }}</label>
-                            <label style="color: black;">{{ company.address }}</label>
+                            <div class="row">
+                                <div class="column-12">
+                                    <div class="cs-spez">
+                                        <span class="cs-vakansiya-name">{{company.name}}</span>
+                                        <div class="">
+
+                                        </div>
+                                        <span class="tochka"> • </span>
+                                        <span class="cs-vakansiya-company">{{company.address}}</span>
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            {% comment %} <label style="color: black;">{{ company.name }}</label> {% endcomment %}
+                            {% comment %} <label style="color: black;">{{ company.address }}</label> {% endcomment %}
                             <br>
-                        {% endfor %}
-                       
+                        {% endfor %}                       
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </body>
 </html>
