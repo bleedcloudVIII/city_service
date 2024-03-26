@@ -27,6 +27,21 @@ def fetch_pdf_resources(uri, rel):
         path = None
     return path
 
+def get_list(list_phones):
+    phones = list_phones
+    
+    phones = phones.replace("[", "")
+    phones = phones.replace("]", "/")
+    phones = phones.replace(",", "")
+    phones = phones.replace("//", "")
+    phones = phones.replace("'", "")
+
+    phones = phones.split("/")
+    phones = [phone.replace("+", "#+") for phone in phones]
+    phones = [phone.split("#") for phone in phones]
+    phones = [[ phone for phone in l if len(phone) >= 18] for l in phones]
+    return phones
+
 def create_pdf(request):
     template_path = 'pdfs/invoice.html'
     phones = []
@@ -36,12 +51,15 @@ def create_pdf(request):
         companies = json.loads(request.POST['companies'].replace("'", "\""))
     
     if request.POST['phones'] != '':
-        phones = []
-        
+        phones = get_list(request.POST['phones'])
+    
+    print(request.POST['phones'])
+    
     context = {
         "companies": companies,
         "phones": phones,
     }
+    
     response = HttpResponse(content_type='application/pdf')
     response['Content-Disposition'] = 'attachment; filename="report.pdf"'
     template = get_template(template_path)
@@ -52,35 +70,6 @@ def create_pdf(request):
     if pisa_status.err:
        return HttpResponse('We had some errors <pre>' + html + '</pre>')
     return response
-
-# def w(request):
-#     buffer = io.BytesIO()
-#     p = canvas.Canvas(buffer)
-#     # (0; 0) - левый нижний угол
-
-#     font = TTFont('MyFont', 'static/arial/Times_New_Roman.ttf')
-#     pdfmetrics.registerFont(font)
-#     p.setFont('MyFont', 14)
-    
-#     print(request.POST)
-    
-#     if request.POST['companies'] != '':
-#         companies = json.loads(request.POST['companies'].replace("'", "\""))
-    
-#     print(companies)
-#     print(type(companies))
-#     print(companies[0]['name'])
-    
-    
-#     for i in range(len(companies)):
-#         y = 100 * (7 - i)
-#         p.drawString(50, y, companies[i]['name'])
-#         p.drawString(50, y - 15, companies[i]['address'])
-
-#     p.showPage()
-#     p.save()
-#     buffer.seek(0)
-#     return FileResponse(buffer, as_attachment=True, filename="CityService.pdf")
 
 def companies(request):
     context = {}
