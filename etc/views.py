@@ -18,15 +18,6 @@ from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
-def fetch_pdf_resources(uri, rel):
-    # if uri.find(settings.MEDIA_URL) != -1:
-    #     path = os.path.join(settings.MEDIA_ROOT, uri.replace(settings.MEDIA_URL, ''))
-    if uri.find(settings.STATIC_URL) != -1:
-        path = os.path.join('static/', uri.replace(settings.STATIC_URL, ''))
-    else:
-        path = None
-    return path
-
 def get_list(list_phones):
     phones = list_phones
     
@@ -41,6 +32,15 @@ def get_list(list_phones):
     phones = [phone.split("#") for phone in phones]
     phones = [[ phone for phone in l if len(phone) >= 18] for l in phones]
     return phones
+
+def fetch_pdf_resources(uri, rel):
+    # if uri.find(settings.MEDIA_URL) != -1:
+    #     path = os.path.join(settings.MEDIA_ROOT, uri.replace(settings.MEDIA_URL, ''))
+    if uri.find(settings.STATIC_URL) != -1:
+        path = os.path.join('static/', uri.replace(settings.STATIC_URL, ''))
+    else:
+        path = None
+    return path
 
 def create_pdf(request):
     template_path = 'pdfs/invoice.html'

@@ -178,10 +178,10 @@ hr {
     /* float: right; */
     /* height: 50px; */
     /* width: 120px; */
-    /* border-radius: 8px; */
-    /* background-color: var(--colorWhite); */
-    /* color: var(--colorBlack); */
-    /* border-style: hidden; */
+    border-radius: 2px;
+    background-color: var(--colorWhite);
+    color: var(--colorBlack);
+    border-style: hidden;
 
     /* display: ; */
     /* margin: 0 auto; */

@@ -56,21 +56,12 @@
     <div class="container">
         <div class="row">
             <div class="col-3 cs-panel">
-                <form class="cs-form" action={% url 'create_pdf' %} method="POST">
-                    {% csrf_token %}
-                    <input hidden type="text" name="search" value={{ search }}>
-                    <input hidden type="text" name="specs_choose" value={{ specs_choose }}>
-                    <input hidden type="text" name="services_choose" value={{ services_choose }}>
-                    <input id="pdf_companies" hidden type="text" name="companies" value={{ companies }}>
-                    <input id="pdf_phones" hidden type="text" name="phones" value={{ phones }}>
-                    <input type="submit" onclick="_pdf()" value="PDF">
-                </form>
                 {{ str_companies }}
-                <button  onclick="_pdf()" >ADS</button>
+                {% comment %} <button  onclick="_pdf()" >ADS</button> {% endcomment %}
                 <form class="cs-form" action={% url 'companies' %} method="POST">
                     {% csrf_token %}
                         <input placeholder="Поиск" class="cs-input" name="search">
-                    <input type="submit" value="Найти">
+                    <input type="submit" class="cs-button" value="Найти">
                 {% comment %} </form> {% endcomment %}
                 <div class="spez-name">Специализации</div>
                 <div class="spez">
@@ -95,10 +86,20 @@
                                 <label id='label_{{service.name}}' class="cs-label" for='service_{{service.name}}'>{{ service.name }}</label>                                
                             </div>
                         {% endfor %}
-                        <button type="submit">Найти</button>
+                        <button type="submit" class="cs-button">Найти</button>
 
                     </form>
                 </div>
+                {% comment %} <br> {% endcomment %}
+                <form class="cs-form" action={% url 'create_pdf' %} method="POST">
+                    {% csrf_token %}
+                    <input hidden type="text" name="search" value={{ search }}>
+                    <input hidden type="text" name="specs_choose" value={{ specs_choose }}>
+                    <input hidden type="text" name="services_choose" value={{ services_choose }}>
+                    <input id="pdf_companies" hidden type="text" name="companies" value={{ companies }}>
+                    <input id="pdf_phones" hidden type="text" name="phones" value={{ phones }}>
+                    <input type="submit" style="margin-top: 5px;" class="cs-button" onclick="_pdf()" value="PDF">
+                </form>
             </div>
 
             <div class="col-9 cs-spezi">
@@ -145,6 +146,7 @@
                         {% endfor %}
                     </div>
                 </div>
+                
             </div>
         </div>
         <footer>

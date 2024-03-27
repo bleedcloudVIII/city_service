@@ -20,17 +20,17 @@
                     color: black;
                 }
                 body{
-                    background-color: red;
+                    background-color: white;
                 }
                 header {
-                    background-color: blue;
+                    background-color: white;
                 }
                 .panel{
-                    background-color: yellow;
+                    background-color: white;
                     border-radius: 8px;
                 }
                 .panel-company{
-                    background-color: green;
+                    background-color: white;
                     border-radius: 8px;
                     margin: 10px;
                 }
@@ -55,7 +55,7 @@
             <label class="header">CityService</label>
         </header>
         <hr>
-        <br>
+        {% comment %} <br> {% endcomment %}
         <div class="panel">
             {% for company in companies %}
                 <div class="panel-company">                    
@@ -77,9 +77,10 @@
                             {% endif %}
                         {% endfor %}
                     {% endwith %}
-                    <br>
+                    {% comment %} <br> {% endcomment %}
+                    <hr>
                 </div>
-                <br>
+                {% comment %} <br> {% endcomment %}
             {% endfor %}                       
         </div>
     </body>
