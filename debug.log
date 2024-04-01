@@ -11092,3 +11092,164 @@ django.core.exceptions.FieldError: Unsupported lookup 'icontaints' for CharField
 2024-04-01 12:32:54,302 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-04-01 12:32:59,884 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
 2024-04-01 12:33:00,617 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:34:50,613 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:34:52,194 django.request ERROR    Internal Server Error: /cityservice/admin/login/
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python310\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\contrib\admin\sites.py", line 422, in login
+    **self.each_context(request),
+  File "C:\Python310\lib\site-packages\django\contrib\admin\sites.py", line 337, in each_context
+    "available_apps": self.get_app_list(request),
+  File "C:\Python310\lib\site-packages\django\contrib\admin\sites.py", line 536, in get_app_list
+    app_dict = self._build_app_dict(request, app_label)
+  File "C:\Python310\lib\site-packages\django\contrib\admin\sites.py", line 478, in _build_app_dict
+    has_module_perms = model_admin.has_module_permission(request)
+  File "C:\Python310\lib\site-packages\django\contrib\admin\options.py", line 611, in has_module_permission
+    return request.user.has_module_perms(self.opts.app_label)
+  File "C:\Python310\lib\site-packages\django\contrib\auth\models.py", line 331, in has_module_perms
+    return _user_has_module_perms(self, app_label)
+  File "C:\Python310\lib\site-packages\django\contrib\auth\models.py", line 235, in _user_has_module_perms
+    if backend.has_module_perms(user, app_label):
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 121, in has_module_perms
+    for perm in self.get_all_permissions(user_obj)
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 109, in get_all_permissions
+    user_obj._perm_cache = super().get_all_permissions(user_obj)
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 27, in get_all_permissions
+    *self.get_user_permissions(user_obj, obj=obj),
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 96, in get_user_permissions
+    return self._get_permissions(user_obj, obj, "user")
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 84, in _get_permissions
+    perms = getattr(self, "_get_%s_permissions" % from_name)(user_obj)
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 63, in _get_user_permissions
+    return user_obj.user_permissions.all()
+AttributeError: 'NoneType' object has no attribute 'all'
+2024-04-01 12:34:55,272 django.request ERROR    Internal Server Error: /cityservice/admin/login/
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python310\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\contrib\admin\sites.py", line 422, in login
+    **self.each_context(request),
+  File "C:\Python310\lib\site-packages\django\contrib\admin\sites.py", line 337, in each_context
+    "available_apps": self.get_app_list(request),
+  File "C:\Python310\lib\site-packages\django\contrib\admin\sites.py", line 536, in get_app_list
+    app_dict = self._build_app_dict(request, app_label)
+  File "C:\Python310\lib\site-packages\django\contrib\admin\sites.py", line 478, in _build_app_dict
+    has_module_perms = model_admin.has_module_permission(request)
+  File "C:\Python310\lib\site-packages\django\contrib\admin\options.py", line 611, in has_module_permission
+    return request.user.has_module_perms(self.opts.app_label)
+  File "C:\Python310\lib\site-packages\django\contrib\auth\models.py", line 331, in has_module_perms
+    return _user_has_module_perms(self, app_label)
+  File "C:\Python310\lib\site-packages\django\contrib\auth\models.py", line 235, in _user_has_module_perms
+    if backend.has_module_perms(user, app_label):
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 121, in has_module_perms
+    for perm in self.get_all_permissions(user_obj)
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 109, in get_all_permissions
+    user_obj._perm_cache = super().get_all_permissions(user_obj)
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 27, in get_all_permissions
+    *self.get_user_permissions(user_obj, obj=obj),
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 96, in get_user_permissions
+    return self._get_permissions(user_obj, obj, "user")
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 84, in _get_permissions
+    perms = getattr(self, "_get_%s_permissions" % from_name)(user_obj)
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 63, in _get_user_permissions
+    return user_obj.user_permissions.all()
+AttributeError: 'NoneType' object has no attribute 'all'
+2024-04-01 12:35:02,234 django.request ERROR    Internal Server Error: /cityservice/admin/login/
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python310\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\contrib\admin\sites.py", line 422, in login
+    **self.each_context(request),
+  File "C:\Python310\lib\site-packages\django\contrib\admin\sites.py", line 337, in each_context
+    "available_apps": self.get_app_list(request),
+  File "C:\Python310\lib\site-packages\django\contrib\admin\sites.py", line 536, in get_app_list
+    app_dict = self._build_app_dict(request, app_label)
+  File "C:\Python310\lib\site-packages\django\contrib\admin\sites.py", line 478, in _build_app_dict
+    has_module_perms = model_admin.has_module_permission(request)
+  File "C:\Python310\lib\site-packages\django\contrib\admin\options.py", line 611, in has_module_permission
+    return request.user.has_module_perms(self.opts.app_label)
+  File "C:\Python310\lib\site-packages\django\contrib\auth\models.py", line 331, in has_module_perms
+    return _user_has_module_perms(self, app_label)
+  File "C:\Python310\lib\site-packages\django\contrib\auth\models.py", line 235, in _user_has_module_perms
+    if backend.has_module_perms(user, app_label):
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 121, in has_module_perms
+    for perm in self.get_all_permissions(user_obj)
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 109, in get_all_permissions
+    user_obj._perm_cache = super().get_all_permissions(user_obj)
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 27, in get_all_permissions
+    *self.get_user_permissions(user_obj, obj=obj),
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 96, in get_user_permissions
+    return self._get_permissions(user_obj, obj, "user")
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 84, in _get_permissions
+    perms = getattr(self, "_get_%s_permissions" % from_name)(user_obj)
+  File "C:\Python310\lib\site-packages\django\contrib\auth\backends.py", line 63, in _get_user_permissions
+    return user_obj.user_permissions.all()
+AttributeError: 'NoneType' object has no attribute 'all'
+2024-04-01 12:36:38,055 django.request WARNING  Not Found: /
+2024-04-01 12:39:12,148 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:39:13,155 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:39:37,120 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:39:38,058 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:39:55,799 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:39:56,784 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:40:14,552 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:40:15,463 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:40:19,355 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:40:20,514 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:40:23,905 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:40:24,970 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:40:28,203 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:40:29,105 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:40:57,900 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:41:11,696 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:41:12,676 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:41:20,912 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:41:22,064 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:43:37,595 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\models.py changed, reloading.
+2024-04-01 12:43:38,654 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:44:33,768 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:44:34,771 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:44:51,442 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:44:52,489 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:45:15,600 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:45:16,600 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:45:37,406 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:45:38,437 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:45:59,390 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:46:00,268 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:46:06,881 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:46:07,916 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:46:31,667 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:46:32,584 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:46:57,944 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:46:58,848 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:50:14,287 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:50:32,817 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:50:33,811 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:51:14,407 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:51:15,374 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:51:29,501 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:51:30,417 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:51:54,355 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:51:55,485 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:52:07,514 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\admin.py changed, reloading.
+2024-04-01 12:52:08,486 django.utils.autoreload INFO     Watching for file changes with StatReloader

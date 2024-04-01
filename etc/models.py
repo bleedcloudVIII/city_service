@@ -22,6 +22,7 @@ class User(models.Model):
     class Meta:
         db_table = "auth_user"
         
+        
 class Specialization(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=150, null=False)
