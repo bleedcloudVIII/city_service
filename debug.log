@@ -10705,3 +10705,390 @@ xhtml2pdf.w3c.cssParser.CSSParseError: Selector Pseudo Function closing ')' not 
 2024-03-27 18:00:29,096 xhtml2pdf.files DEBUG    URLParts: ParseResult(scheme='', netloc='', path='static/arial/Times_New_Roman.ttf', params='', query='', fragment=''), ''
 2024-03-27 18:00:29,096 xhtml2pdf.files DEBUG    Unrecognized scheme, assuming local file path
 2024-03-27 18:00:29,098 xhtml2pdf.context DEBUG    Load font 'static/arial/Times_New_Roman.ttf'
+2024-04-01 09:45:05,179 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 09:45:10,217 django.request WARNING  Not Found: /
+2024-04-01 09:45:10,701 django.request WARNING  Not Found: /favicon.ico
+2024-04-01 09:46:21,491 xhtml2pdf.document DEBUG    pisaDocument options:
+  src = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">\n<html>\n    <head>\n        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">\n        \n        \n        <title>CityService</title>\n        <style type="text/css">\n                @page { \n                    size: A4;\n                    \n                }\n                @font-face { \n                    font-family: MyFont;\n                    src: url(static/arial/Times_New_Roman.ttf);\n                }\n                \n                p, label, span { \n                    font-family: MyFont;\n                    color: black;\n                }\n                body{\n                    background-color: white;\n                }\n                header {\n                    background-color: white;\n                }\n                .panel{\n                    background-color: white;\n                    border-radius: 8px;\n                }\n                .panel-company{\n                    background-color: white;\n                    border-radius: 8px;\n                    margin: 10px;\n                }\n                .company-name{\n                    font-size: 30px;\n                }\n                .company-address{\n                    margin-top: 10px;\n                    font-size: 20px;\n                }\n                .company-phone{\n                    font-size: 20px;\n                    \n                }\n                .header{\n                    font-size: 50px;\n                }\n        </style>\n    </head>\n    <body>\n        <header>\n            <label class="header">CityService</label>\n        </header>\n        <hr>\n        \n        <div class="panel">\n            \n                <div class="panel-company">                    \n                    <label class="company-name"> расота</label>\n                    <br>\n                    <div class="company-address">\n                        <span> Х </span>\n                        <label>”л. Ћенина 27</label>\n                    </div>\n                    \n                        \n                            \n                                \n                                    <div class="company-phone">\n                                        <span> Х </span>\n                                        <label>+2 (222) 222-22-22 </label>\n                                    </div>\n                                \n                                    <div class="company-phone">\n                                        <span> Х </span>\n                                        <label>+2 (231) 123-13-34</label>\n                                    </div>\n                                \n                            \n                        \n                    \n                    \n                    <hr>\n                </div>\n                \n                                   \n        </div>\n    </body>\n</html>'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = ''
+  link_callback = <function fetch_pdf_resources at 0x0000018B029AE200>
+  xhtml = False
+  context_meta = None
+2024-04-01 09:46:21,509 xhtml2pdf.context WARNING  missing explicit frame definition for content or just static frames
+
+2024-04-01 09:46:21,510 xhtml2pdf.files DEBUG    FileObject 'static/arial/Times_New_Roman.ttf', Basepath: None
+2024-04-01 09:46:21,510 xhtml2pdf.files DEBUG    URLParts: ParseResult(scheme='', netloc='', path='static/arial/Times_New_Roman.ttf', params='', query='', fragment=''), ''
+2024-04-01 09:46:21,510 xhtml2pdf.files DEBUG    Unrecognized scheme, assuming local file path
+2024-04-01 09:46:21,522 xhtml2pdf.context DEBUG    Load font 'static/arial/Times_New_Roman.ttf'
+2024-04-01 12:04:35,757 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:04:39,565 django.request WARNING  Not Found: /
+2024-04-01 12:04:39,926 django.request WARNING  Not Found: /favicon.ico
+2024-04-01 12:06:47,697 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:06:48,509 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:06:52,446 django.request WARNING  Not Found: /favicon.ico
+2024-04-01 12:07:09,255 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:07:10,277 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:07:23,642 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:07:24,523 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:08:41,604 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:08:42,789 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:19:26,040 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:19:27,103 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:19:34,822 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:19:35,744 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:19:51,856 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:19:52,721 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:20:10,855 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:20:11,598 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:20:12,965 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:20:13,672 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:20:36,041 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:20:36,877 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:20:42,454 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:20:43,283 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:20:49,899 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:20:50,864 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:21:01,862 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:21:02,853 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:21:09,541 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:21:10,453 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:21:15,976 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:21:16,695 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:21:24,286 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:21:25,364 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:22:02,807 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:22:03,858 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:22:12,117 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 99, in companies
+    services = list(Service.objects.filter(Q(name__icontains=search) | Q(name__incontains=upper(search) | Q(name__incontains=lower(search)) | Q(name__incontains=title(lower(search))))))
+NameError: name 'upper' is not defined
+2024-04-01 12:22:20,898 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:22:21,869 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:22:25,395 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:22:26,231 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:22:32,825 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:22:33,603 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:22:58,102 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:22:58,854 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:23:03,514 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 99, in companies
+    services = list(Service.objects.filter(Q(name__icontains=search) | Q(name__incontains=search.upper()) | Q(name__incontains=search.lower()) | Q(name__incontains=search.lower().title())))
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1404, in build_filter
+    return self._add_q(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1312, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1356, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'incontains' for CharField or join on the field not permitted, perhaps you meant icontains or contains?
+2024-04-01 12:24:05,768 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 99, in companies
+    services = list(Service.objects.filter(Q(name__icontains=search) | Q(name__incontains=search.upper()) | Q(name__incontains=search.lower()) | Q(name__incontains=search.lower().title())))
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1404, in build_filter
+    return self._add_q(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1312, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1356, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'incontains' for CharField or join on the field not permitted, perhaps you meant icontains or contains?
+2024-04-01 12:25:45,812 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:25:46,750 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:25:49,072 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 98, in companies
+    printf(search)
+NameError: name 'printf' is not defined
+2024-04-01 12:25:55,602 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:25:56,507 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:25:57,832 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 101, in companies
+    services = list(Service.objects.filter(Q(name__icontains=search) | Q(name__incontains=search.upper()) | Q(name__incontains=search.lower()) | Q(name__incontains=search.lower().title())))
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1404, in build_filter
+    return self._add_q(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1312, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1356, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'incontains' for CharField or join on the field not permitted, perhaps you meant icontains or contains?
+2024-04-01 12:27:01,605 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:27:02,808 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:27:07,796 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 101, in companies
+    services = list(Service.objects.filter(Q(name__icontains=search) | Q(name__incontains=search.upper()) | Q(name__incontains=search.lower()) | Q(name__incontains=search.lower())))
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1404, in build_filter
+    return self._add_q(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1312, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1356, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'incontains' for CharField or join on the field not permitted, perhaps you meant icontains or contains?
+2024-04-01 12:27:51,755 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:27:52,646 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:27:57,970 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:27:58,864 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:28:02,688 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 103, in companies
+    companies.extend(list(Company.objects.filter(Q(name__icontains=search) | Q(name__incontains=search.upper()) | Q(name__incontains=search.lower()) | Q(name__incontains=search.lower()))))
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1404, in build_filter
+    return self._add_q(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1312, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1356, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'incontains' for CharField or join on the field not permitted, perhaps you meant icontains or contains?
+2024-04-01 12:28:33,588 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:28:34,456 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:28:35,801 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:28:36,560 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:28:43,219 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:28:44,004 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:28:47,466 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:28:48,219 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:29:10,260 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:29:11,245 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:29:30,097 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:29:31,139 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:29:32,484 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 107, in companies
+    companies.extend(list(Company.objects.filter(Q(name__icontains=search) | Q(name__incontains=upper) | Q(name__incontains=lower))))
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1404, in build_filter
+    return self._add_q(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1312, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1356, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'incontains' for CharField or join on the field not permitted, perhaps you meant icontains or contains?
+2024-04-01 12:30:05,364 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:30:06,603 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:30:37,504 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:30:38,484 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:30:41,983 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:30:42,769 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:30:48,329 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:30:49,100 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:30:54,670 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:30:55,369 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:31:09,270 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:31:10,086 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:31:17,810 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:31:18,788 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:31:24,039 xhtml2pdf.document DEBUG    pisaDocument options:
+  src = '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">\n<html>\n    <head>\n        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">\n        \n        \n        <title>CityService</title>\n        <style type="text/css">\n                @page { \n                    size: A4;\n                    \n                }\n                @font-face { \n                    font-family: MyFont;\n                    src: url(static/arial/Times_New_Roman.ttf);\n                }\n                \n                p, label, span { \n                    font-family: MyFont;\n                    color: black;\n                }\n                body{\n                    background-color: white;\n                }\n                header {\n                    background-color: white;\n                }\n                .panel{\n                    background-color: white;\n                    border-radius: 8px;\n                }\n                .panel-company{\n                    background-color: white;\n                    border-radius: 8px;\n                    margin: 10px;\n                }\n                .company-name{\n                    font-size: 30px;\n                }\n                .company-address{\n                    margin-top: 10px;\n                    font-size: 20px;\n                }\n                .company-phone{\n                    font-size: 20px;\n                    \n                }\n                .header{\n                    font-size: 50px;\n                }\n        </style>\n    </head>\n    <body>\n        <header>\n            <label class="header">CityService</label>\n        </header>\n        <hr>\n        \n        <div class="panel">\n            \n                <div class="panel-company">                    \n                    <label class="company-name"> расота</label>\n                    <br>\n                    <div class="company-address">\n                        <span> Х </span>\n                        <label>”л. Ћенина 27</label>\n                    </div>\n                    \n                        \n                            \n                                \n                                    <div class="company-phone">\n                                        <span> Х </span>\n                                        <label>+2 (222) 222-22-22 </label>\n                                    </div>\n                                \n                                    <div class="company-phone">\n                                        <span> Х </span>\n                                        <label>+2 (231) 123-13-34</label>\n                                    </div>\n                                \n                            \n                        \n                            \n                        \n                            \n                        \n                            \n                        \n                            \n                        \n                    \n                    \n                    <hr>\n                </div>\n                \n            \n                <div class="panel-company">                    \n                    <label class="company-name">ћо€ компани€</label>\n                    <br>\n                    <div class="company-address">\n                        <span> Х </span>\n                        <label>ћосковска€ 32</label>\n                    </div>\n                    \n                        \n                            \n                        \n                            \n                                \n                                    <div class="company-phone">\n                                        <span> Х </span>\n                                        <label>+7 (777) 777-77-77 </label>\n                                    </div>\n                                \n                                    <div class="company-phone">\n                                        <span> Х </span>\n                                        <label>+9 (888) 888-99-90</label>\n                                    </div>\n                                \n                            \n                        \n                            \n                        \n                            \n                        \n                            \n                        \n                    \n                    \n                    <hr>\n                </div>\n                \n            \n                <div class="panel-company">                    \n                    <label class="company-name">“ик-“ак</label>\n                    <br>\n                    <div class="company-address">\n                        <span> Х </span>\n                        <label>”лична€ 52</label>\n                    </div>\n                    \n                        \n                            \n                        \n                            \n                        \n                            \n                                \n                                    <div class="company-phone">\n                                        <span> Х </span>\n                                        <label>+1 (222) 345-23-11</label>\n                                    </div>\n                                \n                            \n                        \n                            \n                        \n                            \n                        \n                    \n                    \n                    <hr>\n                </div>\n                \n            \n                <div class="panel-company">                    \n                    <label class="company-name">ћастер на все руки</label>\n                    <br>\n                    <div class="company-address">\n                        <span> Х </span>\n                        <label>ѕушкина  42</label>\n                    </div>\n                    \n                        \n                            \n                        \n                            \n                        \n                            \n                        \n                            \n                                \n                                    <div class="company-phone">\n                                        <span> Х </span>\n                                        <label>+1 (222) 222-22-22</label>\n                                    </div>\n                                \n                            \n                        \n                            \n                        \n                    \n                    \n                    <hr>\n                </div>\n                \n            \n                <div class="panel-company">                    \n                    <label class="company-name">Kraski Zhizni</label>\n                    <br>\n                    <div class="company-address">\n                        <span> Х </span>\n                        <label>ул. 50 лет ќкт€бр€ 24</label>\n                    </div>\n                    \n                        \n                            \n                        \n                            \n                        \n                            \n                        \n                            \n                        \n                            \n                                \n                                    <div class="company-phone">\n                                        <span> Х </span>\n                                        <label>+7 (777) 789-78-89</label>\n                                    </div>\n                                \n                            \n                        \n                    \n                    \n                    <hr>\n                </div>\n                \n                                   \n        </div>\n    </body>\n</html>'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = ''
+  link_callback = <function fetch_pdf_resources at 0x000002A52118E200>
+  xhtml = False
+  context_meta = None
+2024-04-01 12:31:24,055 xhtml2pdf.context WARNING  missing explicit frame definition for content or just static frames
+
+2024-04-01 12:31:24,058 xhtml2pdf.files DEBUG    FileObject 'static/arial/Times_New_Roman.ttf', Basepath: None
+2024-04-01 12:31:24,058 xhtml2pdf.files DEBUG    URLParts: ParseResult(scheme='', netloc='', path='static/arial/Times_New_Roman.ttf', params='', query='', fragment=''), ''
+2024-04-01 12:31:24,059 xhtml2pdf.files DEBUG    Unrecognized scheme, assuming local file path
+2024-04-01 12:31:24,137 xhtml2pdf.context DEBUG    Load font 'static/arial/Times_New_Roman.ttf'
+2024-04-01 12:31:34,476 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 103, in companies
+    companies.extend(list(Company.objects.filter(Q(name__icontains=search) | Q(name__icontains=search.upper()) | Q(name__icontains=search.lower()) | Q(name__icontaints=search.lower().title()))))
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1404, in build_filter
+    return self._add_q(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1312, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1356, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'icontaints' for CharField or join on the field not permitted, perhaps you meant icontains or contains?
+2024-04-01 12:31:45,616 django.request WARNING  Not Found: /favicon.ico
+2024-04-01 12:31:45,859 django.request WARNING  Not Found: /favicon.ico
+2024-04-01 12:31:50,524 django.request ERROR    Internal Server Error: /cityservice/companies
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 103, in companies
+    companies.extend(list(Company.objects.filter(Q(name__icontains=search) | Q(name__icontains=search.upper()) | Q(name__icontains=search.lower()) | Q(name__icontaints=search.lower().title()))))
+  File "C:\Python310\lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1436, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1454, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Python310\lib\site-packages\django\db\models\query.py", line 1461, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1545, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1404, in build_filter
+    return self._add_q(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1576, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1491, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1312, in build_lookup
+    lhs = self.try_transform(lhs, lookup_name)
+  File "C:\Python310\lib\site-packages\django\db\models\sql\query.py", line 1356, in try_transform
+    raise FieldError(
+django.core.exceptions.FieldError: Unsupported lookup 'icontaints' for CharField or join on the field not permitted, perhaps you meant icontains or contains?
+2024-04-01 12:32:08,507 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:32:09,561 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:32:42,599 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:32:43,719 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:32:53,560 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:32:54,302 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-01 12:32:59,884 django.utils.autoreload INFO     C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py changed, reloading.
+2024-04-01 12:33:00,617 django.utils.autoreload INFO     Watching for file changes with StatReloader

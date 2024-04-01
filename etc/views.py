@@ -95,9 +95,12 @@ def companies(request):
                 companies.extend(list(Company.objects.filter(services=s)))
         if request.POST['search'] != '':
             search = request.POST['search']
-            services = list(Service.objects.filter(name__icontains=search))
-            specializations = list(Specialization.objects.filter(name__icontains=search))
-            companies.extend(list(Company.objects.filter(name__icontains=search)))
+            print(search)
+            print(type(search))
+            # Запрос с ИЛИ где 3 значения, нижний регистр, верхний регистр и верхний регист у 1-го символа
+            services = list(Service.objects.filter(Q(name__icontains=search) | Q(name__icontains=search.upper()) | Q(name__icontains=search.lower()) | Q(name__icontains=search.lower().title())))
+            specializations = list(Specialization.objects.filter(Q(name__icontains=search) | Q(name__icontains=search.upper()) | Q(name__icontains=search.lower()) | Q(name__icontains=search.lower().title())))
+            companies.extend(list(Company.objects.filter(Q(name__icontains=search) | Q(name__icontains=search.upper()) | Q(name__icontains=search.lower()) | Q(name__icontains=search.lower().title()))))
             for service in services:
                 companies.extend(list(Company.objects.filter(services=service)))
             for spec in specializations:
