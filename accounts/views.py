@@ -68,6 +68,7 @@ def registration(request):
             group = request.POST['choice']
             email = request.POST['email']
             if group == 'user':
+                print("QWEQWEQWEQWE")
                 account = Account.objects.create_user(
                     username=username,
                     password=password1,

@@ -3,7 +3,7 @@ from django.urls import reverse
 from django.core import serializers
 from etc.forms import CompanyAddPhone, SpecializationCreate, ServiceCreate, CompanyAddService
 from django.template.loader import get_template
-from etc.models import Company, Phone, Specialization, Service, User
+from etc.models import Company, Phone, Specialization, Service, User, Review
 from accounts.models import Account
 from django.db.models import Q
 from cityservice import settings
@@ -17,6 +17,46 @@ from django.http import FileResponse
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
+import datetime
+
+def add_view(request):
+    print(request.POST)
+    company = Company.objects.get(id = request.POST['company_pk'])
+    
+    account = Account.objects.get(username=request.user)
+    if (account.group.id == 1):
+        user = User.objects.get(account=account.pk)        
+        Review.objects.create(company=company, user=user, text=request.POST['view'], date=datetime.datetime.now())
+        
+    phones = Phone.objects.filter(company=company)
+    views = Review.objects.filter(company=company)
+    # accounts = []
+    # for view in views:
+    #     accounts.extend(Account.objects.get(id=view.user.account))
+    context = {
+        'company': company,
+        'phones': phones,
+        'views': views,
+        # 'accounts': accounts,
+    }
+    return render(request, 'company.html', context)
+
+def get_company(request):
+    company = Company.objects.get(id = request.POST['pk'])
+    phones = Phone.objects.filter(company=company)
+    views = Review.objects.filter(company=company)
+    # accounts = []
+    # for view in views:
+    #     accounts.append(Account.objects.get(id=view.user.account.pk))
+    
+    context = {
+        'company': company,
+        'phones': phones,
+        'views': views,
+        # 'accounts': accounts,
+    }
+    
+    return render(request, 'company.html', context)
 
 def get_list(list_phones):
     phones = list_phones
@@ -195,6 +235,15 @@ def change_name(request):
     account = Account.objects.get(username=request.user)
     company = Company.objects.get(account=account.pk)
     company.name = name
+    company.save()
+    return HttpResponseRedirect(reverse('account_profile'))
+
+def change_description(request):
+    print(request.POST)
+    description = request.POST['description']
+    account = Account.objects.get(username=request.user)
+    company = Company.objects.get(account=account.pk)
+    company.description = description
     company.save()
     return HttpResponseRedirect(reverse('account_profile'))
 

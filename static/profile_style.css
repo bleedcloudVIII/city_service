@@ -151,3 +151,22 @@ input:invalid+b+[type="submit"] {
     color: var(--colorWhite);
     width: 150px;
 }
+.cs-input-base-description{
+    border: none;
+    border-radius: 6px;
+    /* background-color: black; */
+    color: black;
+    width: 300px;
+    /* height: 100px; */
+}
+
+.cs-button-description {
+    /* margin-top: 10px; */
+    /* float: left; */
+    height: 30px;
+    width: 100px;
+    border-radius: 8px;
+    background-color: var(--colorWhite);
+    color: var(--colorBlack);
+    border-style: hidden;
+}

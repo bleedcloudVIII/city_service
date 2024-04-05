@@ -60,26 +60,41 @@ class Day_of_work(models.Model):
     class Meta:
         db_table = "day_of_work"
 
-
 class Company(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=150, null=False) #blank = False?
     rank = models.IntegerField(null=True)
     type_of_ownership = models.CharField(max_length=150, null=True)
     address = models.CharField(max_length=200, null=True)
-    
+    description = models.TextField()
+        
     account = models.ForeignKey(Account, on_delete=models.CASCADE)
+    # reviews = models.ForeignKey()
     
     services = models.ManyToManyField(Service)
     specializations = models.ManyToManyField(Specialization)
     holidays = models.ManyToManyField(Holiday)
     day_of_work = models.ManyToManyField(Day_of_work)
     
+    
+    
     # orders = models.ForeignKey(Order, on_delete=models.CASCADE, null=True)
     # phones = models.ForeignKey(Phone, on_delete=models.CASCADE, null=True)
 
     class Meta:
         db_table = "company"
+        
+        
+class Review(models.Model):
+    id = models.IntegerField(primary_key=True)
+    date = models.DateField()
+    text = models.TextField()
+    
+    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    
+    class Meta:
+        db_table = "reviews"
         
 class Phone(models.Model):
     id = models.IntegerField(primary_key=True)

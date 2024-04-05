@@ -37,6 +37,7 @@ from etc.views import company_delete_service
 from etc.views import change_rank
 # from etc.views import change_email
 from etc.views import change_name
+from etc.views import change_description
 from etc.views import change_ownership
 from etc.views import change_address
 from etc.views import spec_create
@@ -44,8 +45,9 @@ from etc.views import service_create
 from etc.views import change_first_name
 from etc.views import change_last_name
 from etc.views import get_service
-
+from etc.views import add_view
 from etc.views import create_pdf
+from etc.views import get_company
 
 urlpatterns = [
     path('cityservice/admin/', admin.site.urls),
@@ -58,11 +60,13 @@ urlpatterns = [
     path('cityservice/account/add_phone', company_add_phone, name='add_phone'),
     path('cityservice/account/delete_phone', company_delete_phone, name='delete_phone'),
     
+    path('cityservice/account/change_description', change_description, name='change_description'),
     path('cityservice/account/change_rank', change_rank, name='change_rank'),
     path('cityservice/account/change_name', change_name, name='change_name'),
     path('cityservice/account/change_ownership', change_ownership, name='change_ownership'),
     path('cityservice/account/change_address', change_address, name='change_address'),
-    # path('cityservice/account/change_email', change_email, name='change_email'),
+    
+    path('cityservice/companies/', get_company, name='company'),
     
     path('cityservice/specialization/create', spec_create, name='spec_create'),
     path('cityservice/service/create', service_create, name='service_create'),
@@ -71,8 +75,8 @@ urlpatterns = [
     path('cityservice/account/change_last_name', change_last_name, name='change_last_name'),
     
     path('cityservice/companies/create_pdf', create_pdf, name='create_pdf'),
+    path('cityservice/companies/add_view', add_view, name='add_view'),
     
-    # path('cityservice/service/get_service', companies, name='get_service'),
     
     path('cityservice/account/add_service', company_add_service, name='add_service'),
     path('cityservice/account/delete_service', company_delete_service, name='delete_service'),

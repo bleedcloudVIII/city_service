@@ -61,14 +61,14 @@
                             <form action={% url 'change_first_name' %} method="POST">
                                 <label>Имя:</label>
                                 {% csrf_token %}
-                                <input placeholder="Имя" class="cs-input-base" type="text" name="first_name" value={{ info.first_name }}>
+                                <input placeholder="Имя" class="cs-input-base" type="text" name="first_name" value="{{ info.first_name }}">
                             </form>
                         </div>
                         <div class="panel">
                             <form action={% url 'change_last_name' %} method="POST">
                                 <label>Фамилия:</label>
                                 {% csrf_token %}
-                                <input placeholder="Фамилия" class="cs-input-base" type="text" name="last_name" value={{ info.last_name }}>
+                                <input placeholder="Фамилия" class="cs-input-base" type="text" name="last_name" value="{{ info.last_name }}">
                             </form>
                         </div>
                     {% else %}
@@ -76,28 +76,28 @@
                             <form action={% url 'change_name' %} method="POST">
                                 <label>Имя компании:</label>
                                 {% csrf_token %}
-                                <input placeholder="Имя компании" class="cs-input-base" type="text" name="name" value={{ info.name }}>
+                                <input placeholder="Имя компании" class="cs-input-base" type="text" name="name" value="{{ info.name }}">
                             </form>
                         </div>
                         <div class="panel">
                             <form action={% url 'change_ownership' %} method="POST">
                                 <label>Форма собственности:</label>
                                 {% csrf_token %}
-                                <input placeholder="Форма собственности" class="cs-input-base" type="text" name="type_of_ownership" value={{ info.type_of_ownership }}>
+                                <input placeholder="Форма собственности" class="cs-input-base" type="text" name="type_of_ownership" value="{{ info.type_of_ownership }}">
                             </form>
                         </div>
                         <div class="panel">
                             <form action={% url 'change_rank' %} method="POST">
                                 <label>Разряд:</label>
                                 {% csrf_token %}
-                                <input placeholder="Разряд" class="cs-input-base" type="text" name="rank" value={{ info.rank }}>
+                                <input placeholder="Разряд" class="cs-input-base" type="text" name="rank" value="{{ info.rank }}">
                             </form>
                         </div>
                         <div class="panel">
                             <form action={% url 'change_address' %} method="POST">
                                 <label>Адрес:</label>
                                 {% csrf_token %}
-                                <input placeholder="Адрес" class="cs-input-base" type="text" name="address" value={{ info.address }}>
+                                <input placeholder="Адрес" class="cs-input-base" type="text" name="address" value="{{ info.address }}">
                             </form>
                         </div>
                         <div class="panel">
@@ -163,14 +163,17 @@
                                 <br>
                             </div>
                         </div>
-                        
-                        {% comment %} {% if info.services %}
-                            {% for service in services %}
-                                <span class="tochka"> • </span>
-                                {{ service.name }}
+                        <div class="panel">
+                            <form action={% url 'change_description' %} method="POST" id="description_form">
+                                <label>Описание компании:</label>
                                 <br>
-                            {% endfor %}
-                        {% endif %} {% endcomment %}
+                                {% csrf_token %}
+                                <textarea form="description_form" placeholder="Описание компании" class="cs-input-base-description" type="text" name="description">{{info.description}}</textarea>
+                                <br>
+                                <input type="submit" class="cs-button-description" value="Сохранить">
+                                {% comment %} <input placeholder="Описание компании" class="cs-input-base-description" type="text" name="description" value="{{ info.description }}"> {% endcomment %}
+                            </form>
+                        </div>
                     {% endif %}
                 </div>
             </div>

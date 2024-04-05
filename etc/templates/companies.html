@@ -112,10 +112,15 @@
                         <div class="row">
                             <div class="column-10">
                                 <div class="cs-spez">
-                                    <a class="cs-vakansiya-ssilka" href="#">
-                                        <span class="cs-vakansiya-name">{{company.name}}</span>
-                                    </a>
-                                    <br>
+                                    {% comment %} <a class="cs-vakansiya-ssilka" type="submit"> {% endcomment %}
+                                        {% comment %} {{company.name}} {% endcomment %}
+                                        <form method="POST" action={% url 'company' %}>
+                                            {% csrf_token %}
+                                            <input hidden type="text" name="pk" value={{ company.pk }}>
+                                            <input type="submit" class="button_company_name" value={{company.name}}>
+                                        </form>
+                                    {% comment %} </a> {% endcomment %}
+                                    {% comment %} <br> {% endcomment %}
                                     {% with count=forloop.counter %}
                                         {% for ph in phones %}
                                             {% if forloop.counter == count %}

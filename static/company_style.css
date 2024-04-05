@@ -263,3 +263,35 @@ hr {
 .label-phone{
     color: var(--colorBlack);
 }
+
+.button_company_name
+{
+    border: none; 
+    background-color: white;
+    font-size: 30px;
+    color: black
+}
+
+.cs-name{
+    color: white;
+    font-size: 30px;
+}
+
+.cs-div{
+    padding: 10px;
+    background-color: black;
+    border-radius: 8px;
+    color: white;
+}
+
+.cs-tochka-company, .cs-span, .label-phone-company{
+    color: white;
+}
+
+.cs-textarea
+{
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 6px;
+}

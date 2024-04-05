@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/company_style.css" rel=stylesheet>
+    <title>CityService</title>
+</head>
+
+<body>
+    <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src='/static/index.js'></script>
+    <header>
+        <div class="container ">
+            <div class="row">
+                <div class="col-11">
+                    <h1 class="text-left cs-h1"><a class="cs-a" href={% url 'companies' %}>CityService</a></h1>
+                </div>
+                <div class="col-1">
+                    {% if request.user.is_authenticated %}
+                        <a href={%url 'account_profile'%} class="cs-a-registr">Профиль</a>   
+                        <br>                     
+                        <a href={% url 'account_logout'%} class="cs-a-registr">Выйти</a>                        
+                    {% else %}
+                        <a href={% url 'account_login'%} class="cs-a-registr">Войти</a>
+                        <br>
+                        <a href={% url 'account_registration'%} class="cs-a-registr">Регистрация</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <h1></h1>
+    </header>
+    <hr>
+    <div class="container">
+        <div class="row">
+
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 cs-spezi cs-div">
+                <div class="column-10">
+                    <span class="cs-name">{{company.name}}</span>
+                    <br>
+                    {% for p in phones %}
+                        <span class="cs-tochka-company"> • </span>
+                        <label class="label-phone-company">{{ p.phone }}</label>
+                    {% endfor %}
+                    <br>
+                    <span class="cs-tochka-company"> • </span>
+                    <span class="cs-span">{{company.address}}</span>            
+
+                    {% comment %} Отзывы {% endcomment %}
+                    <br>
+                    <br>
+                    {% if request.user.is_authenticated %}
+                        <form method="POST" action="{% url 'add_view'%}" id="view_form">
+                            {% csrf_token %}
+                            <textarea name="view" placeholder="Напишите свой отзыв!" class="cs-textarea" form="view_form"></textarea>
+                            <br>
+                            <input hidden type="text" name="company_pk" value="{{company.pk}}">
+                            <input type="submit" class="cs-button" value="Опубликовать">
+                        </form>
+                    {% endif %}
+                    {% comment %} Все Отзывы {% endcomment %}
+                    <br>
+
+                    {% for r in views %}
+                        {{ r.user.first_name }} {{r.user.last_name}}: {{ r.text }} <br>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
