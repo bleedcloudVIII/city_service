@@ -12155,3 +12155,26 @@ AttributeError: 'NoneType' object has no attribute 'all'
 2024-04-05 15:27:45,603 xhtml2pdf.files DEBUG    URLParts: ParseResult(scheme='', netloc='', path='static/arial/Times_New_Roman.ttf', params='', query='', fragment=''), ''
 2024-04-05 15:27:45,603 xhtml2pdf.files DEBUG    Unrecognized scheme, assuming local file path
 2024-04-05 15:27:45,605 xhtml2pdf.context DEBUG    Load font 'static/arial/Times_New_Roman.ttf'
+2024-04-07 15:00:23,403 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-04-07 15:03:30,613 django.request WARNING  Not Found: /
+2024-04-07 15:03:30,707 django.request WARNING  Not Found: /favicon.ico
+2024-04-07 15:03:42,068 django.request ERROR    Internal Server Error: /cityservice/companies/
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 84, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'pk'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python310\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Python310\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ёрий\Desktop\BD_Proekt\cityservice\etc\views.py", line 45, in get_company
+    company = Company.objects.get(id = request.POST['pk'])
+  File "C:\Python310\lib\site-packages\django\utils\datastructures.py", line 86, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'pk'
+2024-04-07 15:04:24,200 django.request WARNING  Not Found: /favicon.ico
+2024-04-07 15:07:53,984 django.request WARNING  Not Found: /favicon.ico

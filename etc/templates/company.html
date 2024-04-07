@@ -70,9 +70,21 @@
                     {% endif %}
                     {% comment %} Все Отзывы {% endcomment %}
                     <br>
-
                     {% for r in views %}
-                        {{ r.user.first_name }} {{r.user.last_name}}: {{ r.text }} <br>
+                    <div class="review_div">
+                        {% comment %} <div class="review_div_2"> {% endcomment %}
+                        <strong>
+                            <label class="review_first_name_label">{{ r.user.first_name }}</label>
+                            <label class="review_second_name_label">{{ r.user.last_name }}</label>
+                        </strong>
+                        {% comment %} </div> {% endcomment %}
+                        {% comment %} <hr> {% endcomment %}
+                        <br>
+                        {% comment %} <textarea>{{} }</textarea> {% endcomment %}
+                        {% comment %} <hr class="review_hr"> {% endcomment %}
+                        <label class="review_reviw_label">{{ r.text }}</label>
+                    </div>
+                        {% comment %} {{ r.user.first_name }} {{r.user.last_name}}: {{ r.text }} <br> {% endcomment %}
                     {% endfor %}
 
                 </div>
